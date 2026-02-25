@@ -75,6 +75,10 @@
    - Klant beheert: instellingen en data.
    - Voorbeelden: Microsoft 365, Outlook, Teams.
 
+**Summary:**
+
+Cloud computing draait om het leveren van IT‑diensten via het internet, zoals virtuele machines, opslag, databases en complete applicaties. Je werkt daarbij met een shared responsibility‑model: Microsoft beheert de fysieke infrastructuur en beveiliging van de cloud, terwijl jij verantwoordelijk bent voor je eigen data, identiteiten en apparaten. Je kunt kiezen uit verschillende cloudmodellen zoals private, public, hybrid en multicloud, afhankelijk van hoeveel controle of flexibiliteit je nodig hebt. De cloud rekent meestal via een consumption‑based model, waarbij je alleen betaalt voor wat je gebruikt in plaats van grote investeringen vooraf. Het biedt daarnaast voordelen zoals hoge beschikbaarheid, automatische schaalbaarheid, betrouwbaarheid, voorspelbare kosten en sterke beveiliging en governance. Tot slot kun je kiezen uit IaaS, PaaS of SaaS, afhankelijk van hoeveel je zelf wilt beheren en hoeveel je door de provider laat doen.
+
 ---
 
 ## Compute
@@ -129,10 +133,6 @@
 | Azure Monitor            | Monitoring van resources             | SaaS | Microsoft: platform — Jij: alerts & dashboards |
 | Log Analytics Workspace  | Opslag + query’s voor logs           | PaaS | Microsoft: platform — Jij: data & queries |
 | Azure Policy             | Governance & regels afdwingen        | SaaS | Microsoft: service — Jij: policies maken |
-
-
-**Summary:**
-Cloud computing draait om het leveren van IT‑diensten via het internet, zoals virtuele machines, opslag, databases en complete applicaties. Je werkt daarbij met een shared responsibility‑model: Microsoft beheert de fysieke infrastructuur en beveiliging van de cloud, terwijl jij verantwoordelijk bent voor je eigen data, identiteiten en apparaten. Je kunt kiezen uit verschillende cloudmodellen zoals private, public, hybrid en multicloud, afhankelijk van hoeveel controle of flexibiliteit je nodig hebt. De cloud rekent meestal via een consumption‑based model, waarbij je alleen betaalt voor wat je gebruikt in plaats van grote investeringen vooraf. Het biedt daarnaast voordelen zoals hoge beschikbaarheid, automatische schaalbaarheid, betrouwbaarheid, voorspelbare kosten en sterke beveiliging en governance. Tot slot kun je kiezen uit IaaS, PaaS of SaaS, afhankelijk van hoeveel je zelf wilt beheren en hoeveel je door de provider laat doen.
 
 ---
    
