@@ -136,10 +136,72 @@
    - **Module:** Describe the core architectural components of Azure
       - **Extra:** FreeCodeCamp AZ‑90
 
-**Title**
-   - 
+**What is Microsoft Azure**
+   - CSP Cloud Service Provider met een wereldwijd netwerk van datacentres
+   - Honderden services om apps te bouwen
+   - Compute, storage, networking, databases, AI, security en identity services
+   - IaaS, PaaS, SaaS en serverless
 
-**Title**
-   - 
-   - 
-   - 
+**Azure accounts**
+   - Om Azure-services te gebruiken heb je een Azure account nodig met subscriptions
+   - Een account kan meerdere subscriptions hebben. Dev, test, marketing etc.
+   - Resources worden altijd binnen een subscription gemaakt.
+
+**Interacting with Azure**
+   - http://portal.azure.com
+   - CLI: Cloud Shell Interface that can be in PowerShell of BASH
+   - PowerShell: begint met PS
+   - BASH: begint met username@azure
+   - Interactive mode: Enter "az interactive"
+   - Auto-completion: "a"
+
+**Azure physical infrastructure**
+   - Physical infrastructure: Datacenters with racks, power, cooling, network
+   - Regions: Een geografisch gebied met minstens 1 maar vaak meerdere Availability Zones
+   - Availability Zones: 1 of meer datacenters, altijd onafhankelijk
+   - Availability Zones: VM's, managed disks, load balancers, SQL databases
+     3 catogorieen 
+      - Zonal services: Kiest een specific zone
+      - Zone-redundant services: Automatisch copy over verschillende zones
+      - Non-Regional services: Global services zonder region, geen impact van zone-wide of region uitval
+   - Region Zones
+        - 
+
+
+
+
+**title**
+   -
+
+
+
+**title**
+   -
+
+
+
+**title**
+   -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
