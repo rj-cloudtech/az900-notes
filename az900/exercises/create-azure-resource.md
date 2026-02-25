@@ -1,8 +1,8 @@
 
 # Create a Microsoft Azure resource 
 
-## Learning path: Introduction to Cloud Infrastructure: Azure architecture & services
-  ## Module: 1. Describe the core architectural components of Azure
+Learning path: Introduction to Cloud Infrastructure: Azure architecture & services
+Module: 1. Describe the core architectural components of Azure
 
 Note: De originele oefening wordt uitgevoerd via de Azure Portal, maar ik heb ervoor gekozen om alle opdrachten in PowerShell (Azure CLI) uit te voeren om mijn CLI‑vaardigheden te trainen.
 
