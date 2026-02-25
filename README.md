@@ -37,7 +37,7 @@ It helps me structure my knowledge, track progress, and prepare for future certi
 All detailed notes are stored in:
 
 ```
-/notes/az900-full-notes.md
+/az900/notes/az900-full-notes.md
 ```
 
 This file contains:
