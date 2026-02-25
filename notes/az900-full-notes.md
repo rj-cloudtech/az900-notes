@@ -32,10 +32,10 @@
 ###       - **Extra:** FreeCodeCamp AZ‑90
    
 **Benefits of high availability and scalability in the cloud**
-   - **High availabilty:** diensten blijven draaien doordat Azure meerdere datacenters gebruikt
-   - **Scalability:** automatisch meer of midner capaciteit gebruiken wanneer de vraag stijgt of daalt
-   - **Vertical scaling:** groter of kleiner maken van één machine
-   - **Horizontal scaling:** meer of minder machines toevoegen
+   - High availabilty: diensten blijven draaien doordat Azure meerdere datacenters gebruikt
+   - Scalability: automatisch meer of midner capaciteit gebruiken wanneer de vraag stijgt of daalt
+   - Vertical scaling: groter of kleiner maken van één machine
+   - Horizontal scaling: meer of minder machines toevoegen
 
 **Benefits of reliability and predictability in the cloud**
    - Reliability: cloud blijft werken, zelfs als er iets uitvalt
