@@ -1,4 +1,4 @@
-#Cloud & Security Learning Repository
+# Cloud & Security Learning Repository
 
 This repository contains my study notes and hands‑on exercises for multiple Microsoft cloud and security certifications. It supports my development in Cloud, Identity & Access Management (IAM), and Cloud Security.
 
@@ -85,16 +85,28 @@ More exercises will be added as I progress.
 
 ## Future Certifications / Roadmap
 
-I plan to expand this repository with notes and exercises for:
+This repository will grow as I continue my IAM & Cloud Security learning path.
 
-  - AZ‑104 – Azure Administrator
+**Phase 1 — 0 to 3 months**
+  - AZ‑900 – Azure Fundamentals
   - MS‑900 – Microsoft 365 Fundamentals
   - SC‑900 – Security, Compliance & Identity Fundamentals
-  - SC‑200 – Security Operations Analyst
-  - SC‑300 – Identity & Access Administrator
-  - SC‑400 – Information Protection Administrator
+  - PowerShell basis
+  - IAM basisbegrippen
 
-This structure will grow as I progress through these certifications.
+**Phase 2 — 3 to 12 months**
+  - AZ‑104 – Azure Administrator
+  - Intune basis
+  - Conditional Access verder uitwerken
+  - Identity Lifecycle verder uitwerken
+
+**Phase 3 — 12 to 24 months**
+  - SC‑300 – Identity & Access Administrator
+  - SC‑200 – Security Operations Analyst
+  - IAM‑automatisering (PowerShell + Graph API)
+  - Identity Governance gevorderd niveau
+
+This roadmap supports my long‑term goal of becoming an IAM Specialist / Cloud Security Engineer.
 
 ---
 
