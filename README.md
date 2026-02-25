@@ -7,12 +7,12 @@ This repository serves as a central place to document what I learn while studyin
 
 ## Repository Structure
 
-az900/
-  notes/
-    az900-full-notes.md
-  exercises/
-    create-azure-resource.md
-README.md
+- az900/
+  - notes/
+    - az900-full-notes.md
+  - exercises/
+    - create-azure-resource.md
+- README.md
 
 ---
 
