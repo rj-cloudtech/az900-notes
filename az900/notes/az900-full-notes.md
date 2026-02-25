@@ -263,12 +263,14 @@ Scenario‑oefeningen
       - Storage disks: HDD of SSD etc
       - Networking: virtual netwerk, public ip en port configuratie
 
+ - **Create an Azure resource**
+      - [Create an Azure virtual machine](/az900/exercises/Create-an-Azure-virtual-machine.md)
 
 
 
 
 
-
+Exercise - Create an Azure virtual machine
 
 
 
