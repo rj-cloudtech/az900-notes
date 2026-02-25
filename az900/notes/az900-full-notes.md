@@ -51,6 +51,9 @@
    - Of the cloud: Automatically scale resources, templates, health alerts
    - In the cloud: webportal, CLI, API, Powershell
 
+**Summary**
+Cloud computing draait om het leveren van IT‑diensten via het internet, zoals virtuele machines, opslag, databases en netwerkoplossingen. In de cloud werk je met het shared responsibility‑model: Microsoft beheert de fysieke infrastructuur en beveiliging van de cloud, terwijl jij verantwoordelijk bent voor je eigen data, identiteiten en apparaten. Je kunt kiezen uit verschillende cloudmodellen, zoals private, public, hybrid en multicloud. De kostenstructuur verschilt ook: on‑premises vraagt om grote investeringen vooraf (CapEx), terwijl de cloud werkt met OpEx en een consumption‑based model waarbij je alleen betaalt voor wat je gebruikt. De cloud biedt daarnaast voordelen zoals hoge beschikbaarheid, automatische schaalbaarheid, betrouwbaarheid, voorspelbare prestaties en kosten, sterke governance en flexibele manieren om resources te beheren via portals, CLI, API’s en automatisering.
+
 ---
    
 - **Learning path:** Introduction to Cloud Infrastructure: Describe cloud concepts
@@ -208,7 +211,7 @@
            - Maximaal 6 niveaus diep (root en subscriptions niet meegerekend)
            - Elke subscription of management group heeft slechts één parent
       - **Create an Azure resource**
-           - [Create a resource exercise](../exercises/create-resource.md)
+           - [Create a resource exercise](/az900/exercises/create-azure-resource.md)
        
       
 ---
