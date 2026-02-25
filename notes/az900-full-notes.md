@@ -160,32 +160,112 @@
    - Regions: Een geografisch gebied met minstens 1 maar vaak meerdere Availability Zones
    - Availability Zones: 1 of meer datacenters, altijd onafhankelijk
    - Availability Zones: VM's, managed disks, load balancers, SQL databases
-     3 catogorieen 
+     **3 catogorieen** 
       - Zonal services: Kiest een specific zone
       - Zone-redundant services: Automatisch copy over verschillende zones
       - Non-Regional services: Global services zonder region, geen impact van zone-wide of region uitval
-   - Region Zones
-        - 
+   - **Region pairs**
+        - Meeste regions zijn verbonden met een region minstens 300 mile er vandaan.
+        - Doel: Bescherming tegen grootschalige uitval; natuurramp, onrust, stroomuitval, physieke netwerk uitval
+        - Niet alle Azure services zijn automatisch, kopie en herstel is dan de verandwoordelijkheid van gebruiker
+        - Updates worden nooit tegelijk uitgevoerd in beide regions van een region pair
+        - Data blijft in de zelfde geography als zijn pair voor voor belasting- en wetshandhaving. ex Brazil
+     - **Sovereign Regions**
+        - Gescheiden van de publieke Azure cloud
+        - US DoD central, US Gov Virginia, US Gov Iowa. China East, China North van 21Vianet
 
+**Azure management infrastructure**
+   - **Resources and resource groups**
+      - Resources, resource groups, subscriptions and account
+      - Resource: alles wat je creëert, configureert of uitrolt (VM, VNet, database, storage, function)
+      - Resource group: group van resources. een resource kan maar van 1 group deel uitmaken
+      - Resource group: bepalen toegang, lifecycle en beheeracties
+   - **Subscriptions**
+      - Een subscription = eenheden voor beheer, billing en schaal
+      - Nodig om Azure‑services te gebruiken (authenticatie + autorisatie)
+      - Gelinkt aan een Azure account (Entra ID‑identiteit)
+      - Eén account kan meerdere subscriptions hebben
+   - **Subscription boundaries**
+      - Billing boundary: elke subscription heeft eigen kosten, facturen en rapporten
+      - Access control boundary: RBAC‑toegang wordt toegepast op subscription‑niveau
+   - **Waarom extra subscriptions maken**
+      - Environments: dev / test / prod scheiden
+      - Organisatie: teams of afdelingen isoleren
+      - Kostenbeheer: kosten per workload of afdeling scheiden
+   - **Azure Management Groups**
+      - Laag boven subscriptions voor governance op grote schaal
+      - Subscriptions worden gegroepeerd in management groups.
+      - Policies en RBAC op een management group worden geërfd door:
+           - onderliggende management groups
+           - subscriptions
+           - resource groups
+           - resources
+      - **Gebruiksscenario's**
+           - Policies centraal afdwingen (bijv. VM’s alleen in West US)
+           - Toegang verlenen aan meerdere subscriptions tegelijk
+      - **Belangrijke feiten**
+           - Maximaal 10.000 management groups per directory
+           - Maximaal 6 niveaus diep (root en subscriptions niet meegerekend)
+           - Elke subscription of management group heeft slechts één parent
+      - **Create an Azure resource**
+           - [Create a resource exercise](../exercises/create-resource.md)
+       
+      
+---
+   
+- **Learning path:** Introduction to Cloud Infrastructure: Azure architecture & services
+   - **Module:** Describe Azure compute and networking services
+      - **Extra:** FreeCodeCamp AZ‑90
 
-
-
-**title**
+**Azure virtual machines**
    -
 
 
 
-**title**
+
+
+
+
+
+
+
+**Azure virtual desktop**
    -
 
 
 
-**title**
+**Azure containers**
+   -
+
+
+**Azure functions**
    -
 
 
 
+**Application hosting options**
+   -
 
+
+
+**Azure virtual networking**
+   -
+
+
+**Exercise - Create an Azure Virtual Machine and Configure network access**
+   -
+
+
+**Azure virtual private networks**
+   -
+   
+
+**Azure ExpressRoute**
+   -
+
+
+**Azure DNS**
+   -
 
 
 
