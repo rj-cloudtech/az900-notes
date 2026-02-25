@@ -81,9 +81,9 @@ my-VM_disk1_15de01512b074201903571c3a95155cc  INTROAZURERG     westeurope  Micro
 
 ```bash
 robert-jan [ ~ ]$ az group delete \
---name IntroAzureRG \
---yes \
---no-wait
+  --name IntroAzureRG \
+  --yes \
+  --no-wait
 ```
 
 ## Taks 5 Check 1
