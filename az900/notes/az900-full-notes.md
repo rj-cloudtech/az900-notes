@@ -24,7 +24,7 @@
    - CapEx: Eenmalige inverstering, vooraf betalen voor eigen datacenter en hardware
    - OpEx: Doorlopende kosten, betalen per maand of gebruik
    - Consumption-based model: Alleen betalen voor wat je gebruikt
-
+   - 
 ---
    
 - **Learning path:** Introduction to Cloud Infrastructure: Describe cloud concepts
@@ -50,9 +50,6 @@
 **Benefits of manageability in the cloud**
    - Of the cloud: Automatically scale resources, templates, health alerts
    - In the cloud: webportal, CLI, API, Powershell
-
-**Summary**
-Cloud computing draait om het leveren van IT‑diensten via het internet, zoals virtuele machines, opslag, databases en netwerkoplossingen. In de cloud werk je met het shared responsibility‑model: Microsoft beheert de fysieke infrastructuur en beveiliging van de cloud, terwijl jij verantwoordelijk bent voor je eigen data, identiteiten en apparaten. Je kunt kiezen uit verschillende cloudmodellen, zoals private, public, hybrid en multicloud. De kostenstructuur verschilt ook: on‑premises vraagt om grote investeringen vooraf (CapEx), terwijl de cloud werkt met OpEx en een consumption‑based model waarbij je alleen betaalt voor wat je gebruikt. De cloud biedt daarnaast voordelen zoals hoge beschikbaarheid, automatische schaalbaarheid, betrouwbaarheid, voorspelbare prestaties en kosten, sterke governance en flexibele manieren om resources te beheren via portals, CLI, API’s en automatisering.
 
 ---
    
@@ -132,6 +129,10 @@ Cloud computing draait om het leveren van IT‑diensten via het internet, zoals 
 | Azure Monitor            | Monitoring van resources             | SaaS | Microsoft: platform — Jij: alerts & dashboards |
 | Log Analytics Workspace  | Opslag + query’s voor logs           | PaaS | Microsoft: platform — Jij: data & queries |
 | Azure Policy             | Governance & regels afdwingen        | SaaS | Microsoft: service — Jij: policies maken |
+
+
+**Summary:**
+Cloud computing draait om het leveren van IT‑diensten via het internet, zoals virtuele machines, opslag, databases en complete applicaties. Je werkt daarbij met een shared responsibility‑model: Microsoft beheert de fysieke infrastructuur en beveiliging van de cloud, terwijl jij verantwoordelijk bent voor je eigen data, identiteiten en apparaten. Je kunt kiezen uit verschillende cloudmodellen zoals private, public, hybrid en multicloud, afhankelijk van hoeveel controle of flexibiliteit je nodig hebt. De cloud rekent meestal via een consumption‑based model, waarbij je alleen betaalt voor wat je gebruikt in plaats van grote investeringen vooraf. Het biedt daarnaast voordelen zoals hoge beschikbaarheid, automatische schaalbaarheid, betrouwbaarheid, voorspelbare kosten en sterke beveiliging en governance. Tot slot kun je kiezen uit IaaS, PaaS of SaaS, afhankelijk van hoeveel je zelf wilt beheren en hoeveel je door de provider laat doen.
 
 ---
    
