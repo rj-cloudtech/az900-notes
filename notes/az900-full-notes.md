@@ -130,4 +130,16 @@
 | Log Analytics Workspace  | Opslag + query’s voor logs           | PaaS | Microsoft: platform — Jij: data & queries |
 | Azure Policy             | Governance & regels afdwingen        | SaaS | Microsoft: service — Jij: policies maken |
 
+---
+   
+- **Learning path:** Introduction to Cloud Infrastructure: Azure architecture & services
+   - **Module:** Describe the core architectural components of Azure
+      - **Extra:** FreeCodeCamp AZ‑90
 
+**Title**
+   - 
+
+**Title**
+   - 
+   - 
+   - 
