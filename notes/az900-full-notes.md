@@ -1,9 +1,9 @@
 # AZ-900 Study Notes
 
 ## Week 1: 23-2-2026
-- **Learning path:** Introduction to Cloud Infrastructure: Describe cloud concepts
-   - **Module:** Describe cloud computing
-      - **Extra:** FreeCodeCamp AZ‑90
+### - **Learning path:** Introduction to Cloud Infrastructure: Describe cloud concepts
+###    - **Module:** Describe cloud computing
+###       - **Extra:** FreeCodeCamp AZ‑90
 
 **What is cloud computing**
    - Leveren van computer services over internet, zoals: VM’s, storage, databases en networking
@@ -27,14 +27,14 @@
 ---
    
 ### - **Learning path:** Introduction to Cloud Infrastructure: Describe cloud concepts
-   - **Module:** Describe the benefits of using cloud services
-      - **Extra:** FreeCodeCamp AZ‑90
+###    - **Module:** Describe the benefits of using cloud services
+###       - **Extra:** FreeCodeCamp AZ‑90
    
 **Benefits of high availability and scalability in the cloud**
-   - High availabilty: diensten blijven draaien doordat Azure meerdere datacenters gebruikt
-   - Scalability: automatisch meer of midner capaciteit gebruiken wanneer de vraag stijgt of daalt
-   - Vertical scaling: groter of kleiner maken van één machine
-   - Horizontal scaling: meer of minder machines toevoegen
+   - **High availabilty:** diensten blijven draaien doordat Azure meerdere datacenters gebruikt
+   - **Scalability:** automatisch meer of midner capaciteit gebruiken wanneer de vraag stijgt of daalt
+   - **Vertical scaling:** groter of kleiner maken van één machine
+   - **Horizontal scaling:** meer of minder machines toevoegen
 
 **Benefits of reliability and predictability in the cloud**
    - Reliability: cloud blijft werken, zelfs als er iets uitvalt
@@ -52,9 +52,9 @@
 
 ---
    
-- **Learning path:** Introduction to Cloud Infrastructure: Describe cloud concepts
-   - **Module:** Describe cloud service types
-      - **Extra:** FreeCodeCamp AZ‑90
+### - **Learning path:** Introduction to Cloud Infrastructure: Describe cloud concepts
+###    - **Module:** Describe cloud service types
+###       - **Extra:** FreeCodeCamp AZ‑90
 
 IaaS - Infrastructure as a Service
    - Definitie: de infrastructuur (servers, storage, netwerk).
