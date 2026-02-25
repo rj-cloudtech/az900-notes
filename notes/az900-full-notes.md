@@ -1,14 +1,10 @@
 # AZ-900 Study Notes
+
 ## Week 1: 23-2-2026
 
-### Learning path
-   - Introduction to Cloud Infrastructure: Describe cloud concepts
-
-### Module
-   - Describe cloud computing
-
-### Extra
-   - FreeCodeCamp AZ‑90
+- **Learning path:** Introduction to Cloud Infrastructure: Describe cloud concepts
+   - **Module:** Describe cloud computing
+      - **Extra:** FreeCodeCamp AZ‑90
 
 **What is cloud computing**
    - Leveren van computer services over internet, zoals: VM’s, storage, databases en networking
@@ -57,9 +53,9 @@
 
 ---
    
-### - **Learning path:** Introduction to Cloud Infrastructure: Describe cloud concepts
-###    - **Module:** Describe cloud service types
-###       - **Extra:** FreeCodeCamp AZ‑90
+- **Learning path:** Introduction to Cloud Infrastructure: Describe cloud concepts
+   - **Module:** Describe cloud service types
+      - **Extra:** FreeCodeCamp AZ‑90
 
 IaaS - Infrastructure as a Service
    - Definitie: de infrastructuur (servers, storage, netwerk).
