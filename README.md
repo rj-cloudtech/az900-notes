@@ -1,7 +1,6 @@
-# AZ-900 Study Notes
+# Coud & Security Learning Repository
 
-This repository contains my personal study notes and hands-on exercises for the Microsoft Azure Fundamentals (AZ-900) certification.  
-It reflects my learning journey toward a career in Cloud, Identity & Access Management (IAM), and Cloud Security.
+This repository contains my study notes and hands-on exercises for multiple Microsoft cloud certifications. It supports my development in Cloud, Identity & Access Management (IAM), and Cloud Security.
 
 ---
 
