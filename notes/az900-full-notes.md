@@ -26,7 +26,6 @@
 
 ---
    
-## Week 1: 23-2-2026
 - **Learning path:** Introduction to Cloud Infrastructure: Describe cloud concepts
    - **Module:** Describe the benefits of using cloud services
       - **Extra:** FreeCodeCamp AZ‑90
@@ -53,7 +52,6 @@
 
 ---
    
-## Week 1: 23-2-2026
 - **Learning path:** Introduction to Cloud Infrastructure: Describe cloud concepts
    - **Module:** Describe cloud service types
       - **Extra:** FreeCodeCamp AZ‑90
