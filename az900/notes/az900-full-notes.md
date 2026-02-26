@@ -226,7 +226,7 @@ Scenario‑oefeningen
            - Maximaal 6 niveaus diep (root en subscriptions niet meegerekend)
            - Elke subscription of management group heeft slechts één parent
       - **Create an Azure resource**
-           - [Create a resource exercise](/az900/exercises/create-azure-resource.md)
+           - [Exercise 1 Create a resource exercise](/az900/exercises/1-create-azure-resource.md)
        
 ---
    
@@ -290,7 +290,7 @@ Scenario‑oefeningen
 
 
 **Exercise - Create an Azure Virtual Machine and Configure network access**
-   - [2-create-an-Azure-Virtual-Machine-and-Configure-network-access](/az900/exercises/2-create-an-Azure-Virtual-Machine-and-Configure-network-access.md)
+   - [Exercise 2 Create an Azure Virtual Machine and Configure Network Access](/az900/exercises/2-create-an-azure-virtual-machine-and-configure-network-access.md)
 
 
 **Azure virtual private networks**
