@@ -227,56 +227,16 @@ Scenario‑oefeningen
            - Elke subscription of management group heeft slechts één parent
       - **Create an Azure resource**
            - [Exercise 1 Create a resource exercise](/az900/exercises/1-create-azure-resource.md)
-       
+                    
+**Summary:**
+Azure bestaat uit een wereldwijd netwerk van datacenters waar Microsoft honderden cloudservices aanbiedt voor compute, storage, networking, databases, AI, security en identity, beschikbaar in IaaS, PaaS, SaaS en serverless.
+Je gebruikt Azure via een Azure account met 1 of meerdere subscriptions, waarin alle resources worden aangemaakt en beheerd. Je kunt met Azure werken via het Portal, PowerShell, Bash/CLI en interactieve command modi.
+De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regions, availability zones en region pairs voor hoge beschikbaarheid, herstel bij rampen en naleving van regionale regelgeving en wetgeving. Er zijn ook Sovereign Regions die volledig gescheiden zijn van de publieke cloud.
+Voor beheer gebruik je resources, resource groups, subscriptions en management groups. Recources zitten in 1 resource group, subscriptions bepalen kosten en toegang en management groups zorgen voor centraal beleid en governance over meerdere subscriptions heen.
+
 ---
    
-- **Learning path:** Part 2. Introduction to Cloud Infrastructure: Azure architecture & services
-   - **Module:** 2. Describe Azure compute and networking services
-      - **Extra:** FreeCodeCamp AZ‑90
-
-**Azure virtual machines**
-   - Create VMs in de cloud. IaaS zodat je totale controle hebt over de 'computer'. Het OS, custom software en custom hosting configs en daar verantwoordelijk voor bent
-   - Kopen van hardware is niet nodig
-   - Gebruik van een image om meerdere VMs te configureren
-   - **Scale VMs in Azure**
-      - Single VMs voor testing, dev of kleine taken
-      - Group VMs voor high availability, scalability and redundancy. Of scale sets en availability sets
-   - **Virtual machine scale sets**
-      - Maak en manage een group van identieke, load-balanced VMs
-      - Manage, configure en update grote hoeveelheiden van VM's
-      - Gebruik van load balancers
-      - Automatisch schalen op basis van CPU, RAM, tijdschema’s
-   - **Virtual machine availability sets**
-      - altijd binnen 1 datacenter
-      - Update domain: Niet alle VMs worden tegelijk geupdatet, 30 min tussen updates
-      - Fault domain: Verdeeld VMs over 3 fault domain. Elk heeft zijn eigen power source en network switch
-   - **Examples of when to use VMs**
-      - Testing en Development: snel een OS en apps maken en verwijderen
-      - Running applications in the cloud: voor applicaties die grote fluctuaties hebben, starten en sluiten van VMs bespaard kosten
-      - Extending datacenter to the cloud: Vergroten van het on-premises netwerk
-      - Disaster recovery: wanneer je primaire datacenter niet werk kan een VM het werk tijdelijk overnemen
-      - Applicaties die niet geschikt zijn voor containers of PaaS‑diensten.
-   - **Move to the cloud with VMs**
-      - Lift and shift: Maken van een VM die identiek is aan the on-premises server. 
-   - **VM Resources**
-      - Size: doel, processor cores en RAM
-      - Storage disks: HDD of SSD etc
-      - Networking: virtual netwerk, public ip en port configuratie
-
- - **Create an Azure resource**
-   - Merged with the later exercise in this module.
-
-**Azure virtual desktop**
-   - Toegang vanaf elk OS, device en meeste browsers
-   - Alles op cloud, geen gegevens op personlijke devices
-   - Microsoft Entra ID, MFA en RBAC's Role-Based Access Control.
-   - Multi-session Windows 10/11: Met Enterprise multi-session, meerdere gebruikers tegelijk op 1 Virtual Desktop
-
-**Azure containers**
-   - ACI Azure Container Instances: snelste manier om één container te draaien zonder VM’s of clusterbeheer. PaaS.
-        - Korte workloads zoals scrips, API, batchjobs
-        - upload en direct runnen.
-   - ACA Azure Container Apps: PaaS‑oplossing zonder containerbeheer, met load balancing, autoscaling en ondersteuning voor microservices.
+De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regions, availability aS‑oplossing zonder containerbeheer, met load balancing, autoscaling en ondersteuning voor microservices.
    - AKS Azure Kubernetes Services: Kubernetes‑gebaseerde container orchestration voor grote containerplatformen en complexe workloads.
    - Voorbeeld: Website, front end, back end, storage in 3 containers, afzonderlijk te schalen of updaten
 
@@ -304,27 +264,76 @@ Scenario‑oefeningen
            - Push notifications
            - Custom back-end in C# or Node.js
 
-
 **Azure virtual networking**
-   -
-
+   - VMs, Web apps en databases met elkaar kunnen communiceren, over internet met on-premises netwerken
+   - Isolation and segmentation: Meerdere geïsoleerde VNET maken. Zelf een prive IP-range defineren en opdelen in subnets. Voor DNS kan Azure DNS of eigen DNS server worden gebruikt.
+   - Internet communications: Een public ip adress voor een Azure resource. of de resource achter een load balancer
+   - Communicate betwween Azure resources
+      - Virtual networks: VMs, App service environment, Kubernetes (AKS), virutal machine scale sets
+      - Service endpoints: Azure SQL database and storage accounts
+   - Communicate with on-premise resources:
+      - Point-to-point: Encrypted VPN connection naar het Azure vitual network
+      - Point-to-site: Individuele client maakt versleutelde verbinding naar azure VNET
+      - Azure ExpressRoute: Prive dedicated verbinding die niet over het gewone internet gaat. Stabieler, voorspelbaarder en veiliger
+   - Route network traffic
+      - Route tables: Hoe verkeer tussen subnets wordt geleid. Custom routing afdwingen
+      - Border Gateway Protocol BGP: Werkt met Azure VPN gateways, Azure Route Server en Azure ExpressRoute
+   - Filter network traffic
+      - Network security groups: Regels voor inbound en outbound connecties
+      - Network virtual appliances: Network virtual appliances zijn gespecialiseerde VMs zoals firewalls of WAN-optimalisatie-apparaten
+   - Connect virtual networks: VNet peering verbindt 2 VNets via het microsoft backbone-netwerk,  niet via internet. Ook cross-region
+   - UDR User-Defined Routes: controle over de routing tussen subnets of VNets
+   - Public en Private endpoints
+   - Public endpoints hebben een public ip adres en zijn wereldwijd bereikbaar
+   - Private endpoints bestaan alleen binnen het virtual network en hebben een private ip adres
 
 **Exercise - Create an Azure Virtual Machine and Configure network access**
    - [Exercise 2 Create an Azure Virtual Machine and Configure Network Access](/az900/exercises/2-create-an-azure-virtual-machine-and-configure-network-access.md)
 
-
 **Azure virtual private networks**
-   -
-   
-
+   - Een VPN maakt een versleutelde tunnel binnen een ander netwerk, meestal het internet. Meedere vertrouwde prive netwerken veilig met elkaar verbinden. Het is versleuteld waardoor er vertrouwelijke informatie veilig uitgewisselt kan worden
+   - VPN Gateway: Speciale gateway in een Azure Virtual Network. Hij staat altijd in dedicated GatewaySubnet
+     - Site-to-site: On-premises netwerk van/naar Azure VNet
+     - Point-to-site: Individuele apparaten van/naar Azure Vnet
+     - VNet-to-Vnet: Twee Azure VNet van/naar elkaar
+   - Maar 1 VPN gateway per VNet, maar hij kan wel meerdere verbindigen tegelijk ondersteunen.
+   - VPN-Gateway Policy-based: Vaste IP-regels. Oud en weinig flexibel
+   - VPN-Gateway Route-based: Statisch of BGP routing; flexibel en aanbevolen voor bijna alle scenario's zoals multisite,P2S, VNet-Vnet en ExpressRoute-coexistence
+   - High Availability:
+        - Active/standby: standaard met automatische failover
+        - Active/active: Twee active gateways met twee tunnels voor hogere beschikbaarheid
+        - ExpressRoute-failover: VPN als back-up wanneer ExpressRoute uitvalt
+        - Zone-redundant gateways: Gateways over meerdere availability zones
+          
 **Azure ExpressRoute**
-   -
-
+   - 
+   - Features and benefits of ExpressRoute
+      - Priveconnectie naar microsoft cloudservices in je regio
+      - Wereldwijde verbindingen tussen locaties via ExpressRoute Global Reach, ExpressRoute circuits koppelt
+      - Dynamic routing via BGP, waardoor routes automatisch worden uitgewisseld tussen jouw netwerk en Azure
+      - Ingebouwde redundantie bij elke peeringlocatie voor hoge beschikbaarheid
+   - ExpressRoute connectivity models
+      - CloudExchange colocation: Fysiek in dezelfde colocatie als de provider en maakt een viruele cross-connect
+      - Point-to-point Ethernet connection: directe verbinding met jouw locatie en Microsoft
+      - Any-to-any connection: WAN provider koppelt je netwerk aan Azure
+      - Driect from ExpressRoute sites: Directe aansluiting op de Microsoft's backbone met 10 of 100 Gbps voor grootschalige active/active connectiviteit
+   - Security considerations: ExpressRoute is een priveverbinding. data reist niet over het internet. sommige zaken zoals DNS-queries, CR: checks en CDN verkeer gaan wel over het internet
 
 **Azure DNS**
-   -
+   - Azure DNS verzorgt name resolution. Het omzetten van domeinnamen naar IP-adressen. Beheren van alle DNS records centraal via de Azure Portal, PowerShell, CLI of API's
+   - Benefits:
+        - Reliability and performance: Wereldwijde DNS server en anycast routing
+        - Security: RBAC, activity logs en resource locks
+        - Ease of use: Volledig geintegreerd in Azure
+        - Customize VNets: voor je eigen domeinnamen in je VNets
+        - Alias records: Automatisch verwijzen anar Azure resources zoals Public IPs, Traffic manager of CDN. Automatisch update als IP verandert
+   - Azure verkooptg een domeinnamen
 
-
+**Summary:**
+Azure bestaat uit een wereldwijd netwerk van datacenters die zijn georganiseerd in regions en availability zones voor hoge beschikbaarheid en bescherming tegen uitval. B
+innen Azure kun je applicaties hosten via containers (ACR, ACI, AKS), serverless functies met Azure Functions, of PaaS‑diensten zoals App Service voor webapps, API’s, mobile back‑ends en achtergrondtaken. 
+Azure‑netwerken verbinden resources met elkaar en met on‑premises via VNet‑peering, VPN‑tunnels of ExpressRoute, met opties voor routing, filtering en private of public endpoints. VPN‑gateways maken versleutelde verbindingen over het internet, terwijl ExpressRoute een privé, dedicated verbinding biedt met hogere stabiliteit en voorspelbaarheid. 
+Azure DNS beheert domeinnamen en DNS‑records via Microsoft’s wereldwijde infrastructuur, inclusief private zones en alias‑records die automatisch meeveranderen met Azure‑resources.
 
 
 
