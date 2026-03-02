@@ -394,13 +394,42 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
       - **Extra:** FreeCodeCamp AZ‑90
 
 **Azure storage accounts**
-   -
+   - Toegankelijk wereldwijd over HTTP OF HTTPS
+   - Blobs, files, queues en tables
+   - Secure, highly available, durable en massively scalable
+   - Redundancy
+      - LRS       - Locally Redundant Storage
+      - GRS       - Geo-Redundant Storage
+      - RA-GRS    - Read-Acces Geo Redundant Storage
+      - ZRS       - Zone-Redundant Storage
+      - GZRS      - Geo-Zone-Redundant Storage 
+      - RA-GZRS   - Read-Access Geo-Zone_redundant Storage
+
+   - Standard general purpose v2: Ondersteut alle opslagdiensten en de meeste redundantieopties.Geschik voor de meeste workloads
+   - Premium block blobs: Geoptimaliseerd voor hoge transactiesnelheid en lage latency voor blob opsloag
+   - Premium file shares: bedoeld voor snelle Azure Files workloads, SMB NFS
+   - Premium page blobs: Page blobs zoals VHD's
+     
+   - Blob storage             - https://<storage-account-name>.blob.core.windows.net
+   - Data lake storage gen2   - https://<storage-account-name>.dfs.core.windows.net
+   - Azure files              - https://<storage-account-name>.file.core.windows.net
+   - Queue storage            - https://<storage-account-name>.queue.core.windows.net
+   - Table storage            - https://<storage-account-name>.table.core.windows.net
 
 **Azure storage redundancy**
-   -
+   - Azure slaat data altijd meerdere keren op zodat deze beschermd is tegen hardwarefoute, stroomstoringen of zelfs grote regionale uitval
+   - Redundantie bepaalt hoe vaak en waar je data wordt gekopieerd, daarmee ook de beschikbaarheid, duurzaamheid en kosten
+
+   - Redundatie binnen de primaire regio. Altijd 3 kopieen in de primaire regio met 2 keuzes:
+        - LRS Locally Redundant Storage: 3 kopieen in 1 datacenter, goedkoop maar kwetsbaar bij datacenter ramp
+        - ZRS Zone Redundant Storage: 3 Kopieen verspreid over 3 AZs
+   - Redundatie naar secundaire regio. Extra bescherming omdat data ook in een 2e regio staat
+        - GRS Geo Redundant Storage: LRSi n primaire regio, LRS in secundaire regio
+        - GZRS Geo Zone Redundant Storage: ZRS in primaire regio, LRS in de secundaire regio. Max Beschikbaarheid en duurzaamheid
+        - Replicatie naar secundaire regio is asynchroon, bij ramp een klein stuk data verloren RPO <15min
    
 **Azure storage services**
-   -
+   - 
 
 **Exercise - Create a storage blob**
    - [Exercise 3 Create a storage blob](/az900/exercises/3-Create-a-storage-blob.md)
