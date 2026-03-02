@@ -5,7 +5,7 @@
 
 In deze oefening maak ik een Azure VM aan. Installeer een web server (Nginx) en update de configuratie van het netwerk zodat deze toegang heeft vanaf het internet. Tot slot controleer ik de NSG regels en test ik de webserver.
 
-For this exercise, I'm using the Azure CLI and running it in az interactive mode. This allows me to execute commands faster, get inline suggestions, and deepen my command‑line skills.
+Voor deze oefening gebruik ik de Azure CLI in az interactive‑modus bij het eerste gedeelte. Dit maakt het mogelijk om sneller opdrachten uit te voeren, inline suggesties te krijgen en mijn command‑linevaardigheden verder te ontwikkelen.
 
 ## Task 1 Resource Group, create, name, location
 
