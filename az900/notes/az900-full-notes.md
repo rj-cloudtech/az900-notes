@@ -471,18 +471,56 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
       - Toegang via Azure en externe omgevingen
       - Geschikt voor hybride of multicloud scenario's
 
-
-
 **Exercise - Create a storage blob**
    - [Exercise 3 Create a storage blob](/az900/exercises/3-Create-a-storage-blob.md)
    
 **Identify Azure data migration options**
-   -
+   - Azure Migrate: centrale platform om workloads van on-premises naar Azure te verplaatsen. De plek waar je migratie kunt discover, assess en Migrate. Het ondersteunt servers, applicaties en databases
+      - Discovery and Assessment: analyseert VMware-, Hyper-V- en fysieke servers om te bepalen wat klaar is voor migrate
+      - Server Migration: verplaatst VMs, fysieke servers en workloads van andere clouds naar Azure
+      - Data Migration Assistand DMA: controleert SQL servers op compatibiliteit en mogeljke blokkades
+      - Azure Database Migration Service DMS: migreert databases naar Azure SQL Database, SQL managed Instance of SQL server op Azure VMs
+      - App Service Migration Assistant: beoordeelt en migreert .NET- en PHP-website naar Azure App Service.
+   
+   - Azure Data Box
+   - Fysiek apparaat die je kan bestellen om grote hoeveelheden data tot 80 TB snel en veilig naar Azure te verplaatsen. Data gewist volgens NIST 800-88r1
+   - Wanneer Azure Data Box gebruiken:
+      - One-time migration: grote bulk data naar Azure
+      - Meida libraries: offline tapes of grote mediacollecties digitaliseren
+      - VM farms en SQL server migreren: de 1e grote datastap
+      - Historical data: Grote datasets naar Azure brengen voor analytics.
+      - Initial bulk transfer: 1e grote upload via Data Box, daarna incrementale uploads via het netwerk
+      - Periodic uploads: wanneer je regelmatig grote hoeveelheden data genereert
 
+   - Export Scenarios:
+     - Disaster recovery: grote hoeveelheden Azure data terughalen naar on-premises
+     - Security/Compliance: data fysiek exporteren vanwege regelgeving
+     - Cloud-to-cloud of terug naar on-premises: workloads verplaatsen naar andere omgeving.
+    
 **Identify Azure file movement options**
-   -
+   - AzCopy: command-line tool waarmee je bestanden en blobs kunt vreplaatsen naar, van of tussen Azure Storage accounts. Uploaden, downloaden, kopieren en zelfs eenrichtings-synchronisatie uitvoeren. Bij synchronisatie kies je altijd een soure en destination. AzCopy werkt nooit bi-directioneel
+   
+   - Azure Storage Explorer: een grafische applicatie (Windows, macOS, Linux) waarmee je eenvoudig bestanden en blobs kunt beheren in je Azure Storage account. Het gebruikt AzCopy op de achtergrond, maar biedt een visuele interface om te uploaden, downloaden en data tussen storage accounts te verplaatsen.
+
+   - Azure File Sync: lokale windows file server koppelen aan Azure Files, zodat je 1 centrale file share in Azure hebt, terwijl je lokaal de performance en compatibiliteit van Windows Server behoudt. Het werkt bi-directioneel en houdt je lokale server en Azure Files automatisch synchroon.
+
+   - Toegang via alle Windows Server-protocollen zoals SMB, NFS en FTPS
+   - Meerdere loakel caches wereldwijd
+   - Kapotte server vervangen door simpelwg Azure File Sync opnieuw te installeren
+   - Cloud Tiering: veelgebruikte bestanden lokaal houden, minder gebruikte bestanden alleen in Azure totdat ze nodig zijn.
 
 **Summary:**
+   - Azure Storage biedt werelwijde, veilige en schaalbare opslag via 1 storage account dat verschillende diensten ondersteunt: Blobs, Files, Queues en Tables, elk bereikbaar via HTTP(S) en specifieke service-endpoints
+   - Beschikbaarheid en duurzaamheid worden bepaald door redundancy options zoals LRS, ZRS, GRS, GZRS  en hun read-access varianten. Data wordt altijd minimaal 3 keer opgeslagen, en kan optioneel naar een tweede regio worden gerepliceerd.
+   - 
+   - 
+
+
+
+
+
+
+
 
 ---
 ---
