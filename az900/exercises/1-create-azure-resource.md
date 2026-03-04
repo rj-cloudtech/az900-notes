@@ -4,9 +4,11 @@
 - Learning path: Introduction to Cloud Infrastructure: Azure architecture & services
 - Module: 1. Describe the core architectural components of Azure
 
-- Note: De originele oefening wordt uitgevoerd via de Azure Portal, maar ik heb ervoor gekozen om alle opdrachten in PowerShell (Azure CLI) uit te voeren om mijn CLI‑vaardigheden te trainen.
+Deze oefening voer ik twee keer uit:
+  - Eerst via de Azure Portal (UI)
+   -Daarna via de Azure CLI
 
-In deze oefening heb ik via de Azure Portal een nieuwe resource group aangemaakt en daarin een virtuele machine gedeployed. Het doel was om te zien hoe Azure automatisch alle benodigde onderdelen aanmaakt en groepeert, zoals netwerkinterfaces, disks en een virtual network. Na de deployment heb ik gecontroleerd welke resources waren aangemaakt en hoe deze binnen dezelfde resource group werden georganiseerd. Tot slot heb ik de volledige resource group verwijderd om alle resources in één keer op te schonen.
+In deze oefening heb ik via de Azure Portal en CLI een nieuwe resource group aangemaakt en daarin een virtuele machine gedeployed. Het doel was om te zien hoe Azure automatisch alle benodigde onderdelen aanmaakt en groepeert, zoals netwerkinterfaces, disks en een virtual network. Na de deployment heb ik gecontroleerd welke resources waren aangemaakt en hoe deze binnen dezelfde resource group werden georganiseerd. Tot slot heb ik de volledige resource group verwijderd om alle resources in één keer op te schonen.
 
 ## Task 1 Resource Group, create, name, location
 
