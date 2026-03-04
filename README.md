@@ -71,16 +71,17 @@ More exercises will be added as I progress.
    - Azure accounts  
    - Azure regions & datacenters  
    - Azure management infrastructure  
-   - Resource groups  
-   - [Exercise: Create an Azure Resource](/az900/exercises/1-create-azure-resource.md)
-
+   - Resource groups
+     
 5. **Azure compute & networking services**
-   - Virtual machines  
+   - Virtual machines
+   - Virtual desktop
    - Containers  
    - Functions  
-   - App hosting options  
-   - Virtual networks  
-   - VPNs, ExpressRoute, DNS  
+   - Application hosting options  
+   - Virtual networking 
+   - Azure ExpressRoute
+   - Azure DNS
 
 ---
 
