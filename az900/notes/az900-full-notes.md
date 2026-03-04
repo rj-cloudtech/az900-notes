@@ -472,7 +472,7 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
       - Geschikt voor hybride of multicloud scenario's
 
 **Exercise - Create a storage blob**
-   - [Exercise 3 Create a storage blob](/az900/exercises/3-Create-a-storage-blob.md)
+   - [Exercise 3 Create a storage blob](/az900/exercises/3-create-a-storage-blob.md)
    
 **Identify Azure data migration options**
    - Azure Migrate: centrale platform om workloads van on-premises naar Azure te verplaatsen. De plek waar je migratie kunt discover, assess en Migrate. Het ondersteunt servers, applicaties en databases
