@@ -41,7 +41,7 @@ Hands-on practice tasks to reinforce learning:
 
 - [Exercise 1 Create an Azure Resource](/az900/exercises/1-create-azure-resource.md)
 - [Exercise 2 Create an Azure Virtual Machine and Configure Network Access](/az900/exercises/2-create-an-Azure-Virtual-Machine-and-Configure-network-access.md)
-- [Exercise 3 Create a storage blob](/az900/exercises/3-Create-a-storage-blob.md)
+- [Exercise 3 Create a storage blob](/az900/exercises/3-create-a-storage-blob.md)
 
 More exercises will be added as I progress.
 
