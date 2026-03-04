@@ -512,16 +512,11 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
 **Summary:**
    - Azure Storage biedt werelwijde, veilige en schaalbare opslag via 1 storage account dat verschillende diensten ondersteunt: Blobs, Files, Queues en Tables, elk bereikbaar via HTTP(S) en specifieke service-endpoints
    - Beschikbaarheid en duurzaamheid worden bepaald door redundancy options zoals LRS, ZRS, GRS, GZRS  en hun read-access varianten. Data wordt altijd minimaal 3 keer opgeslagen, en kan optioneel naar een tweede regio worden gerepliceerd.
-   - 
-   - 
-
-
-
-
-
-
-
-
+   - Azure Storage services omvatten Blob Storage voor ongestructureerde data met hot/cool/cold/archive tiers, Azure File Sync, Queues voor asynchrone messaging, Disks voor VM-block storage en Tables voor NoSQL-data
+   - Storage accounts bestaan in verschillende performance types zoals Standard, GPv2, Premium Block Blobs, Premium File Shares en Premium Page Blobs, afgestemd op workload vereisten zoals throughput, latency of VM gebruik
+   - Voor data migratie beidt Azure zowel online als offline opties: Azure Migrate voor discover/assess/migrate van servers, databases en apps. Azure Data Box voor fysieke bulk overdracht tot 80 TB per device, geschikt voor one-time, periodic of DR-scenarios.
+   - Voor het verplaatsen van individuele bestanden zijn er tools zoals AzCopy (CLI voor kopie and sync), Azure Storage Explorer (GUI voor blob/filemanagement) en Azure File Sync (bi-directionele sync tussen Windows file servers en Azure Files met cloud tiering).
+     
 ---
 ---
 
