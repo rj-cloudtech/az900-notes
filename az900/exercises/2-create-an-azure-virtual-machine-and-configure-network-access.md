@@ -128,7 +128,7 @@ my-vmNSG
 ```
 
 ```bash
-<subscription-id>  [ ~ ]$ az network nsg rule list \
+<subscription-id> [ ~ ]$ az network nsg rule list \
 > --resource-group 'IntroAzureRG' \
 > --nsg-name my-vmNSG
 [
@@ -169,7 +169,7 @@ default-allow-ssh  1000        22      Allow
 ## Task 6: Create the network security rule
 
 ```bash
-<subscription-id>  [ ~ ]$ az network nsg rule create \
+<subscription-id> [ ~ ]$ az network nsg rule create \
   --resource-group "IntroAzureRG" \
   --nsg-name my-vmNSG \
   --name allow-http \
