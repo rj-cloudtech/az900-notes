@@ -17,7 +17,7 @@ In deze oefening heb ik via de Azure Portal en CLI een nieuwe resource group aan
   --name IntroAzureRG \
   --location "westeurope"
 {
-  "id": "/subscriptions/69799361-14fa-4e9b-8b7f-e48e93f9e422/resourceGroups/IntroAzureRG",
+  "id": "/subscriptions/<subscription-id>/resourceGroups/IntroAzureRG",
   "location": "westeurope",
   "managedBy": null,
   "name": "IntroAzureRG",
@@ -47,12 +47,12 @@ Selecting "uksouth" may reduce your costs. The region you've selected may cost
 
 {
   "fqdns": "",
-  "id": "/subscriptions/69799361-14fa-4e9b-8b7f-e48e93f9e422/resourceGroups/IntroAzureRG/providers/Microsoft.Compute/virtualMachines/my-VM",
+  "id": "/subscriptions/<subscription-id>/resourceGroups/IntroAzureRG/providers/Microsoft.Compute/virtualMachines/my-VM",
   "location": "westeurope",
-  "macAddress": "00-0D-3A-BE-54-93",
+  "macAddress": "<mac-address>",
   "powerState": "VM running",
   "privateIpAddress": "10.0.0.4",
-  "publicIpAddress": "20.229.41.188",
+  "publicIpAddress": "<public-ip>",
   "resourceGroup": "IntroAzureRG"
 }
 ```
@@ -84,7 +84,7 @@ my-VM_disk1_15de01512b074201903571c3a95155cc  INTROAZURERG     westeurope  Micro
 ```bash
 [ ~ ]$ az group show --name IntroAzureRG
 {
-  "id": "/subscriptions/69799361-14fa-4e9b-8b7f-e48e93f9e422/resourceGroups/IntroAzureRG",
+  "id": "/subscriptions/<subscription-id>/resourceGroups/IntroAzureRG",
   "location": "westeurope",
   "managedBy": null,
   "name": "IntroAzureRG",
