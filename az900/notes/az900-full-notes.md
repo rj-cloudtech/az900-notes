@@ -525,20 +525,145 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
       - **Extra:** FreeCodeCamp AZ‑90
 
 **Azure directory services**
-   -
+   - Microsoft Entra ID
+      - Directory service voor toegang tot Microsoft cloud applicaties en zelf ontwikkelde applicaties
+      - On-premises gebruik je Active Directory op Windows Server, beheerd door jouw organisatie
+      - In de cloud, Microsoft Entra ID, beheerd door Microsoft maar jij beheert de identity accounts
+      - On-premises Active Directory koppelen aan Microsoft Entra ID, detecteert Microsoft automatisch suspicious sing-in attemps zoals logins vanaf unexpected locations of unknow devices (gratis)
+
+   - Who uses Microsoft Entra ID?
+      - IT administrators: toegangsbeheer tot applicaties en resources
+      - App developers: SSO en authenticatie toevoegen aan applicaties
+      - Users: eigen identiteit beheren en self-service password reset
+      - Online service subscribers: Microsfot 365, Azure en dynamics CRM Online gebruiken Microsoft Entra ID automatisch voor authenticatie
+    
+   - What does Microsoft Entra ID do?
+      - Authentication: identity verifieren voor toegang to applicaties en resources, inclusief self-service password reset, multifacotr authentication, banned passwords lijst en smart lockout
+      - Single sign-on: 1 username en wachtwoord voor toegang to meerder applicaties. Als een gebruiker van rol wisselt of de organisatie verlaat hoef je maar 1 identity aan te passen
+      - Application management: cloud en on=premises apps beheren via Application Proxy, SaaS apps en de My Apps portal
+      - Device management: apparaten registreren en beheren via Microsoft Intune. Hiermee kun je Conditional Acces policies instellen die alleen toegang geven vanaf known devices.
+
+   - Can I connect my on-premises AD with Microsoft Entra ID?
+      - Zonder koppeling heb je twee losse identity sets: 1 on -premises en 1 in de cloud
+      - Met Microsoft Entra Connect koppel je beide systemen en synchroniseer je user identities tussen on-premises Active Directory en Microsoft Entra ID
+      - Hierdoor werken SSO, multifactor authentication en self-service passwords reset in beide omgevingen
+
+   - What is Microsfot Entra Domain Services?
+      - Managed domain services die klassieke functies biedt zoals domain join, group policy, LDAP en Kerberos/NTLM authentication
+      - Je hoeft zelf geen domain controllers te deployen, beheren of patchen, Microsoft regelt dat
+      - Handig voor legacy applications die geen moderne authentication methoden ondersteunen
+      - Maakt lift-and-shift van on-premises applicaties naar de cloud mogelijk zonder AD DS zelf te beheren
+      - Integreert met je bestaande Microsoft Entra tenant zodat gebruikers hun bestaande credentials kunnen blijven gebruiken
+
+   - How does Microsoft Entra Domain Services work?
+      - Definieert een unique namespace, dit is je domain name
+      - Azure deployed automatisch twee Windows Server domain controllers in jouw Azure region, dit heet een replica set
+      - Domain controllers hoef je niet te beheren, configureren of updaten, Azure regelt alles inclusief backups en encryption at rest via Azure Disk Encryption
+
+   - Is information synchronized?
+      - Synchronization is one-way: van Microsoft Entra ID naar Microsoft Entra Domain Services, niet andersom
+      - Resources die je direct in de managed domain aanmaakt worden niet teruggesynchroniseerd naar Microsoft Entra ID
+      - In een hybrid environment synchroniseert Microsoft Entra Connect eerst naar Microsoft Entra ID, Daaran wordt dat doorgesynchroniseerd naar de managed domain
+      - Applications, services en VMs in Azure die verbonden zijn met de managed domain kunnen gebruik maken van domain join, group policy, LDAP en Kerberos/NTLM authentication
 
 **Azure authentication methods**
-   -
+   - Authentication is het proces van het vaststellen van de indentity van een persoon, service of device
+   - Je bewijst wie je bent door credentials te verstrekken, vergelijkbaar met een ID tonen op reis
+   - Azure ondersteunt meerdere authentication methoden: passwords, SSO, Multifactor authentication (MFA) en passwordless
+   - Passwordless is zowel high security as high convenience
+   - Een los opassword is high convernience maar low security
+
+   - What's single sign-on?
+      - SSO betekent 1 keer inloggen met credential voor toegang tot meerdere applicaties en provides
+      - Zonder SSO heeft elke gebruiker meerdere passwords met verschillende policies, wat leidt tot meer security risico's en meer druk op de helpdesk
+      - Als een gebruiker de organisatie verlaat is het met meerdere identities lastig om alle accounts te vinden en te disablen, met SSO hoef je maar 1 identity te disablen
+      - SSO vereenvoudigt het security model: 1 identity per gebruiker, gekoppeld aan hun rol
+      - Belangrijk: SSO is alleen zo veilig als de initial authenticator, alle volgende verbindengen zijn gebaseerd op de beveiliging van die eerste login
+
+   - What’s multifactor authentication?
+      - MFA vereist twee of meer verificatiemethoden tijdens het inloggen
+      - 3 categorieen:
+         - Something the user knows: bijvoorbeeld een challenge question of password
+         - Something the user has: bijvoorbeeld een code op je telefoon
+         - Something the user is: biometric zoals fingerprint of face scan
+      - Als een attacker alleen je password heeft, kan hij nog steeds niet inloggen zonder de tweede factor
+      - MFA moet overal worden ingeschakeld waar mogelijk vanwege de enorme security voordelen
+     
+   - What's Microsoft Entra multifactor authentication?
+      - Microsoft service die de MFA mogelijk maakt
+      - Gebruikers kiezen een extra authentication methode tijdens het inloggen, zoals een phone call of mobile app notification
+     
+   - What’s passwordless authentication?
+      - Passwordless vervangt het password door something you have + something you are of something you know
+      - Gebruikers zijn meer geneigd zich aan security regels te houden als het makkelijk en convenient is
+      - Je device moet eerst geregistreerd worden voordat passwordless werkt, daarna weet Azure dat het device bij jou hoort
+      - Vorbeeld: je laptop is something you have, je PIN of fingerprint is something you know of something you are, samen authenticeer je zonder password
+      - Microsfot biedt 3 passwordless opties die integreren met Microsoft Entra ID
+         - Windows Hello for Business
+         - Microsoft Authenticator app
+         - FIDO2 security keys
+     
+   - Windows Hello for Business
+      - Ideaal voor gebrukers met een eigen vaste Windows PC
+      - Biometric en PIN credentials zijn direct gekoppeld aan de PC van de gebruiker, niemand anders kan inloggen
+      - Heeft PKI integratie en ingebouwde SSO ondersteuning voor toegang tot corporate resources on-premises en in de cloud
+     
+   - Microsoft Authenticator App
+      - Maakt van elke iOS of Android phone een passwordless credential
+      - Werkt op elk platform en elke browser via een notification op je phone
+      - Je bevestigt je login door een nummer op je scherm te matchen met je phone en daarna je biometric (touch of face) of PIN te gebruiken
+      - Kan ook worden gebruikt als MFA optie naast een password
+     
+   - FIDO2 security keys
+      - FIDO Fast Identity Online is een open standard voor passwordless authentication zonder username of password
+      - FIDO2 is de nieuwste standaard en bouwt voort de WebAuthn standard
+      - FIDO2 security keys zijn unphishable, er is geen password dat gestolen of geraden kan worden
+      - Typisch een USB device maar Bluetooth of NFC is mogelijk
+      - Gebruikers registeren hun security key eenmalig en gebruiken die daarna als authentication methode
 
 **Azure external identities**
-   -
+   - External identity is een persoon, device of service buiten jouw organisatie
+   - Microsoft Entra External ID regelt hoe je veilig samenwerkt met gebruikers buiten je organisatie
+   - External users kunnen hun eigen bestaande identity gebruiken om in te loggen, zoals een corporate account, Google of Facebook. Jij beheert alleen de toegang via Microsoft Entra ID
+   - Drie mogelijkheden
+      - B2B collaboration: externe gebruikers loggen in met hun eigen identity op jouw Microsoft of enterprise applicaties. Ze worden in jouw directory opgeslagen als guest users
+      - B2B direct connect: twee-weg vertrouwensrelatie met een andere Microsoft Entra organisatie, Gebruikers zijn niet zichtbaar in jouw directory maar wel in Teams shared channels
+      - Azure AD B2C: identity en access management voor consumers en customers van jouw eigen SaaS of custom apps
+   - Microsoft Entra B2B kun je guest users uitnodigen vanuit een andere tenants of social identities zoals Microsoft accounts
+   - Via Access Review kun je periodiek controleren of guest users nog steeds toegang nodig hebben en indien nodig toegang intrekken
 
 **Azure conditional access**
-   -
+   - Conditional Access i seen tool in Microsoft Entra ID die toegang toestaat of blokkeert op basis van identity signals
+   - Signals zijn: wie de gebruiker is, waar de gebruiker is en vanaf welk device de gebruiker inlogt
+   - 3 stappen
+      - Signal: verzamelen van informatie over de gebruiker,locatie en device
+      - Decision: beslissing nemen op basis van signals
+      - Enforcement: de beslissing uitvoeren, toegang verlenen, blokkeren of MFA vereisen
+   - Voorbeeld: een gebruiker op een bekende locatie krijg direct toegang, maar vanaf een unknown of high risk locatie wordt toegang geblokkeeerd of MFA vereist
+   
+   - When can I use Conditional Access?
+      - MFA vereisen op basis van rol, locatie of netwerk
+      - Toegang alleen toestaan via approved client applications
+      - Toegang alleen toestaan vanaf managed devices
+      - Toegang blokkeren vanaf untrusted of unknown locations
+
 
 **Azure role-based access control**
-   -
-
+   - RBAC: gebaseerd op het principe van least privilege; alleen toegang geven die nodig is voor een taak
+   - In plaats van per persoon toegang te beheren, wijs je mensen toe aan een role met bijbehorende permissions
+   - Nieuwe teamleden krijgen automatisch de juiste toegang door ze aan de juiste RBAC group toe te voegen
+   - RBAC wordt toegepast op een scope:
+      - Management group
+      - Subscription
+      - Resource group
+      - Single resource
+   - RBAC is hierarchaish: permissions op een parent scope worden geerfd door alle child scopes
+      - Voorbeeld: owner rol op management group niveau geeft toegang tot alle subscriptions daaronder
+      - Voorbeeld: Reader rol op subscription niveau geeft leestoegang tot alle resource groups en resources daarbinnen
+   - RBAC wordt gehandhaafd via Azure Resource Manager, toegankelijk via de Azure Portal, Cloud Shell, PowerShell en CLI
+   - RBAC regelt geen toegang op applicatie of data niveau, dat is de verantwoordelijkheid van de applicatie zelf
+   - RBAC gebruikt een allow model: als twee rollen elkaar overlappen krijg je beide permissions gecombineerd
+    
 **Azure Zero Trust model**
    -
    
