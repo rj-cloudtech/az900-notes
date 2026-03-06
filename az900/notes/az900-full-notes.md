@@ -766,19 +766,40 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
    - Defense-in-depth beschermt data via zeven lagen: physical security, identity and access, perimeter, network, compute, application en data. Elke laag vertraagt een aanval en beperkt schade als een vorige laag wordt doorbroken.
    - Microsoft Defender for Cloud monitort cloud, on-premises, hybrid en multicloud omgevingen via drie kernfuncties: continuously assess (vulnerabilities identificeren), Secure (resources hardenen via security policies en secure score) en defend (threats detecteren via security alerts en fusion kill-chain analysis)
          
-         
 
 ---
 ---
 
 
+- **Learning path:** Part 3. Describe Azure management and governance
+   - **Module:** 1. Describe cost management in Azure
+      - **Extra:** FreeCodeCamp AZ‑90
 
 
+---
+---
 
 
+- **Learning path:** Part 3. Describe Azure management and governance
+   - **Module:** 2. Describe features and tools in Azure for governance and compliance
+      - **Extra:** FreeCodeCamp AZ‑90
+
+---
+---
 
 
+- **Learning path:** Part 3. Describe Azure management and governance
+   - **Module:** 3. Describe features and tools for managing and deploying Azure resources 
+      - **Extra:** FreeCodeCamp AZ‑90
+
+---
+---
 
 
+- **Learning path:** Part 3. Describe Azure management and governance
+   - **Module:** 4. Describe monitoring tools in Azure 
+      - **Extra:** FreeCodeCamp AZ‑90
 
--
+
+---
+---
