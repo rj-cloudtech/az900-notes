@@ -1,4 +1,4 @@
-# IAM, Cloud & Security Learning Repository
+# IAM, Cloud & Security Study Repository
 
 This repository contains my study notes and hands‑on exercises for multiple Microsoft cloud and security certifications. It supports my development in Cloud, Identity & Access Management (IAM), and Cloud Security.
 
