@@ -15,7 +15,7 @@
    - Gedeelde verantwoordelijkeheid: afhankelijk van LaaS/PaaS/Saas
 
 **Cloud Models:**
-   - Private cloud: On premises met eigen datacentre, zelf beheer van hardware netwerk en beveiliging
+   - Private cloud: On premises met eigen datacenter, zelf beheer van hardware netwerk en beveiliging
    - Public cloud: Cloud die door meerdere organisaties wordt gebruikt. (Azure, AWS)
    - Hybrid cloud: Combinatie van private en public cloud
    - Multi cloud: meerdere cloud provides tegelijk met Azure Arc
@@ -158,7 +158,7 @@ Scenario‑oefeningen
       - **Extra:** FreeCodeCamp AZ‑90
 
 **What is Microsoft Azure**
-   - CSP Cloud Service Provider met een wereldwijd netwerk van datacentres
+   - CSP Cloud Service Provider met een wereldwijd netwerk van datacenters
    - Honderden services om apps te bouwen
    - Compute, storage, networking, databases, AI, security en identity services
    - IaaS, PaaS, SaaS en serverless
@@ -665,16 +665,108 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
    - RBAC gebruikt een allow model: als twee rollen elkaar overlappen krijg je beide permissions gecombineerd
     
 **Azure Zero Trust model**
-   -
+   - Zero Trust is een security model dat atlijd uitgaat van het worst case scenario, assume breach
+   - Elk request wordt geverifieerd alsof het afkomstig is van een uncontrolled network, ongeacht de locatie
+   - Drie guiding pinciples
+      - Verify explicitly: altijd authenticeren en autoriseren op basis van alle beschikbare data points
+      - Use least privilege access: toegang beperken via Just-In-Time en Just-Enough-Access (JIT/JEA) en risk-based adaptive polices
+      - Assume breach: toegang segmenteren, end-to-end encryption verfieren en analytics gebruiken voor threat detection
+   - Traditioneel werd een corporate network als veilig beschouwd, managed devices konden joinen, VPN was tightly controlled
+   - Zero Trust draait dat om: niet de locatie maar de authentication bepaalt de toegang
    
 **Defense-in-depth**
-   -
-   
+   - Beschermt data door meerdere lagen van beveiliging te gebruiken
+   - Als 1 laag wordt doorbroken, is er altijd een volgende laag die verdere schade beperkt
+   - Het vertraagt een aanval en geeft security teams de tijd om te reageren
+   - De 7 lagen van buiten naar binnen:
+      - Physical security: bescherming van de fysieke hardware in het datacenter
+      - Identity and access: toegangsbeheer tot infrastructure en cahnge control
+      - Permimeter: DDoS protection om grootschalige aanvallen te filteren
+      - Network: communicatie beperken via segmentation en access controls
+      - Compute: toegang beveiligen tot virtual machines
+      - Application: applicaties beveiligingen en vrij houden van security vulnerabilities
+      - Data: toegang beheren tot business en customer data
+        
+   - Physical security
+      - Eerste verdedigingslinie: fysieke toegang tot gebouwen en hardware in het datacenter beveiligen
+      - Zorgt ervoor dat andere lagen niet omzeild kunnen worden via fysieke toegang
+      
+   - Identity and access
+     - Identities beveiligen en toegang alleen verlenen aan wat nodig is
+     - Belangrijke maatregelen:
+         - Access control to infrastructure en change control
+         - SSO en multifactor authentication gebruiken
+         - Events en changes auditen en loggen
+              
+   - Perimeter
+     - Beschermt tegen network-based attacks
+     - Belangrijke maatregelen
+         - DDoS protection om grootschalige aanvallen te filteren voordat ze de availability beinvloeden
+         - Perimeter firewalls gebruiken om malicious attacks te identificeren en te melden
+              
+   - Network
+     - Communicatie beperken tot alleen wat noodzakelijk is om verspreiding van aanvallen te verkomen
+     - Belangrijke maatregelen
+         - Deny by default
+         - Inbound internet access beperken en outbound access waar nodig limiteren
+         - Secure connectivity naar on-premises networks implementeren
+     
+   - Compute
+     - Malware, unpatched systems en slecht beveiligde systemen openen de deur voor aanvallen
+     - Belangrijke maatregelen
+          - Secure access tot virtual machines
+          - Endpoint protection implementeren en systemen up-to-date houden
+     
+   - Application
+     - Security intergreren in de application development lifecycle om vulnerabilities te verminderen
+     - Belangrijke maatregelen
+          - Applicaties beveiligen en vrij houden van vulnerabilities
+          - Sensitive secrets opslaan in een secure storage medium
+          - Security als design requirement meenemen in alle application development
+     
+   - Data
+     - Degene die data opslaat en beheert is verantwoordelijk voor de beveiliging ervan
+     - Aanvallers zijn bijna altijd op oek naar data, in databases, op VM disks, in SaaS applications of in de cloud storage
+     - Regelgeving dicteert vaak de controls die nodig zijn voor confidentiality, integrity en availability van data
+     
 **Microsoft Defender for Cloud**
-   -
+   - Defender for cloud is een monitoring tool voor security posture management en threat protection
+   - Monitort cloud, on-premises, hybrid en multicloud omgevingen
+   - Is natively geintegreerd in Azure, geen deployment nodig voor Azure services
+
+   - Protection everywhere
+      - Voor hybrid en multicloud omgevingen wordt Azure Arc gebruikt om non-Azure machines te beschermen
+      - Cloud Security Posture Management (CSPM) werkt op multicloud zonder agents
+
+   - Azure-native protections
+      - Detecteert threats op Azure PaaS services zoals App Service, Azure SQL en Storage
+      - Classificeert automatisch data in Azure SQL en geeft vulnerability assessments
+      - Beschermt tegen brute force attacks via just-in-time VM access op geselecteerde ports
+
+   - Hybrid en multicloud
+      - On-premises machines beschermen via Azure Arc
+      - AWS en GCP worden ook ondersteund:
+         - CSPM features voor AWS resources inclusief secure score
+         - Microsoft Defender for Containers voor Amazon EKS Clusters
+         - Microsoft Defender foor Server voor Windows en Linux EC2 instances
+       
+   - Drie kernfucnties, Assess, Secure, Defend
+        - Continuously assess: security posture kennen, vulnerabilities identificeren via scans op VMs, container registries en SQL server
+        - Secure: resources hardenen via security policies gebouwd op Azure Policy controls. Nieuwe resources worden automatisch gecontroleerd op security best practices en krijgen een priotized lijst van aanbevelingen. Een secure score geeft een overzicht van de gezondheid van je security posture
+        - Defend: security alerts genereren bij gedetecteerde threats met details, remediation steps en optioneel een logic app trigger. Fusion kill-chain analysis correleert alerts automatisch om het volledige verhaal van een aanval te begrijpen. Advanced threat protection voor VMs, SQL databases, containers, web applications en networks
+          
 
 **Summary:**
-
+   - Microsoft Entra ID is de cloud-based identity and access management service van Microsoft die authentication, SSO, application management en device management biedt. On-premises Active Directory kan worden gekoppeld via Microsoft Entra Connect voor een consistente identity experience. Microsoft Entra Domain Services biedt managed domain services zoals domain join, group policy en LDAP zonder zelf domain controllers te beheren
+   - Azure ondersteunt meerdere authentication methoden van zwak naar sterk: passwords (low security), SSO (1 identity voor meerdere applicaties) MFA (iets wat je weet + hebt + bent) en passwordless via Windows Hello for Business, Microsoft Authenticator App of FIDO2 security keys.
+   - External identities maken samenwerking buiten je organisatie mogelijk via B2B collaboration (guest users), B2B direct connect (Teams shared channels) of Azure AD B2C (consumers en custumers). External users brengen hun eigen identity mee, jij beheert alleen de toegang
+   - Conditional Access verleent of blokkeert toegang op basis van identity signals zoals gebruiker, locatie en device, en kan MFA vereisen bij suspicious of high risk situaties.
+   - Azure RBAC regelt toegang via roles en scopes op basis van least privilege. Permissions zijn hierarchisch en worden geerfd van parent naar child scopes. RBAC wordt gehandhaafd via Azure Resource Manager.
+   - Zero Trust gaat altijd uit van assume breach en vereist verify explicitly, least privilege access en end-to-end encryption, ongeacht de locatie van de gebruiker.
+   - Defense-in-depth beschermt data via zeven lagen: physical security, identity and access, perimeter, network, compute, application en data. Elke laag vertraagt een aanval en beperkt schade als een vorige laag wordt doorbroken.
+   - Microsoft Defender for Cloud monitort cloud, on-premises, hybrid en multicloud omgevingen via drie kernfuncties: continuously assess (vulnerabilities identificeren), Secure (resources hardenen via security policies en secure score) en defend (threats detecteren via security alerts en fusion kill-chain analysis)
+         
+         
 
 ---
 ---
