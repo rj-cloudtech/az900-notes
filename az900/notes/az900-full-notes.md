@@ -765,8 +765,8 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
    - Zero Trust gaat altijd uit van assume breach en vereist verify explicitly, least privilege access en end-to-end encryption, ongeacht de locatie van de gebruiker.
    - Defense-in-depth beschermt data via zeven lagen: physical security, identity and access, perimeter, network, compute, application en data. Elke laag vertraagt een aanval en beperkt schade als een vorige laag wordt doorbroken.
    - Microsoft Defender for Cloud monitort cloud, on-premises, hybrid en multicloud omgevingen via drie kernfuncties: continuously assess (vulnerabilities identificeren), Secure (resources hardenen via security policies en secure score) en defend (threats detecteren via security alerts en fusion kill-chain analysis)
-         
 
+         
 ---
 ---
 
