@@ -37,7 +37,10 @@ This file contains:
 
 ## Exercises
 
-Hands-on practice tasks to reinforce learning:
+Hands-on practice tasks to reinforce learning. Each exercise is completed three times:
+- Via the Azure Portal (UI)
+- Via the Azure CLI (Bash)
+- Via PowerShell
 
 - [Exercise 1 Create an Azure Resource](/az900/exercises/1-create-azure-resource.md)
 - [Exercise 2 Create an Azure Virtual Machine and Configure Network Access](/az900/exercises/2-create-an-Azure-Virtual-Machine-and-Configure-network-access.md)
