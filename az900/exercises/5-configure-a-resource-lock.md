@@ -3,6 +3,8 @@
   - Learning Path: Describe Azure management and governance 
   - Module: 2. Describe features and tools in Azure for governance and compliance
 
+---
+
 Doel: Een resource lock aanmaken, het effect ervan testen en de lock verwijderen.
 
 Deze oefening voer ik drie keer uit:
@@ -12,6 +14,7 @@ Deze oefening voer ik drie keer uit:
 
 Hoewel de originele opdracht alleen via de Azure Portal wordt uitgevoerd, heb ik ervoor gekozen om de oefening ook via de Azure CLI (Bash) en PowerShell uit te voeren om extra ervaring op te doen met beide omgevingen.
 
+---
 
 ## Via de Azure Portal (UI)
 
