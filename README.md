@@ -47,6 +47,7 @@ Hands-on practice tasks to reinforce learning. Each exercise is completed three 
   - [Exercise 3 Create a storage blob](/az900/exercises/3-create-a-storage-blob.md)
    - [Exercise 4 Estimate workload costs by using the Pricing calculator](/az900/exercises/4-estimate-workload-costs-by-using-the-pricing-calculator.md)
   - [Exercise 5 Configure a resource lock](/az900/exercises/5-configure-a-resource-lock.md)
+    
 More exercises will be added as I progress.
 
 ---
