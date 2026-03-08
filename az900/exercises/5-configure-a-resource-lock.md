@@ -331,23 +331,47 @@ ResourceId        : /subscriptions/<subscription-id>/resourceGroups/Int
 
 ## Task 2: Create a storage account
 ```powershell
-New-AzStorageAccount `
-  -ResourceGroupName IntroAzureRG `
-  -Name tempstoragerj123 `
-  -Location westeurope `
-  -SkuName Standard_LRS `
-  -Kind StorageV2
+New-AzStorageAccount `                                                
+>>   -ResourceGroupName IntroAzureRG `                                            
+>>   -Name tempstoragerj123 `
+>>   -Location westeurope `
+>>   -SkuName Standard_LRS `
+>>   -Kind StorageV2
+
+StorageAccountName ResourceGroupName PrimaryLocation SkuName      Kind      AccessTier Cre
+                                                                                       ati
+                                                                                       onT
+                                                                                       ime
+------------------ ----------------- --------------- -------      ----      ---------- ---
+tempstoragerj123   IntroAzureRG      westeurope      Standard_LRS StorageV2 Hot        3/…
+
   ```
 
 ## Task 3: Apply a read-only resource lock
 ```powershell
-New-AzResourceLock `
-  -LockName ReadOnlyLock `
-  -LockLevel ReadOnly `
-  -ResourceGroupName IntroAzureRG `
-  -ResourceName tempstoragerj123 `
-  -ResourceType Microsoft.Storage/storageAccounts `
-  -Force
+New-AzResourceLock `                                       
+>>   -LockName ReadOnlyLock `
+>>   -LockLevel ReadOnly `
+>>   -ResourceGroupName IntroAzureRG `
+>>   -ResourceName tempstoragerj123 `
+>>   -ResourceType Microsoft.Storage/storageAccounts `
+>>   -Force
+                                                                                           
+Name                  : ReadOnlyLock
+ResourceId            : /subscriptions/69799361-14fa-4e9b-8b7f-e48e93f9e422/resourceGroups
+                        /IntroAzureRG/providers/Microsoft.Storage/storageAccounts/tempstor
+                        agerj123/providers/Microsoft.Authorization/locks/ReadOnlyLock
+ResourceName          : tempstoragerj123
+ResourceType          : Microsoft.Storage/storageAccounts
+ExtensionResourceName : ReadOnlyLock
+ExtensionResourceType : Microsoft.Authorization/locks
+ResourceGroupName     : IntroAzureRG
+SubscriptionId        : 69799361-14fa-4e9b-8b7f-e48e93f9e422
+Properties            : @{level=ReadOnly}
+LockId                : /subscriptions/69799361-14fa-4e9b-8b7f-e48e93f9e422/resourceGroups
+                        /IntroAzureRG/providers/Microsoft.Storage/storageAccounts/tempstor
+                        agerj123/providers/Microsoft.Authorization/locks/ReadOnlyLock
+
 ```
 
 ## Task 4: Try to add a container (blocked by lock)
