@@ -838,6 +838,12 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
    - Voorbeeld tag structuur:
       - AppName, Costcenter, Owner, Environment, Impact
 
+**Summary**
+   - Azure kosten worden bepaald door resource type, consumption, maintenance, geography, network traffic, subscription type en Azure Marketplace. Pay-as-you-go is het standaard model, maar reserved capacity biedt kortingen tot 72% bij commitment van 1 of 3 jaar.
+   - De pricing calculator geeft een kostenscatting voor resources zonder iets aan te maken of te factureren. Cost Management helpt onverwachte kosten te voorkomen via cost analysis, budget alerts, credit alerts en department spending quota alerts.
+   - Tags zijn metadata op Azure resources bestaande uit een naam en waarde. Ze worden gebruikt voor resource management, cost management, security, governance en workload automatisering. Tags worden niet automatisch geërfd tussen lagen.
+
+
 ---
 ---
 
@@ -845,6 +851,66 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
 - **Learning path:** Part 3. Describe Azure management and governance
    - **Module:** 2. Describe features and tools in Azure for governance and compliance
       - **Extra:** FreeCodeCamp AZ‑90
+
+**Describe the purpose of Microsoft Purview**
+   - Microsoft Purview is een familie van data governance, risk en compliance oplossingen
+   - Geeft één unified view over on-premises, multicloud en SaaS data
+   - Drie kernfuncties: automated data discovery, sensitive data classification en end-to-end data lineage
+
+   -Risk and compliance:
+      - Gebouwd op Microsoft 365 services zoals Teams, OneDrive en Exchange
+      - Beschermt sensitive data across clouds, apps en devices
+      - Identificeert data risico's en beheert regulatory compliance vereisten
+
+   - Unified data governance:
+     - Beheert data in Azure, SQL, Hive databases, on-premises en andere clouds zoals Amazon S3
+     - Maakt een actuele map van je volledige data estate inclusief classificatie en lineage
+     - Identificeert waar sensitive data is opgeslagen
+     - Beheert toegang tot data veilig en op schaal
+
+**Describe the purpose of Azure Policy**
+   - Azure Policy is een service waarmee je regels instelt die bepalen wat er wel en niet mag in je Azure omgeving
+   - Policies evalueren resources op compliance en markeren resources die niet voldoen
+   - Noncompliant resources kunnen worden geblokkeerd voordat ze aangemaakt worden
+
+   - Hoe werkt het:
+      - Policies stel je in op resource, resource group, subscription of management group niveau
+      - Policies zijn hierarchisch — een policy op een hogere laag wordt automatisch geërfd door alle onderliggende resources
+      - Azure Policy kan noncompliant resources automatisch herstellen, bijvoorbeeld een ontbrekende tag automatisch toevoegen
+      - Resources kunnen als exception worden gemarkeerd zodat ze niet automatisch worden aangepast
+
+   - Initiatives:
+      - Een initiative is een groep van gerelateerde policies samen voor een groter doel
+      - Voorbeeld: het initiative "Enable Monitoring in Azure Security Center" bevat meer dan 100 policy definitions die samen alle security aanbevelingen monitoren
+
+   - Azure Policy integreert met Azure DevOps voor compliance checks in CI/CD pipelines
+
+**Describe the purpose of resource locks**
+   - Resource locks voorkomen dat resources per ongeluk worden verwijderd of gewijzigd
+   - Locks werken onafhankelijk van RBAC, zelfs een owner moet eerst de lock verwijderen
+   - 2 types locks:
+      - Delete: lezen en wijzigen mag, verwijderen niet
+      - ReadOnly: alleen lezen mag, wijzigen en verwijderen niet
+   - Locks zijn hierarchisch, een lock op een resource group geldt automatisch voor alle resources daarbinnen
+   - Locks beheren via de Azure Portal, PowerShell, Azure CLI of ARM templates
+   - Om een locked resource te wijzigen: eerst de lock verwijderen dan de wijziging doorvoeren, daarna optioneel de lock terugzetten.
+
+**Exercise 5.  Configure a resource lock**
+  - [Exercise 5 Configure a resource lock](/az900/exercises/5-Configure-a-resource-lock.md)
+
+
+
+
+**Describe the purpose of the Service Trust portal**
+   - De Service Trust Portal is een portal van Microsoft met informatie over security, privacy en compliance practices
+   - Bevat details over hoe Microsoft zijn cloud services en klantdata beschermt
+   - Toegankelijk via servicetrust.microsoft.com/
+   - Voor sommige content moet je inloggen met een Microsoft Entra account en de non-disclosure agreement accepteren
+   - Hoofdonderdelen:
+      - My Library: documenten opslaan en notificaties instellen bij updates
+      - All Documents: centrale plek voor alle beschikbare documenten, minimaal 12 maanden beschikbaar na publicatie
+
+
 
 ---
 ---
