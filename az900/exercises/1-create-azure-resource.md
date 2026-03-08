@@ -1,5 +1,5 @@
 
-# Create a Microsoft Azure resource 
+# Exercise 1. Create a Microsoft Azure resource 
 
 - Learning path: Introduction to Cloud Infrastructure: Azure architecture & services
 - Module: 1. Describe the core architectural components of Azure
