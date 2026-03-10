@@ -451,7 +451,7 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
          - Archive: bijna nooit wordt gebruikt, minimaal 180 bewaart blijft. Goedkoop opslaag maar duur om terug te halen
 
    - Azure Files
-      - Volledig beheerde files shares in de cloud via SMB of NFS. Tegelijk te gebruiken vanuit de cloud en on-premises. S
+      - Volledig beheerde files shares in de cloud via SMB of NFS. Tegelijk te gebruiken vanuit de cloud en on-premises.
       - MB shares werken op Windows, Linux en MacOS,
       - NFS shares op Linux en macOS.
       - Azure File Sync: SMB shares lokaal cachen voor snelle toegang
@@ -857,7 +857,7 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
    - Geeft één unified view over on-premises, multicloud en SaaS data
    - Drie kernfuncties: automated data discovery, sensitive data classification en end-to-end data lineage
 
-   -Risk and compliance:
+   - Risk and compliance:
       - Gebouwd op Microsoft 365 services zoals Teams, OneDrive en Exchange
       - Beschermt sensitive data across clouds, apps en devices
       - Identificeert data risico's en beheert regulatory compliance vereisten
