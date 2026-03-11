@@ -46,7 +46,7 @@
 
 **Benefits of security and governance in the cloud**
    - Governance: policies en audits zorgen dat alles aan de regels voldoet
-   - Security: zelf de verantwoordelijkheid kiezen IaaS of PaaS/SaaS
+   - Security: zelf de verantwoordelijkheid kiezen IaaS, PaaS of SaaS
 
 **Benefits of manageability in the cloud**
    - Of the cloud: Automatically scale resources, templates, health alerts
