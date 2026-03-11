@@ -1,6 +1,6 @@
 # AZ-900 Study Notes
 
-## Week 1: 23-2-2026
+## 23-2-2026 t/m 9-3-2026
 
 - **Learning path:** Part 1. Introduction to Cloud Infrastructure: Describe cloud concepts
    - **Module:** 1. Describe cloud computing
