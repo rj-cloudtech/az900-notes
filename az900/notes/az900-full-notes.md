@@ -320,8 +320,8 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
    - VMs, Web apps en databases met elkaar kunnen communiceren, over internet met on-premises netwerken
    - Isolation and segmentation: Meerdere geïsoleerde VNET maken. Zelf een prive IP-range defineren en opdelen in subnets. Voor DNS kan Azure DNS of eigen DNS server worden gebruikt.
    - Internet communications: Een public ip adress voor een Azure resource. of de resource achter een load balancer
-   - Communicate betwween Azure resources
-      - Virtual networks: VMs, App service environment, Kubernetes (AKS), virutal machine scale sets
+   - Communicate between Azure resources
+      - Virtual networks: VMs, App service environment, Kubernetes (AKS), virtual machine scale sets
       - Service endpoints: Azure SQL database and storage accounts
    - Communicate with on-premise resources:
       - Point-to-point: Encrypted VPN connection naar het Azure vitual network
