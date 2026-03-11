@@ -443,12 +443,12 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
         - Accessible: Accessible wereldwijd over HTTP of HTTPS. .NET, Java, Node.js, Python, PHP, Ruby, Go, REST API. Scripting in Azure PowerShell of CLI. Visual solutions with Azure Portal en Azure Storage Explorer
 
    - Azure Blobs
-        - Grote hoeveelheden ongestructeerde data, tekst, afbeeldingen, video's of logbestanden. Werelwijd te bereiken via HTTP(S) met tooals zoals REST API, Azure CLI, PowerShell of client-libraries voor o.a. .NET, Java Python en NOde.js.
-         - Verschillende tiers zodat je kosten kunt afstemmen op hoe vaak data wordt gebruikt:
-         - Hot: data die vaak wordt gelezen
-         - Cool: minder vaak gebruikt en minimaal 30 dagen blijft staan
-         - Cold: zelden gebruikt en minimaal 90 dagen blijft staan
-         - Archive: bijna nooit wordt gebruikt, minimaal 180 bewaart blijft. Goedkoop opslaag maar duur om terug te halen
+      - Grote hoeveelheden ongestructeerde data, tekst, afbeeldingen, video's of logbestanden. Werelwijd te bereiken via HTTP(S) met tools zoals REST API, Azure CLI, PowerShell of client-libraries voor o.a. .NET, Java Python en Node.js.
+      - Verschillende tiers zodat je kosten kunt afstemmen op hoe vaak data wordt gebruikt:
+      - Hot: data die vaak wordt gelezen
+      - Cool: minder vaak gebruikt en minimaal 30 dagen blijft staan
+      - Cold: zelden gebruikt en minimaal 90 dagen blijft staan
+      - Archive: bijna nooit wordt gebruikt, minimaal 180 bewaart blijft. Goedkoop opslaag maar duur om terug te halen
 
    - Azure Files
       - Volledig beheerde files shares in de cloud via SMB of NFS. Tegelijk te gebruiken vanuit de cloud en on-premises.
