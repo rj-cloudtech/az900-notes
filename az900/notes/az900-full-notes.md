@@ -181,7 +181,7 @@ Scenario‑oefeningen
    - Regions: Een geografisch gebied met minstens 1 maar vaak meerdere Availability Zones
    - Availability Zones: 1 of meer datacenters, altijd onafhankelijk
    - Availability Zones: VM's, managed disks, load balancers, SQL databases
-     **3 catogorieen** 
+   - **3 catogorieen** 
       - Zonal services: Kiest een specific zone
       - Zone-redundant services: Automatisch copy over verschillende zones
       - Non-Regional services: Global services zonder region, geen impact van zone-wide of region uitval
