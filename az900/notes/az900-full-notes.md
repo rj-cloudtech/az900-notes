@@ -840,7 +840,7 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
 
 **Summary**
    - Azure kosten worden bepaald door resource type, consumption, maintenance, geography, network traffic, subscription type en Azure Marketplace. Pay-as-you-go is het standaard model, maar reserved capacity biedt kortingen tot 72% bij commitment van 1 of 3 jaar.
-   - De pricing calculator geeft een kostenscatting voor resources zonder iets aan te maken of te factureren. Cost Management helpt onverwachte kosten te voorkomen via cost analysis, budget alerts, credit alerts en department spending quota alerts.
+   - De pricing calculator geeft een kostenschatting voor resources zonder iets aan te maken of te factureren. Cost Management helpt onverwachte kosten te voorkomen via cost analysis, budget alerts, credit alerts en department spending quota alerts.
    - Tags zijn metadata op Azure resources bestaande uit een naam en waarde. Ze worden gebruikt voor resource management, cost management, security, governance en workload automatisering. Tags worden niet automatisch geërfd tussen lagen.
 
 
