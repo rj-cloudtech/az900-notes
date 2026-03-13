@@ -21,9 +21,9 @@ iam-cloud-security-study/
 │   ├── exercises/
 │   └── exam-prep/
 ├── 02-ms900/
-│   ├── notes/
-│   ├── exercises/
-│   └── exam-prep/
+    ├── notes/
+    ├── exercises/
+    └── exam-prep/
 ```
 
 ---
