@@ -56,7 +56,7 @@ Planned:
 | 03 | SC-900 – Security, Compliance & Identity | 📅 Planned | — |
 | 04 | AZ-104 – Azure Administrator | 📅 Planned | — |
 | 05 | SC-300 – Identity & Access Administrator | 📅 Planned | — |
-
+| 06 | SC-200 – Security Operations Analyst Associate | 📅 Planned | — |
 ---
 
 ## Notes Overview
