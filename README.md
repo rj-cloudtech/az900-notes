@@ -36,9 +36,9 @@ Planned:
 │   ├── exercises/
 │   └── notes/
 |── 05-sc300/
-|   ├── exam-prep/
-|   ├── exercises/
-|   └── notes/
+│   ├── exam-prep/
+│   ├── exercises/
+│   └── notes/
 |── 05-sc200/
     ├── exam-prep/
     ├── exercises/
