@@ -1,135 +1,137 @@
 # IAM, Cloud & Security Study Repository
 
-This repository contains my study notes and hands‑on exercises for multiple Microsoft cloud and security certifications. It supports my development in Cloud, Identity & Access Management (IAM), and Cloud Security.
+A personal study repository documenting my learning journey toward a career in
+Identity & Access Management (IAM) and Cloud Security. This repository combines
+theory, hands-on exercises and exam preparation across multiple Microsoft
+certifications.
 
-## Purpose
+---
 
-This repository is my central place to document what I learn while studying Microsoft cloud fundamentals and security concepts. It helps me:
-  - Organize knowledge
-  - Track progress
-  - Combine theory with hands‑on labs
-  - Prepare for certifications such as AZ‑900, AZ‑104, MS‑900, and SC‑900
+## Goal
+
+Become an IAM Specialist / Cloud Security Engineer.
+
+---
 
 ## Repository Structure
+```
+iam-cloud-security-study/
+├── 01-az900/
+│   ├── notes/
+│   ├── exercises/
+│   └── exam-prep/
+├── 02-ms900/
+│   ├── notes/
+│   ├── exercises/
+│   └── exam-prep/
+├── 03-sc900/
+│   ├── notes/
+│   ├── exercises/
+│   └── exam-prep/
+├── 04-az104/
+│   ├── notes/
+│   ├── exercises/
+│   └── exam-prep/
+└── 05-sc300/
+    ├── notes/
+    ├── exercises/
+    └── exam-prep/
+```
 
-- az900/
-  - notes/
-    - az900-full-notes.md
-  - exercises/
-    - create-azure-resource.md
-- README.md
+---
+
+## Certifications & Progress
+
+| # | Certification | Status | Date |
+|---|--------------|--------|------|
+| 01 | AZ-900 – Azure Fundamentals | ✅ Passed | Mar 12, 2026 |
+| 02 | MS-900 – Microsoft 365 Fundamentals | 🔄 In progress | — |
+| 03 | SC-900 – Security, Compliance & Identity | 📅 Planned | — |
+| 04 | AZ-104 – Azure Administrator | 📅 Planned | — |
+| 05 | SC-300 – Identity & Access Administrator | 📅 Planned | — |
 
 ---
 
 ## Notes Overview
 
-Detailed notes are stored in:
+### 01 — AZ-900: Azure Fundamentals
+[Full Notes](/01-az900/notes/az900-full-notes.md)
 
-- [Notes AZ-900](/az900/notes/az900-full-notes.md)
+- Cloud concepts
+- Azure architecture and services
+- Azure management and governance
 
-This file contains:
-- Definitions  
-- Summaries  
-- Explanations in my own words  
-- Key concepts for the AZ-900 exam  
+### 02 — MS-900: Microsoft 365 Fundamentals
+*Coming soon*
 
+### 03 — SC-900: Security, Compliance, and Identity Fundamentals
+*Coming soon*
+
+### 04 — AZ-104: Azure Administrator Associate
+*Coming soon*
+
+### 05 — SC-300: Identity and Access Administrator Associate
+*Coming soon*
+
+### 06 — SC-200: Security Operations Analyst Associate
+*Coming soon*
 ---
 
 ## Exercises
 
-Hands-on practice tasks to reinforce learning. Each exercise is completed three times:
+All hands-on exercises are completed three times:
 - Via the Azure Portal (UI)
 - Via the Azure CLI (Bash)
 - Via PowerShell
 
-  - [Exercise 1 Create an Azure Resource](/az900/exercises/1-create-azure-resource.md)
-  - [Exercise 2 Create an Azure Virtual Machine and Configure Network Access](/az900/exercises/2-create-an-azure-virtual-machine-and-configure-network-access.md)
-  - [Exercise 3 Create a storage blob](/az900/exercises/3-create-a-storage-blob.md)
-   - [Exercise 4 Estimate workload costs by using the Pricing calculator](/az900/exercises/4-estimate-workload-costs-by-using-the-pricing-calculator.md)
-  - [Exercise 5 Configure a resource lock](/az900/exercises/5-configure-a-resource-lock.md)
-    
-More exercises will be added as I progress.
+### 01 — AZ-900 Exercises
+- [Exercise 1 — Create an Azure Resource](/01-az900/exercises/1-create-azure-resource.md)
+- [Exercise 2 — Create a Virtual Machine and Configure Network Access](/01-az900/exercises/2-create-an-azure-virtual-machine-and-configure-network-access.md)
+- [Exercise 3 — Create a Storage Blob](/01-az900/exercises/3-create-a-storage-blob.md)
+- [Exercise 4 — Estimate Workload Costs using the Pricing Calculator](/01-az900/exercises/4-estimate-workload-costs-by-using-the-pricing-calculator.md)
+- [Exercise 5 — Configure a Resource Lock](/01-az900/exercises/5-configure-a-resource-lock.md)
+
+### 02 — MS-900 Exercises
+*Coming soon*
+
+### 03 — SC-900 Exercises
+*Coming soon*
 
 ---
 
-## Topics Covered
-
-1. **Cloud computing**
-   - What is cloud computing  
-   - Shared responsibility model  
-   - Cloud deployment models  
-   - Consumption-based model  
-
-2. **Benefits of using cloud services**
-   - High availability & scalability  
-   - Reliability & predictability  
-   - Security & governance  
-   - Manageability  
-
-3. **Cloud service types**
-   - IaaS  
-   - PaaS  
-   - SaaS  
-   - Examples across compute, storage, networking, identity, monitoring  
-
-4. **Core Azure architectural components**
-   - Azure accounts  
-   - Azure regions & datacenters  
-   - Azure management infrastructure  
-   - Resource groups
-     
-5. **Azure compute & networking services**
-   - Virtual machines
-   - Virtual desktop
-   - Containers  
-   - Functions  
-   - Application hosting options  
-   - Virtual networking 
-   - Azure ExpressRoute
-   - Azure DNS
-
----
-
-## Future Certifications / Roadmap
-
-This repository will grow as I continue my IAM & Cloud Security learning path.
+## Roadmap
 
 **Phase 1 — 0 to 3 months**
-  - AZ‑900 – Azure Fundamentals
-  - MS‑900 – Microsoft 365 Fundamentals
-  - SC‑900 – Security, Compliance & Identity Fundamentals
-  - PowerShell basis
-  - IAM basisbegrippen
+- AZ-900 – Azure Fundamentals ✅
+- MS-900 – Microsoft 365 Fundamentals
+- SC-900 – Security, Compliance & Identity Fundamentals
+- PowerShell basics
+- IAM fundamentals
 
 **Phase 2 — 3 to 12 months**
-  - AZ‑104 – Azure Administrator
-  - Intune basis
-  - Conditional Access verder uitwerken
-  - Identity Lifecycle verder uitwerken
+- AZ-104 – Azure Administrator
+- Intune basics
+- Conditional Access deep dive
+- Identity Lifecycle management
 
 **Phase 3 — 12 to 24 months**
-  - SC‑300 – Identity & Access Administrator
-  - SC‑200 – Security Operations Analyst
-  - IAM‑automatisering (PowerShell + Graph API)
-  - Identity Governance gevorderd niveau
-
-This roadmap supports my long‑term goal of becoming an IAM Specialist / Cloud Security Engineer.
+- SC-300 – Identity & Access Administrator
+- SC-200 – Security Operations Analyst
+- IAM automation (PowerShell + Graph API)
+- Identity Governance advanced
 
 ---
 
 ## Technologies Used
-  - Azure Portal
-  - Azure CLI
-  - PowerShell
-  - Markdown
-  - GitHub
+
+- Azure Portal
+- Azure CLI
+- PowerShell
+- Markdown
+- GitHub
 
 ---
 
 ## Status
+
 Actively learning and updating.
-
----
-
-## Goal
-Build a strong foundation in Azure and IAM as part of my path toward a career in cloud security and identity management.
