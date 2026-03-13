@@ -24,18 +24,6 @@ iam-cloud-security-study/
 │   ├── notes/
 │   ├── exercises/
 │   └── exam-prep/
-├── 03-sc900/
-│   ├── notes/
-│   ├── exercises/
-│   └── exam-prep/
-├── 04-az104/
-│   ├── notes/
-│   ├── exercises/
-│   └── exam-prep/
-└── 05-sc300/
-    ├── notes/
-    ├── exercises/
-    └── exam-prep/
 ```
 
 ---
