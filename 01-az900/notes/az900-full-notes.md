@@ -633,7 +633,7 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
    - Via Access Review kun je periodiek controleren of guest users nog steeds toegang nodig hebben en indien nodig toegang intrekken
 
 **Azure conditional access**
-   - Conditional Access i seen tool in Microsoft Entra ID die toegang toestaat of blokkeert op basis van identity signals
+   - Conditional Access is een tool in Microsoft Entra ID die toegang toestaat of blokkeert op basis van identity signals
    - Signals zijn: wie de gebruiker is, waar de gebruiker is en vanaf welk device de gebruiker inlogt
    - 3 stappen
       - Signal: verzamelen van informatie over de gebruiker,locatie en device
