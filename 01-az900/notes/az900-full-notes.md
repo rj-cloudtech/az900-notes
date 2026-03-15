@@ -1,7 +1,7 @@
 # AZ-900: Microsoft Azure Fundamentals - Study Notes
 
   - **Started:** 23-2-2026
-  - **Completed:** 9-3-2026
+  - **Exam passed:** 12-3-2026
 
 ---
 
