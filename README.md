@@ -97,24 +97,19 @@ All hands-on exercises are completed three times:
 
 ## Roadmap
 
-**Phase 1 — 0 to 3 months**
+## Roadmap
+
+**Phase 1 — Fundamentals**
 - AZ-900 – Azure Fundamentals ✅
 - SC-900 – Security, Compliance & Identity Fundamentals 🔄
 - AB-900 – Microsoft 365 Copilot and Agent Administration Fundamentals
-- PowerShell basics
-- IAM fundamentals
 
-**Phase 2 — 3 to 12 months**
-- AZ-104 – Azure Administrator
-- Intune basics
-- Conditional Access deep dive
-- Identity Lifecycle management
+**Phase 2 — Associate**
+- AZ-104 – Azure Administrator Associate
 
-**Phase 3 — 12 to 24 months**
-- SC-300 – Identity & Access Administrator
-- SC-200 – Security Operations Analyst
-- IAM automation (PowerShell + Graph API)
-- Identity Governance advanced
+**Phase 3 — IAM Specialist**
+- SC-300 – Identity and Access Administrator Associate
+- PowerShell & Microsoft Graph API
 
 ---
 
