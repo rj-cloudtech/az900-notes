@@ -33,13 +33,10 @@ Planned:
 │   ├── exercises/
 │   └── notes/
 ├── 05-sc300/
-│   ├── exam-prep/
-│   ├── exercises/
-│   └── notes/
-└── 06-sc200/
     ├── exam-prep/
     ├── exercises/
     └── notes/
+
 ```
 
 ---
@@ -52,7 +49,6 @@ Planned:
 | 03 | AB-900 – Microsoft 365 Copilot and Agent Administration Fundamentals | 📅 Planned | — |
 | 04 | AZ-104 – Azure Administrator Associate | 📅 Planned | — |
 | 05 | SC-300 – Identity and Access Administrator Associate | 📅 Planned | — |
-| 06 | SC-200 – Security Operations Analyst Associate | 📅 Planned | — |
 
 ---
 
@@ -74,9 +70,6 @@ Planned:
 *Coming soon*
 
 ### 05 — SC-300: Identity and Access Administrator Associate
-*Coming soon*
-
-### 06 — SC-200: Security Operations Analyst Associate
 *Coming soon*
 
 ---
