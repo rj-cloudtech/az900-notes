@@ -7,7 +7,7 @@
 
 - **Learning path:** Part 1. Introduction to Cloud Infrastructure: Describe cloud concepts
    - **Module:** 1. Describe cloud computing
-      - **Extra Sources:** FreeCodeCamp AZ‑90
+      - **Extra Sources:** FreeCodeCamp AZ‑900
 
 **What is cloud computing**
    - Leveren van computer services over internet, zoals: VM’s, storage, databases en networking
@@ -33,7 +33,7 @@
 
 - **Learning path:** Part 1. Introduction to Cloud Infrastructure: Describe cloud concepts
    - **Module:** 2. Describe the benefits of using cloud services
-      - **Extra:** FreeCodeCamp AZ‑90
+      - **Extra:** FreeCodeCamp AZ‑900
    
 **Benefits of high availability and scalability in the cloud**
    - High availabilty: diensten blijven draaien doordat Azure meerdere datacenters gebruikt
@@ -158,7 +158,7 @@ Scenario‑oefeningen
    
 - **Learning path:** Part 2. Introduction to Cloud Infrastructure: Azure architecture & services
    - **Module:** 1. Describe the core architectural components of Azure
-      - **Extra:** FreeCodeCamp AZ‑90
+      - **Extra:** FreeCodeCamp AZ‑900
 
 **What is Microsoft Azure**
    - CSP Cloud Service Provider met een wereldwijd netwerk van datacenters
@@ -245,7 +245,7 @@ Scenario‑oefeningen
 
 - **Learning path:** Part 2. Introduction to Cloud Infrastructure: Azure architecture & services
    - **Module:** 2. Describe Azure compute and networking services
-      - **Extra:** FreeCodeCamp AZ‑90
+      - **Extra:** FreeCodeCamp AZ‑900
 
 **Azure virtual machines**
    - Create VMs in de cloud. IaaS zodat je totale controle hebt over de 'computer'. Het OS, custom software en custom hosting configs en daar verantwoordelijk voor bent
@@ -394,7 +394,7 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
 
 - **Learning path:** Part 2. Introduction to Cloud Infrastructure: Azure architecture & services
    - **Module:** 3. Describe Azure storage services
-      - **Extra:** FreeCodeCamp AZ‑90
+      - **Extra:** FreeCodeCamp AZ‑900
 
 **Azure storage accounts**
    - Toegankelijk wereldwijd over HTTP OF HTTPS
@@ -525,7 +525,7 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
 
 - **Learning path:** Part 2. Introduction to Cloud Infrastructure: Azure architecture & services
    - **Module:** 4. Describe Azure identity, access, and security
-      - **Extra:** FreeCodeCamp AZ‑90
+      - **Extra:** FreeCodeCamp AZ‑900
 
 **Azure directory services**
    - Microsoft Entra ID
@@ -776,7 +776,7 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
 
 - **Learning path:** Part 3. Describe Azure management and governance
    - **Module:** 1. Describe cost management in Azure
-      - **Extra:** FreeCodeCamp AZ‑90
+      - **Extra:** FreeCodeCamp AZ‑900
 
 
 **Describe factors that can affect costs in Azure**
@@ -853,7 +853,7 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
 
 - **Learning path:** Part 3. Describe Azure management and governance
    - **Module:** 2. Describe features and tools in Azure for governance and compliance
-      - **Extra:** FreeCodeCamp AZ‑90
+      - **Extra:** FreeCodeCamp AZ‑900
 
 **Describe the purpose of Microsoft Purview**
    - Microsoft Purview is een familie van data governance, risk en compliance oplossingen
@@ -917,7 +917,7 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
 
 - **Learning path:** Part 3. Describe Azure management and governance
    - **Module:** 3. Describe features and tools for managing and deploying Azure resources 
-      - **Extra:** FreeCodeCamp AZ‑90
+      - **Extra:** FreeCodeCamp AZ‑900
 
 **Describe tools for interacting with Azure**
    - Azure biedt drie hoofdtools voor het beheren van je omgeving:
@@ -994,7 +994,7 @@ De fysieke infrastructuur bestaat uit datacenters die zijn georganiseerd in regi
 
 - **Learning path:** Part 3. Describe Azure management and governance
    - **Module:** 4. Describe monitoring tools in Azure 
-      - **Extra:** FreeCodeCamp AZ‑90
+      - **Extra:** FreeCodeCamp AZ‑900
 
 
 **Describe the purpose of Azure Advisor**
