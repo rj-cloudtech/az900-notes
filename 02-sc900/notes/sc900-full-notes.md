@@ -8,6 +8,7 @@
   - **Learning Path 1:** Introduction to Security, Compliance, and Identity
     - **Module 1:** Describe Security and Compliance Concepts
       - **Extra Sources:*FreeCodeCamp SC‑900*
+
         
 **Shared Responsibility Model**
 
@@ -90,6 +91,142 @@
     - Networks: segmenteren met micro segmentation, real-time threat protection, end-to-end encryption en monitoring
 
 
+**Describe encryption and hashing**
+
+  - Encryptie maakt data onleesbaar voor onbevoegeden. Om versleutelde data te lezen moet je het decrypten met secret key.
+
+  - Two types of encryption
+    - Symmetric encryption: zelfde key voo rencryptie en decryptie
+    - Asymmetric encryption: public key en private key pair; wat met de public key versleuteld is kan alleen met de private key gedecrypt worden. Wordt gebruikt voor HTTPS en electronic data signing
+
+  - Encryption for data at rest
+    - Data die opgeslagen is op een fysiek apparaat zoals een server of database
+    - Zonder d ejuiste keys is de data onleesbaas; ook als een aanvaller de ahrde schijf heeft
+
+  - Encryption for data in transit
+    - Data die beweegt van 1 locatie naar een andere, zoals over het internet
+    - HTTPS is een voorbeeld van encryption is transit
+    - Beschermt data tegen buitenstaanders tijdens het transport
+
+  - Encryption for data in use
+    - Data in niet-permanente opslag zoals RAM of CPU cache
+    - Wordt beveiligd via een enclave; een soort beveiligde lockbox die data versleuteld houdt terwijl de CPU het verwerkt
+
+  - Hashing
+    - Converteert tekst aar een unieke fixed-length waarde; een hash
+    - Dezelfde tekst geef altijd dezelfde hash met hetzelfde algoritme
+    - Geen keys nodig en niet te decrypten; anders dan encryptie
+    - Vaak gebruikt voor het opslaan van passwords; het systeem vergelijkt hashes, niet plain text passwords
+    - Risico; hackers kunnen brute-force dictionary attacks uitvoeren omdat hash functions deterministisch zijn
+    - Oplossing: Salting; een random waarde toevoegen aan de input zodat dezelfde passwords toch verschillende hashes krijgen
+   
+
+**Describe governance, risk, and compliance (GRC) concepts**
+
+  - Organisaties hebben een gestructureerde aanpak nodig voor GRC vanwege toenemende complexiteit in regelgeving. Een GRC framework bestaat uit policies, operational processes en technologieen om risico's te verminderen en compliance te verbeteren
+
+  - Governance
+    - Systeem van regels, processen en praktijken waarmee een organisatie haar activiteiten stuurt en controleert
+    - Bepaalt wie, wat, waar en wanneer gebruikers en applicaties toegang hebben tot bedrijfsresources
+    - Bepaalt wie administrative privileges heeft en voor hoe lang
+
+  - Risk
+    - Proces van identificeren, beoordelen en reageren op bedreigingen die impact hebben op bedrijfs- of klantdoelen
+    - External risks: politieke en economische factoren, natuurrampen, pandemieen, security breaches
+    - Internal risks: datalekken, intellectual property thieft, fraude, insider trading
+    
+  - Compliance
+    - Voldoen aan lokale, nationale of internationale wet- en regelgeving
+    - Bepaalt welke data beschermd moet worden, welke processen vereist zijn en wat de gevolgens zijn bij niet-naling
+    - Compliance is niet hetzelfde als security; security is breder, compliance is alleen het wettelijk minimum
+
+  - Compliance-related concepts
+    - Data residency: regelgeving over waar data fysiek opgeslagen mag worden en hoe het internationaal overdragen ma gworden
+    - Data sovereignty: data valt onder de wetten van het land waar het verzameld, opgeslagen of verwerkt wordt; 1 dataset kan onder meerdere jurisdicties vallen
+    - Data privacy: transparantie over het verzamelen, verwerken en delen van personal data; organistaties moeten voldoen aan privacy wet- en regelgeving
+
+      
+---
+
+
+  - **Learning Path 1:** Introduction to Security, Compliance, and Identity
+    - **Module 2:** Describe identity concepts 
+      - **Extra Sources:*FreeCodeCamp SC‑900*
+
+        
+**Define authentication and authorization**
+
+  - Authentication (AuthN)
+    - Bewijzen dat je bent wie je zegt dat je bent
+    - Voorbeeld: gebruikersnaam vertelt wie je bent, wachtwoord bewijst het
+    - Gebruikersnaam + wachtwoord samen zijn een vorm van authentication
+
+  - Authorization (AuthZ)
+    - Bepaalt waar een geauthenticeerde gebruiker naartoe mag en wat hij mag zien en doen
+    - Voorbeeld hotel: receptie verifieert wie je bent (authentication), keycard geeft toegang tot alleen jouw kamer en relevante liften (authorization)
+    - Bepaalt het niveau van toegang en permissions tot data en resources
+
+  - Multifactor authentication (MFA)
+    - Versterkt authentication door meer dan 1 bewijs te vereisen:
+      - Something you know: wachtwoord of PIN
+      - Something you have: telefoon of security key
+      - Something you are: biometrics
+
+  - Passwordless authentication
+    - Vermindert afhankelijkheid van wachtwoorden door sterkere alternatieven zoals passkeys of Windows Hello for business
+    - Veel passwordless methoden zijn phishing-resistant; beschermt gebruikers ook als ze op een neppe inlogpagina terechtkomen
+
+
+**Define identity as the primary security perimeter**
+
+  - De traditionele 0n-premises netwerkperimeter is neit meer voldoende. Door remote werken, BYOD, partners en IoT devices is de security perimeter veel groter geworden. Identity is de nieuwe security perimeter.
+
+  - Een identity is alles wat iemand of iets definieert; username, wachtwoord, authorization level. Een identity kan gekoppeld zijn aan een user, applicatie, device of iets anders
+
+  - The Security perimeter extends to
+    - SaaS applications buiten het corporate netwerk
+    - Persoonlijke devices van medewerkers (BOYD)
+    - Unmanged devices van partners of klaten
+    - IoT devices in het netwerk en bij klanten
+
+  - Four pillars of an identity infrastructure
+    - Administration: aanmaken en beheren van identities voor users, devices en services; wie mag identities aanmaken, updaten en verwijderen
+    - Authentication: vaststellen dat iemand echt is wie hij zegt te zijn; het uitdagen van een partij voor legitieme credentials
+    - Authorization: bepalen welk toegangsniveau een geauthenticeerde user of service heeft binnen een applicatie of service
+    - Auditing: bijhouden wie wat doet, wanneer, waar en hoe; reporting, alert en governance van identities
+
+
+**Describe the role of the identity provider**
+
+  - Modern authentication is een overkoepelende term voor authenticatie en autorisatie tussen een client (laptop of telefoon) en een server (website of applicatie). Centraal hierin staat de identity provider
+  - Een identity provider maakt, beheert en onderhoud identity informatie en biedt authentication, authorization en auditing services aan vanuit 1 centraal punt
+
+  - Hoe werkt het:
+    - Client stuurt een identity naar de identity provider
+    - Identity provider verifieert de identity
+    - Identity provider geeft een security token uit
+    - Client stuurt het token naar de server
+    - Server valideert het token via zijn trust relationship met de identity provider
+    - Gebruiker of applicatie krijg toegang tot de gevraagde resources
+   
+  - Tokens
+    - Tokens zijn time-limited en bevatten claims over de identity en wat mag die doen
+    - ID token: bewijs dat de gebruiker ingelogd is (authentication)
+    - Access token: wat een client gebruikt om toegang te krijgen tot een protected resource zoals een API (authorization)
+   
+  - Voorbeelden van identity providers
+    - Microsoft Entra ID (cloud based)
+    - Google, Amazon, Linkedin, Github
+
+  - Single sing-on (SS0)
+    - Geburiker logt 1 keer in en die credential geeft toegang to meerdere applicaties
+    - SSO binnen 1 identity provider: 1 inlog, meerdere apps
+    - Federation: 2 verschillende identity providers vertrouwen elkaar om gebruikers over grenzen heen te authenticeren
+
+
+
+
+**Describe the concept of directory services and Active Directory**
 
 
 
@@ -98,27 +235,7 @@
 
 
 
-
-
-**Describe the Zero Trust model**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**Describe the concept of federation**
 
 
 
