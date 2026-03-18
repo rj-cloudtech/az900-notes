@@ -101,7 +101,7 @@
 
   - Encryption for data at rest
     - Data die opgeslagen is op een fysiek apparaat zoals een server of database
-    - Zonder d ejuiste keys is de data onleesbaas; ook als een aanvaller de ahrde schijf heeft
+    - Zonder de juiste keys is de data onleesbaas; ook als een aanvaller de harde schijf heeft
 
   - Encryption for data in transit
     - Data die beweegt van 1 locatie naar een andere, zoals over het internet
