@@ -270,12 +270,14 @@
 ---
 
 
-  - **Learning Path 1:** Introduction to Security, Compliance, and Identity
-    - **Module 3:** 
+  - **Learning Path 2:** Introduction to Microsoft Entra
+    - **Module 1:** Describe the function and identity types of Microsoft Entra ID 
       - **Extra Sources:*FreeCodeCamp SC‑900*
 
         
-**
+**Describe Microsoft Entra ID**
+
+  - 
 
 
 
