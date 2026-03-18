@@ -29,7 +29,7 @@
    - AI shared responsibility model
     - AI volgt hetzelfde model maar met extra overwegingen omdat AI beinvloed kan worden door user inputs en outputs an generen
     - een AI-enabled applicatie heeft 3 lagen:
-      - AI Platform: onderliggende infrastructuur en AI moedel via APIs
+      - AI Platform: onderliggende infrastructuur en AI model via APIs
       - AI Application: de app die jij bouwt of deployt bovenop het platform
       - AI Usage: heo mensen in jou organisatie het AI systeem gebruiken
 
