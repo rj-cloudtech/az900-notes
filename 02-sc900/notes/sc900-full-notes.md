@@ -277,7 +277,26 @@
         
 **Describe Microsoft Entra ID**
 
-  - 
+  - Microsoft Entra ID (voorheen Azure Active Directory) is Microsoft's cloud-based identity and access management service. Organistaies gebruiken het zodat medewerkers, gasten en anderen kunnen inloggen en toegang krijgen tot resources.
+    - Interal resources: apps op het corporate netwerk, intranet en cloud apps van de organisatie zelf
+    - External services: Microsoft 365, Azure portal en SaaS applicaties
+
+  - Microsoft Entra ID kan gesynchroniseerd wowrden met on-premises Active Directory, andere directory services, of als standalone service gebruikt worden.
+
+  - Identity Secure Score
+    - Percentage dat aangeeft hoe goed je alighned bent met Microsoft's best practice aanbevelingen voor security
+    - Helpt om je identity security posture te meten, verbeteringen te plannen en het succes van verbeteringen te reviewen
+
+  - Basic terminology
+    - Tenatn: een instance van Microsoft Entra ID voor 1 oragnistaie; bevat users, groups, devices, application, access en compliance policies; heeft een unieke teant ID en domeinnaam; fungeert als security en administrative boundary
+    - directory: logische container binnen een tenat die alle identity en access management resources bevat; users,groups, applicaties, devices; vergelijkbaar met een database van identities. Een tenant heeft altijd maar 1 directory
+    - Multi-tenant: organisatie met meer dan 1 instance van Microsoft Entra ID; bijvoorbeeld bij meerdere subsidiaries, fusies of geografische grenzen met verschillende regelgeving
+
+  - Who uses Microsoft Entra ID
+    - IT admins: toegang tot corporate apps en resources beheren, MFA instellen, identities en credentials beschermen
+    - Developers: SSO toevoegen aan applicaties via standaarden, APIs gebruiken voor gepersonaliseerde app ervaringen
+    - Subscribers: Azure, Microsoft 365 en Dynamics 365 gebruikers hebben automatisch toegang tot Microsoft Entra ID
+      
 
 
 
