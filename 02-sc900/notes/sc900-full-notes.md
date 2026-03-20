@@ -298,10 +298,36 @@
     - Subscribers: Azure, Microsoft 365 en Dynamics 365 gebruikers hebben automatisch toegang tot Microsoft Entra ID
       
 
+**Describe types of identities**
 
+  - Drie Categorieen:
+    - Users: mensen
+    - Fysieke devices
+    - Software-based objects: workload identities
 
+  - User identities: Vertegenwoordigen mensen zoals medewerkers en externe gebruikers. Gekarakteriseerd oor hoe ze authenticeren en hun user type property
+    - Internal member: medewerker van organistatie; authenticeert intern via eigen microsoft Entra ID; UserType=member
+    - External guest: consultants, vendors en partners; authenticeert via extern account of externe identity provider - UserType=Guest beperkte rechten
+    - External member: gebruiker van een andere tenant die member-level toegang nodig heeft; authenticeert extern maar UserType=Member
+    - Internal guest: intern account aangemaakt voor externe partij maar ingesteld als Guest; legacy scenario, B2B collaboration is nu gebruikelijker
+   
+  - Workload Identities: Identity toegewezen aan een software workload zodat die kan authenticeren en toegang krijgen tot andere services en resources. Moeilijker te beveiligen dan user identities omdat credentials veilig opgeslagen moeten wroden en het lastig is bij te houden wanneer een workload identity aangemaakt of ingetrokken meot worden
+    - Applications en service principles: een service principal is een identity voor een applicatie; wordt aangemaakt wanneer een applicatie geregistreerd wordt in Microsoft Entra ID
+    - Managed identities: type service principal dat automatisch beheerd wordt door Microsoft Entra ID; geen credentials nodig voor developers; gratis
+      -  System-assigned: gekoppeld aan de lifecycle van 1 Azure resource; wordt automatisch verwijderd als de resource verwijderd wordt
+      -  User-assigned: standalone identity die aan meerdere resources toegewezen kan worden; moet expliciet verwijderd worden
 
+  - Device identities
+    - Microsoft Entra registered: persoonlijke device (BYOD); geen organisatieaccount nodig om in te loggen op het device
+    - Microsoft Entra joined: device gekoppeld aan zowel on-premises Active Directory als Microsoft Entra ID
 
+  - Devices geregistreerd of joined aan Microsoft Entra ID krijgen SSO tot cloud-based resources. Microsoft Intune beheert devices via mobile device management (MDM) en mobile application management (MAM)
+
+  - Groups: geeft toegangsrechten aan meerdere identities tegelijk in plaats van individueel; core principe van Zero Trust
+    - Security groups: beheert user en device toegang tot gedeelde resources; leden kunnen users, devices, andere groepen en service principals zijn; vereist administrator rol
+    - Microsoft 365 group: voor samenwerking; gedeelde mailbox, calender, SharePoint; alleen users als leden, geen administrator nodig
+   
+  - Groepen kunnen handmatig beheerd worden of via dynamic membership met automatische regels
 
 
 
