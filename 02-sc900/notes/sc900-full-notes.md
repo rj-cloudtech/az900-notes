@@ -330,9 +330,45 @@
   - Groepen kunnen handmatig beheerd worden of via dynamic membership met automatische regels
 
 
+**Describe hybrid identity**
+
+  - Veel organisaties gebruiken zowel on-premises als cloud applicaties. Users verwachten overal makkelijk toegang. Hyrid identity zorgt voor 1 enkele identity voor authenticatie en autorisatie, ongeacht waar de applicatie staat.
+  
+  - Hybrid identity is accomplished through
+    - Inter-directory provisioning: een identity aanmaken tussen twee verschillende directory servies; meest voorkomend scenario: user uit Active Directory provisioneren naar Microsoft Entra ID
+    - Synchronization: zorgt ervoor dat identity informatie van on-premises users en groups overeenkomt met de cloud
+   
+  - Microsoft Entra Cloud Sync
+    - Tool voor inter-directory provisioning en synchronization van users, group en contacts naar Microsoft Entra ID
+    - Werkt via de Microsoft Entra cloud provisioning agent; een lichtgewicht brug tussen Microsoft Entra ID en Active Directory
+    - Agent word on-premises of IaaS omgeving geinstalleerd
+    - Provisioning configuratie wordt opgeslagen in Microsoft Entra ID
+    - Gebruikt de SCIM specifatie; standaard voor het automatisch uitwisselen van user en group identity informatie tussen identity domains; wordt de de facto standaard voor provisioning
 
 
 
+**Describe external identities**
+
+  - Samenwerking met mensen buiten je organisatie vereist soms toegang to je apps en data voor externe gebruiekrs. Microsoft Entra External ID biedt oplossingen voor het werken met externe identities; van corporate accounts tot social identity providers zoals Google of Facebook
+
+  - 2 Scenarios
+    - Colloborate with business guests: samenwerken met externe partners en gasten
+    - Secure your apps for consumers and business customers: authenticatie en identity management voor consumer apps
+   
+  - 2 tenant configurations
+    - Workforce tenant: voor medewerkers, interne apps en organisatie resources; externe gasten en partners kunnen uitgenodigd worden
+    - External tenant: exclusief voor External ID scenarios; voor het publiceren van apps naar conusmenten of zakelijke klanten
+   
+  - Collaborate with business guests - B2B collaboration
+    - Deel company app en services met externe gasten terwijl je controle houdt over corporate data
+    - Gasten loggen in met hun eigen credentials van hun eigen organisatie of identity provider
+    - Geen aparte credentials nodig in jouw organisatie
+    - Geschikt voor: Office 365 apps, SaaS apps en line-of-business applicaties
+
+  - Secure your apps for consumers and business customers - CIAM
+    - Customer Identity and Acces Management (CIAM) oplossing voor consumer apps
+    - Functies: self-service registration, personalized sign-in experiences, SSO met social en enterprise identities, customer account management
+    - Ingebouwd in Microsoft Entra ID; profiteert van platform features zoals security, compliance en scalability
 
 
 
