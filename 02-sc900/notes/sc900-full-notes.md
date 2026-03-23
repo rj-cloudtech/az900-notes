@@ -370,6 +370,157 @@
     - Ingebouwd in Microsoft Entra ID; profiteert van platform features zoals security, compliance en scalability
 
 
+---
 
 
-        
+  - **Learning Path 2:** Introduction to Microsoft Entra
+    - **Module 2:** Describe the authentication capabilities of Microsoft Entra ID
+      - **Extra Sources:*FreeCodeCamp SC‑900*
+
+
+**Describe authentication methods**
+
+  - Passwords zijn de meest voorkomende vorm van authenticatie maar ook de meest kwetsbare. Microsoft Entra ID biedt meerdere authenticatiemethoden als aanvulling of vervanging
+
+  - Passwords
+    - Meest gebruikte vorm maar grootste risico bij single-factor authentication
+    - Makkelijk te onthouden = makkelijk te hacken
+    - Sterke passwords zijn moeilijk te onthouden; impact op productiviteit
+   
+  - Phone
+    - SMS based authentication: gebruiker ontvangt verificatiecode via sms- kan als primary of secondary authenticatie gebruikt worden
+    - Voice call verification: geautomatiseerde telefonische oproep waarbij gebruiker een nummer indrukt ter bevestiging; alleen als secondary authenticatie
+
+  - OATH (open Authentication)
+    - Open standaard voor time-based one-time password (TOTP) codes
+    - Software OATH tokens: app genereert OTP op basis van een secret key vanuit Microsoft Entra ID
+    - Hardware OATH tokens: fysiek apparaat zoals een key fob dat elke 30 of 60 seconden een code genereert
+    - Alleen als secondary authenticatie voor SSPR of MFA
+   
+  - Passwordless authentication Vervangt passwords met sterkere methoden die moeilijker te copieren zijn door aanvallers.
+    - Windows Hello for Business: combineert iets wat je hebt (device + certificate/key) met iets wat je weet (pin) of bent (biometrics); primary en secondary authenticatie
+    - PIDO2: open standaard voor passwordless authenticatie via een externe security key (USB, Bluetooth of NFC) unphishable, primary en secondary authenticatie
+    - Microsoft Authenticator app: app of iOS of Android; gebruiker bevestigt inlog via biometrics of PIN op telefoon; kan ook OATH verificatiecodes genereren; primary en secondary authenticatie
+    - Certificate-based authentication (CBA): authenticatie via X.509 certificates direct tegen Microsoft Entra ID; alleen als primary passworldless authenticatie
+
+  - Primary en secondary authentication
+    - Primary: hoofdmethode bij inloggen
+    - Secondary: aanvullende verificatie bij MFA of SSPR; niet alle methoden kunnen als primary gebruikt worden
+   
+
+  **Describe multifactor authentication**
+
+  - MFA vereist meer dan 1 vorm van identificatie bij het inloggen. Verbetert de security van een identity aanzienlijk terwijl het eenvoudig blijft voor gebruikers
+  - Three factors
+    - Something you know: password of PIN
+    - Something you have: telefoon of hardware key
+    - Something you are: biometrics zoals vingerafdruk of face scan
+   
+  - Microsoft Entra ID verwerkt MFA automatisch zonder aanpassingen aan applicaties of services. Gebruikers kunnen kiezen uit de verificatiemethoden die ze geregistreerd hebben. Administrators kunnen bepaalde methoden verplichten
+  - Supported verification methods
+    - Microsoft Authenticator app
+    - Windows Hello for Business
+    - FIDO2 security key
+    - OATH hardware token
+    - OATH software token
+    - SMS
+    - Voice Call
+
+  - Security defaults and multifactor authentication
+    - Set van basis identity security mechanismen aanbevolen door microsoft
+    - Gratis en automatisch toegepast wanneer ingeschakeld
+    - Enforced: MFA registratie voor alle users, MFA verplicth voor administrators, MFA vereist voor alle users wanneer nodig
+    - Geschikt voor organisaties die security willen verbeteren zonder complexe configuratie of voor organisaties opde gratis tier van Microsoft Entra ID
+    - Minder geschikt voor organisaties met Microsoft Entra ID P1 of P2 licenties of complexere security requirements
+   
+      
+**Describe self-service password reset**
+
+  - Self-service password reset (SSPR) laat users hun wachtwoord zelf wijzigen of resetten zonder hup van een administrator of helpdesk
+  - Key benefits
+    - Verlaagt IT support kosten
+    - Users kunnen sneller weer aan het werk
+    - Administrators kunnen security instellingen aanpassen zonder inlog te verstoren
+    - Bevat audit logs beschikbaar via een API; te importeren in een SIEM system
+      
+  - Requirements voor SSPR
+    - Microsoft Entra ID licentie toegewezen
+    - SSPR ingeschakeld door een administrator
+    - Geregistreerd met authenticatiemethode; minimaal 2 aanbevolen
+   
+  - Available authentication methods
+    - Mobile app notification
+    - Mobile app code
+    - Email
+    - Mobile phone
+    - Office phone
+    - Security questions; alleen beschikbaar bij SSPR, niet bij normaal inloggen. Administrators kunnen geen security questions gebruiken
+   
+  - Belangrijke details
+    - Administrator accounts zijn standaard ingeschakeld voor SSPR en vereisen 2 authenticatiemethoden
+    - Administrators kunnen geen security questions gebruiken
+    - Password write-back: wachtwoorden wordt ook teruggezet naar on-premises Active Directory zodat users direct kunnen inloggen op on-premises devices en applicaties
+    - Email notificaties kunnen ingesteld worden bij SSPR events; bij admins accounts worden alle global admins genotificeerd
+   
+
+**Describe password protection and management capabilities**
+
+  - Microsoft Entra password protection vermindert het risico dat users zwakke wachtwoorden instellen door bekende zwakke wachtwoorden en varienten te detecteren en blokkeren
+
+  - Global banned password list
+    - Automatisch bijgehouden en toegepast op alle users in een Microsoft Entra tenant
+    - Beheerd door het Microsoft Entra ID Protection team op basis van real-world security telemtry data
+    - Blokkeert bekende zwakke wachtwoorden en varianten via smart fuzzy-matching technieken
+    - Kan niet worden uitgeschakeld
+   
+  - Custom banned password list
+    - Admins kunnen eigen lijst aanmaken voor organisatiespecifieke termen
+    - Voorbeelden: brand names, product names, locaties, interne termen en afkortingen
+    - Gecombineerd met de global banned password list
+    - Vereist Microsoft Entra ID P1 of P2 licentie
+
+  - Protecting against password spray
+    - Password spray attacks proberen een klein aantal zwakke wachtwoorden tegen alle accounts in een organisatie
+    - Microsoft Entra password protection blokkeert alle bekende zwakke wachtwoorden die gebruikt worden bij password spray attacks
+    - Gebaseerd op real-world security telemetry data van Microsoft Entra ID
+   
+  - Hybrid security
+    - Microsoft Entra password protection kan geintegreerd worden in een on-premises Active Directory omgeving
+    - On-premises component ontvangt de global banned password list en custom policies van Microsoft Entra ID
+    - Domain controllers verwerken password change events met de lijsten
+    - Zorgt ervoor dat password protection overal toegepast wordt waar een user zijn wachtwoord wijzigt
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
