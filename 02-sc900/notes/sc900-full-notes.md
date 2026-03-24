@@ -11,7 +11,6 @@
 
         
 **Shared Responsibility Model**
-
   - On-premises: zelf verantwoordelijk voor alles, van gebouw tot de data.
   - Cloud: gedeelde verantwoordelijkheid
 
@@ -50,7 +49,6 @@
 
 
 **Describe defense in depth**
-
   - Gelaagde aanpak van security, niet afhankelijk van 1 enkele beschermingslijn
   - Elke laag biedt bescherming; als 1 laag doorbroken wordt, stopt de volgende laag de aanvaller
 
@@ -72,7 +70,6 @@
 
 
 **Describe the Zero Trust model**
-
   - Gaat ervan uit dat alles op een open en onbetrouwbaar netwerk zit, ook achter de firewall
   - Principe: Trust no one, verify everything
   - Geen enkel wachtwoord is voldoende; altijd extra verificatie vereist. Geen toegang tot hele netwerken, alleen tot wat gebruiker nodig heeft.
@@ -92,7 +89,6 @@
 
 
 **Describe encryption and hashing**
-
   - Encryptie maakt data onleesbaar voor onbevoegeden. Om versleutelde data te lezen moet je het decrypten met secret key.
 
   - Two types of encryption
@@ -122,7 +118,6 @@
    
 
 **Describe governance, risk, and compliance (GRC) concepts**
-
   - Organisaties hebben een gestructureerde aanpak nodig voor GRC vanwege toenemende complexiteit in regelgeving. Een GRC framework bestaat uit policies, operational processes en technologieen om risico's te verminderen en compliance te verbeteren
 
   - Governance
@@ -155,7 +150,6 @@
 
         
 **Define authentication and authorization**
-
   - Authentication (AuthN)
     - Bewijzen dat je bent wie je zegt dat je bent
     - Voorbeeld: gebruikersnaam vertelt wie je bent, wachtwoord bewijst het
@@ -178,7 +172,6 @@
 
 
 **Define identity as the primary security perimeter**
-
   - De traditionele 0n-premises netwerkperimeter is neit meer voldoende. Door remote werken, BYOD, partners en IoT devices is de security perimeter veel groter geworden. Identity is de nieuwe security perimeter.
 
   - Een identity is alles wat iemand of iets definieert; username, wachtwoord, authorization level. Een identity kan gekoppeld zijn aan een user, applicatie, device of iets anders
@@ -197,7 +190,6 @@
 
 
 **Describe the role of the identity provider**
-
   - Modern authentication is een overkoepelende term voor authenticatie en autorisatie tussen een client (laptop of telefoon) en een server (website of applicatie). Centraal hierin staat de identity provider
   - Een identity provider maakt, beheert en onderhoud identity informatie en biedt authentication, authorization en auditing services aan vanuit 1 centraal punt
 
@@ -225,7 +217,6 @@
 
 
 **Describe the concept of directory services and Active Directory**
-
   - Een directory is een hierarchische structuur die informatie opslaat over objecten op een netwerk. Een directory service maakt die data beschikbaar voor users, administrators, services en applicaties
 
   - Active Directory (AD)
@@ -249,7 +240,6 @@
 
 
 **Describe the concept of federation**
-
   - Federartion maakt toegang mogelijk tot services over organisatie- domein grenzen heen door trust relationshops te configureren tussen identity providers. Geen aparte username en wachtwoord nodig per domein.
 
   - Hoe het werkt
@@ -276,7 +266,6 @@
 
         
 **Describe Microsoft Entra ID**
-
   - Microsoft Entra ID (voorheen Azure Active Directory) is Microsoft's cloud-based identity and access management service. Organistaies gebruiken het zodat medewerkers, gasten en anderen kunnen inloggen en toegang krijgen tot resources.
     - Interal resources: apps op het corporate netwerk, intranet en cloud apps van de organisatie zelf
     - External services: Microsoft 365, Azure portal en SaaS applicaties
@@ -299,7 +288,6 @@
       
 
 **Describe types of identities**
-
   - Drie Categorieen:
     - Users: mensen
     - Fysieke devices
@@ -347,7 +335,6 @@
 
 
 **Describe external identities**
-
   - Samenwerking met mensen buiten je organisatie vereist soms toegang to je apps en data voor externe gebruiekrs. Microsoft Entra External ID biedt oplossingen voor het werken met externe identities; van corporate accounts tot social identity providers zoals Google of Facebook
 
   - 2 Scenarios
@@ -379,7 +366,6 @@
 
 
 **Describe authentication methods**
-
   - Passwords zijn de meest voorkomende vorm van authenticatie maar ook de meest kwetsbare. Microsoft Entra ID biedt meerdere authenticatiemethoden als aanvulling of vervanging
 
   - Passwords
@@ -409,7 +395,6 @@
    
 
   **Describe multifactor authentication**
-
   - MFA vereist meer dan 1 vorm van identificatie bij het inloggen. Verbetert de security van een identity aanzienlijk terwijl het eenvoudig blijft voor gebruikers
   - Three factors
     - Something you know: password of PIN
@@ -435,7 +420,6 @@
    
       
 **Describe self-service password reset**
-
   - Self-service password reset (SSPR) laat users hun wachtwoord zelf wijzigen of resetten zonder hup van een administrator of helpdesk
   - Key benefits
     - Verlaagt IT support kosten
@@ -464,7 +448,6 @@
    
 
 **Describe password protection and management capabilities**
-
   - Microsoft Entra password protection vermindert het risico dat users zwakke wachtwoorden instellen door bekende zwakke wachtwoorden en varienten te detecteren en blokkeren
 
   - Global banned password list
@@ -491,10 +474,40 @@
     - Zorgt ervoor dat password protection overal toegepast wordt waar een user zijn wachtwoord wijzigt
    
 
+---
 
 
+  - **Learning Path 2:** Introduction to Microsoft Entra
+    - **Module 2:** Describe the authentication capabilities of Microsoft Entra ID
+      - **Extra Sources:*FreeCodeCamp SC‑900*
 
+**Describe Conditional Access**
+  - Conditional Access is een feature van Microsoft Entra ID die een extra beveilingslaag toevoegt voordat geauthenticeerde users toegang krijgen tot data of resources. Werkt via policies die signalen analyseren zoals user, locatie, device, applicatie en risico om automatisch toegangbeslissingen te nemen
+  - Conditional Acces Policies zijn if-then statements; bijvoorbeeld: als een user tot een bepaalde groep behoort, dan is MFA vereist.
+  - Belangrijk: Conditional Access wordt toegepast na first-factor authentication; het is geen eerste verdedigingslinie tegen DoS aanvallen
+  - Conditional access policy components: een policy bestaat uit twee componenten: assignments en access controls
+  - Assignments bepaalt de who, what, where van de policy. Alle assignments zijn logisch AND; alle assignments moeten voldaan zijn om policy te activeren
+      - Users: wie de policy includeert of excludeert; alle users, specifieke users en groups, directory roles, external guests en workload identities
+      - Target resources:
+        - Cloud apps: Microsoft applicaties, Office 365, Azure services en Microsoft Entra geregistreerde applicaties
+        - User actions: policy gebaseerd op acties zoals het registreren van security informatie of het joinen van devices
+        - Global Secure Access: beveiligen van traffic via Global Secure Acces service
+        - Authentication context: extra beveiliging voor specifieke data of acties binnen applicaties
 
+      - Network: toegang controleren op basis van netwerk of fysieke lokatie; trusted networks, IP ranges of named locations
+      - Conditions:
+        - Sign in risk: kans dat een sign in niet geautoriseerd is door de identity owner
+        - User risk: kans dat een identity of account gecompromitteerd is
+        - Insider risk: risicosignalen vanuit Microsoft Purview
+        - Device platform: operating system van het device
+        - Client apps: browser, mobiele app of desktop client
+        - Filters for devices: policies targeten op specifieke device eigenschappen
+
+      - Access controls
+        - Bepaald hoe de polici gehandhaafd wordt na assignments
+          - Block access: toegang volledig blokkeren
+          - Grant access: toegang verlenen zonder of met extra controls zoals MFA, specifieke authenticatiemethoden, device compliance, of password change
+          - Session: beperkte ervaring binnen specifieke cloud applicaties; bijvoorbeeld downloaden, kopieren of printen blokkeren voor gevoelige documenten, sign-in frequency isntellen of application enforced restrictions
 
 
 
