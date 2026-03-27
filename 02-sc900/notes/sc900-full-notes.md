@@ -361,7 +361,7 @@
 
 
   - **Learning Path 2:** Introduction to Microsoft Entra
-    - **Module 2:** Describe the authentication capabilities of Microsoft Entra ID
+    - **Module 3:** Describe the authentication capabilities of Microsoft Entra ID
       - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
 
 
@@ -478,7 +478,7 @@
 
 
   - **Learning Path 2:** Introduction to Microsoft Entra
-    - **Module 2:** Describe the authentication capabilities of Microsoft Entra ID
+    - **Module 4:** Describe the authentication capabilities of Microsoft Entra ID
       - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
 
 **Describe Conditional Access**
@@ -510,9 +510,81 @@
           - Session: beperkte ervaring binnen specifieke cloud applicaties; bijvoorbeeld downloaden, kopieren of printen blokkeren voor gevoelige documenten, sign-in frequency isntellen of application enforced restrictions
 
 
+**Describe Global Secure Access in Microsoft Entra**
+  - Global Secure Access is microsoft's Security Edge (SSE) oplossing, gebouwd op Zero Trust principes. Het combineert Microsoft Entra Internet Access, Microsoft Entra Internet Acces for Microsoft Services en Microsoft Entra Private Access; samen met Microsoft Defender for Cloud apps; om netwerk, identity en endpoint access controls samen te brengen
+
+  - SSE helpt organisaties met:
+    - Verminderen van risico van lateral movement via gecompromitteerde VPN tunnel
+    - Beveiligingsperimeter rondom internet-bassed assets
+    - Betere service op remote locaties zoals branch offices
+
+  - Microsoft Entra Internet Access
+    - Identity-centric Secure Web Gateway (SWG) oplossing voor SaaS applicaties en internet traffic. Beschermt users, devices en data tegen internet-based bedreigingen.
+      - Web content filtering: toegang tot websites reguleren op basis van content categorieen en domeinnamen
+      - Universial Conditional Access: Conditional Access policies toepassen op alle internet bestemmingen, ook die niet gefedereerd zijn met Microsoft Entra ID
+      - Universal Continuous Acccess Evaluation (CAE): apps en Microsoft Entra communiceren continu om user access up-to-date te houden; wijzigingen zoals locatie of security risico worden in near real time verwerkt
+
+    - Vereist Microsoft Entra Suite of standalone microsoft Entra Internet Access licentie.
+
+  - Microsoft Entra Internet Access for Microsoft Services
+    - Directe connectiviteit naar Microsoft services zoals Echange Online, SharePoint Online en Microsoft Teams
+    - Compliant network check: vereist dat users via Global Secure Access verbinen voordat ze toegang krijgen to mMicrosoft Entra ID applicaties; beschermt tegen token theft
+    - Universal tenant restrictions; voorkomt data exfiltration naar ongeautoriseerde tenants of persoonlijke accounts
+    - Source IP restoration: hersteld het originele IP adres van user in sign-in logs zodat locatie-based Conditional Access policies accuraat blijven
+    - Enriched Microsoft 365 logs: gedetailleerde network traffic logs voor Microsoft traffic
+
+  - Microsoft Entra Internet Access for Microsoft Services is included with a Microsoft Entra ID P1 or P2 license, making it available to a broad range of organizations
+    
+  - Microsoft Entra Private Access
+    - Vervangt legacy VPNs met Zero Trust Network Access (ZTNA) aanpak; geeft per app toegang in plaats van brede netwerktoegang
+      - Quick Access: admins definieren private resources via FQDN, IP adres of IP range en poorten; gegroepeerd in 1 applicatie met Conditional Access policies
+      - Per app Access: meer granulaire aanpak waarbij elke enterprise applicatie eigen resource definities, users assignments en Conditional Access policies heeft
+
+  - Global Secure Access dashboard
+      - Dashboard in Microsoft Entra admin center met visualisaties van network traffic. Admins kunnen users, devices, cross-tenant access, web category filtering en device status monitoren
+       
+  - Securing AI Workloads
+    - Global Secure Access zorgt ervoor dat traffic van AI services door dezelfde identity-aware security controls gaat als andere enterprise traffic; Conditional Access policies met compliant network checks, user risk, device state en locatie; Zero Trust principles uitgebreid naar AI workloads
 
 
+**Describe Microsoft Entra roles and role-based access control (RBAC)**
+  - Microsoft Entra roles beheren permissions voor Microsoft Entra resources. Role-based access control (RBAC) is het beheren van toegang via rollen
 
+  - Built-in roles: Rollen met een vaste set van permissions die niet aangepast kunnen worden
+    - Global administrator: toegang tot alle administratieve features in Microsoft Entra; wordt automatisch toegewezen aan de degene die de tenant aanmaakt
+    - User administrator: aanmaken en beheren van users en groups, support tickets en service health monitoren
+    - Billing administrator: aankopen doen, subscriptions en support tickets beheren, service health monitoren
+   
+  - Custom roles: Flexibele rollen die je zelf samenstelt uit een lijst van beschikbare permissions; dezelfde permissions als de built-in roles maar jij kiest welke je includeert
+    - 2 stappen:
+      - Stap 1: custom role definition aanmaken; permissions kiezen uit preset lijst
+      - Stap 2: role assignment aanmaken; role toewijzen aan users of groups op een bepaalde scope
+
+    - Scope bepaalt tot welke resources de role member toegang heeft:
+      - Organization-wide scope: permissions over alle resources
+      - Object scope: permissions over 1 specifieke resource zoals 1 applicatie
+    - Vereist Microsoft Entra ID P1 of P2 licentie.
+   
+    - Least privilege: best practice: geef users alleen de toegang die ze nodig hebben. Beperk de schade bij een gecompromitteerd account; vooral belangrijk bij AI services die grote hoeveelheden data kunnen benaderen
+   
+    - Categories of Microsoft Entra roles
+      - Microsoft Entra specific roles: beheren resources binnen Microsoft Entra ID; bijvoorbeeld User Admin, Application, Admin, Groups admin
+      - Service-specific roles: beheren features binnen een specifieke Microsoft 365 service; bijvoorbeeld Exchange admin, Intune admin, SharePoint admin, Teams admin
+      - Cross-over roles: spans meerdere services; bijvoorbeeld Security admin en Compliance admin
+     
+  - Difference between Microsoft Entra RBAC en Azure RBAC
+    - Microsoft Entra RBAC: beheert toegang tot Microsoft Entra resources zoals users, groups en applicaties
+    - Azure RBAC: beheert toegang tot Azure resources zoals virtual machines en storage via Azure Resource Management
+
+
+**summary**
+  - Passwords zijn de zwakste authenticatiemethode; aanvullen of vervangen met sterkere methoden zoals, MFA, passwordless of certificate-based authentication
+  - MFA vereist something you know, something you have en something you are. Drastisch betere security
+  - SSPR laat users zelf hun wachtwoord resetten zonder helpdesk. Vereist licentie, admin activatie en minimaal 2 authenticatiemethoden
+  - Password protection blokkeert zwakke wachtwoorden via global en custom banned password lists, werkt ook on-premises via hybrid security
+  - Conditional Access analyseert signalen zoals user, locatie, device en risico om automatisch toegang te verlenen, blokkeren of beperken via if-then policies
+  - Global Secure Access is Microsoft's SSE oplossing gebouwd op Zero Trust; combineert Internet Access, Internet Access for Microsoft Services en Private Access voor netwerk, identity en endpoint beveiliging
+  - Microsoft Entra RBAC beheert toegang via built-in en custom roles; altijd least privilege toepassen; verschil met Azure RBAC: Entra beheert identity resources, Azure beheert cloud infrastructure resources
 
 
 
