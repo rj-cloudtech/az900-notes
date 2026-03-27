@@ -263,7 +263,6 @@
   - **Learning Path 2:** Introduction to Microsoft Entra
     - **Module 1:** Describe the function and identity types of Microsoft Entra ID 
       - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
-
         
 **Describe Microsoft Entra ID**
   - Microsoft Entra ID (voorheen Azure Active Directory) is Microsoft's cloud-based identity and access management service. Organistaies gebruiken het zodat medewerkers, gasten en anderen kunnen inloggen en toegang krijgen tot resources.
@@ -361,7 +360,7 @@
 
 
   - **Learning Path 2:** Introduction to Microsoft Entra
-    - **Module 3:** Describe the authentication capabilities of Microsoft Entra ID
+    - **Module 2:** Describe the authentication capabilities of Microsoft Entra ID
       - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
 
 
@@ -472,13 +471,15 @@
     - On-premises component ontvangt de global banned password list en custom policies van Microsoft Entra ID
     - Domain controllers verwerken password change events met de lijsten
     - Zorgt ervoor dat password protection overal toegepast wordt waar een user zijn wachtwoord wijzigt
-   
+
+
+**Summary**
 
 ---
 
 
   - **Learning Path 2:** Introduction to Microsoft Entra
-    - **Module 4:** Describe the authentication capabilities of Microsoft Entra ID
+    - **Module 3:** Describe access management capabilities of Microsoft Entra
       - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
 
 **Describe Conditional Access**
@@ -587,6 +588,14 @@
   - Microsoft Entra RBAC beheert toegang via built-in en custom roles; altijd least privilege toepassen; verschil met Azure RBAC: Entra beheert identity resources, Azure beheert cloud infrastructure resources
 
 
+---
+
+
+  - **Learning Path 2:** Introduction to Microsoft Entra
+    - **Module 4:** Describe the identity protection and governance capabilities of Microsoft Entra 
+      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
+
+**Describe Microsoft Entra ID Governance**
 
 
 
@@ -594,12 +603,42 @@
 
 
 
+**Describe access reviews**
 
 
 
 
 
 
+
+**Describe entitlement management**
+
+
+
+
+
+
+
+**Describe the capabilities of Privileged Identity Management**
+
+
+
+
+
+
+**Describe Microsoft Entra ID Protection**
+
+
+
+
+
+**Describe Microsoft Entra Verified ID**
+
+
+
+
+
+**Describe Microsoft Entra integration with Microsoft Security Copilot**
 
 
 
