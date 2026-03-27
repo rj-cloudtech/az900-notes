@@ -140,14 +140,25 @@
     - Data sovereignty: data valt onder de wetten van het land waar het verzameld, opgeslagen of verwerkt wordt; 1 dataset kan onder meerdere jurisdicties vallen
     - Data privacy: transparantie over het verzamelen, verwerken en delen van personal data; organistaties moeten voldoen aan privacy wet- en regelgeving
 
-      
+
+**Summary**
+  - Shared Responsibility Model: On-premises: alles zelf. Cloud: gedeeld — hoe hoger het service niveau (IaaS → PaaS → SaaS) hoe meer de provider overneemt. Altijd jouw verantwoordelijkheid: data, identities, endpoints en configuratie
+  - Defense in depth: gelaagde beveiliging via physical, identity, perimeter, network, compute, application en data layers; doel is CIA beschermen, Confidentiality, Integrity en Availability
+  - Zero Trust: trust no one, verify everything;
+    - 3 principes: Verify explicitly, Least privilegded access, Assume breach
+    - 6 pillars: Identities, Devices, Applications, Data, Infrastructure en Networks
+  - Ecnryption: Symmetric (zelfde key), Assymetric (public/private key pair)
+      - Data at rest, in transit en in use
+      - Hashing is eenrichtingsverkeer zonder keys, gebruikt voor passwords, beveiligd met salting tegen brute-force attacks
+  - GRC: Governance stuurt en controleert activiteiten; Risk identificeert interne en externe bedreigingen; Compliance voldoet aan wet- en regelgeving; compliance is niet hetzelfde als security; data residency, sovereignty en privacy zijn compliance-gerelateerde concepten
+    
+  
 ---
 
 
   - **Learning Path 1:** Introduction to Security, Compliance, and Identity
     - **Module 2:** Describe identity concepts 
       - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
-
         
 **Define authentication and authorization**
   - Authentication (AuthN)
@@ -256,6 +267,15 @@
     - B2B collaboration: inloggen met een account van een andere organisatie
     - Social identity provider: inloggen met Google account op een exterene applicatie
 
+**Summary**
+  - Authentication (AuthN) bewijst wie je bent
+  - Authorization (AuthZ) bepaalt wat je mag
+  - Idenitity is de nieuwe security perimeter; traditioneel netwerk niet meer voldoende door remote werken, BYOD, IoT en externe partners; 4 pillars: Administration, Authentication, Authorization en Auditing
+  - Identity provider beheert identities centraal en geeft time-limited tokens uit; ID token voor authentication, access token voor authorization; SSO via 1 inlog voor meerdere apps;  federation tussen 2 identity providers via trust relationship
+  - Active Directory (AD DS) is de on-premises directory service met domain controllers
+    - Beperking: geen support voor mobile devices, SaaS of modern authentication; Microsoft Entra ID is de cloud-based opvolger van IDaaS
+    - Federation geeft toegang over organisatiegrenzen via trust relationships tussen identity providers; trust is niet altijd bidirectional
+
 
 ---
 
@@ -355,6 +375,13 @@
     - Functies: self-service registration, personalized sign-in experiences, SSO met social en enterprise identities, customer account management
     - Ingebouwd in Microsoft Entra ID; profiteert van platform features zoals security, compliance en scalability
 
+**Summary**
+  - Microsoft Entra ID is Microsoft's cloud-based IAM service; 1 tenant, 1 directory; synchroniseerbaar met on-premises Active Directory
+  - Identities voor users (internal/external, member/guest), devices (registered, joined, hybrid joined) en workloads (service principals, managed identities)
+  - Managed identities elimineren credential beheer voor developers; system=assigned aan 1 resource, user-assigned herbruikbaar
+  - Groups voor toegangsbeheer (security) of samenwerking (Microsoft 365); handmatig of dynamic membership
+  - Hybrid identity via Microsoft Entra Cloud Sync met SCIM; synchroniseert on-premises Active Directory naar cloud
+  - External identities via B2B collaboration voor business gasten of CIAM voor consumer apps
 
 ---
 
@@ -474,6 +501,11 @@
 
 
 **Summary**
+  - Passwords zijn de zwakste authenticatiemethode; vervangen of aanvullen met Phone, OATH tokens, Passwordless methodesn zoals Windows Hello for Business, FIDO2, Microsoft Authenticatior of Certificate-based authentications (CBA)
+  - MFA vereist something you know, something you have en something you are; Microsoft Entra verwerkt dit automatisch, Security defaults zijn gratis en enforced basis MFA voor alle users
+  - SSPR laat users zelf wachtwoord resetten zonder helpdesk; vereist licentie, admin activatie en minimaal 2 authenticatiemethoden; Password write-back synchroniseert naar on-premises Active Directory
+  - Password protection blokkeert zwakke wachtwoorden via global banned password list en custom banned password list; beschermt tegen password spray attacks, werkt ook on-premises via hybrid security
+
 
 ---
 
