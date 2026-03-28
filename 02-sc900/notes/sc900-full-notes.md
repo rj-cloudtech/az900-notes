@@ -807,6 +807,13 @@
   - Security Copilot integreert met Microsoft Entra voor AI-driven identity onderzoeken via standalone en embedded experiences; gespecialisserde agents voor access reviews, Conditional Access optimalisatie en identity risk management
 
 
+---
+
+
+  - **Learning Path 3:** Introduction to Microsoft security solutions
+    - **Module 1:** Describe Microsoft Security Copilot
+      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
+
 
 
 
