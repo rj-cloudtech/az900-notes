@@ -29,9 +29,7 @@
   - Combineren apps, groepen en rollen
   - Onderdeel van **Entitlement Management**
 
----
-
-## **Defender-producten**
+### **Defender-producten**
 
 ## **Defender for Cloud**
   - **Cloud Security Posture Management (CSPM)**
@@ -53,9 +51,7 @@
   - **Endpoint Detection & Response (EDR)
   - Beschermt Windows, macOS, Linux, iOS en Android
   - Detecteert en reageert op endpoint-dreigingen
-
----
-
+    
 ## **Identity Models
   - Password Hash Sync (PHS): synchroniseert wachtwoordhash naar Entra ID
   - Pass-Through Authentication (PTA): On-prem AD valideert wachtwoorden
