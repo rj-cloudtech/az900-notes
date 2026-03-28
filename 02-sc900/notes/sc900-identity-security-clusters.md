@@ -13,7 +13,7 @@
   - kan **Legacy authentication blokkeren**
   - vormt de **policy-engine** van Microsoft Entra ID
 
-## **Privileged Identity Management (PIM)
+## **Privileged Identity Management (PIM)**
   - Biedt **tijdelijke adminrechten** (Just-in-Time)
   - Ondersteunt **approval workflows**
   - Houdt **audit logs** bij voor privileged access
@@ -28,6 +28,8 @@
   - Bundelen toegang voor **onboarding**
   - Combineren apps, groepen en rollen
   - Onderdeel van **Entitlement Management**
+
+---
 
 ## **Defender-producten**
 
@@ -51,6 +53,8 @@
   - **Endpoint Detection & Response (EDR)
   - Beschermt Windows, macOS, Linux, iOS en Android
   - Detecteert en reageert op endpoint-dreigingen
+
+---
 
 ## **Identity Models
   - Password Hash Sync (PHS): synchroniseert wachtwoordhash naar Entra ID
