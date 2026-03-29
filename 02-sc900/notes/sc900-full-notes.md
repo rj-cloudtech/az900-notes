@@ -1030,9 +1030,29 @@
 
     - Voor bescherming op layer 7 (application layer) heb je aanvullend een Web Application Firewall (WAF) nodig
    
-  
-        
+**Describe Azure DDoS protection**
+  - Een firewall monitort en controleert inkomend en uitgaand netwerkverkeer op basis van vooraf ingestelde beveiligingsregels. Het doel is een barriere te vormen tussen een vertrouwd intern netwerk en onvertrouwde externe netwerken zoals het internet.
 
+  - Azure Firewall is een managed, cloud-based network security service die threat protection biedt voor workloads en resources in Azure. Bij voorkeur ingezet op een centralized virtual network zodat alle andere virtual en on-premises networks er doorheen routen; dit geeft centrale controle over traffic voor alle VNets across verschillende subscriptions
+
+  - Key Features of Azure Firewall
+    - Stateful Firewall; Houdt de staat van actieve verbindingen bij en neemt beslissingen op basis van de conxtext van het verkeer
+    - Buit-in high availability en availability zones; ontworpen voor continue werking; kan verspreid worden over meerdre availability zones voor hogere weerbaarheid
+    - Network and application level filtering; regels op basis van IP-adressen, poorten en protocollen zoals HTTP/S en beheert toegang tot FQDNs (Fully Qualified Domain Names)
+    - SNAT en DNAT — Source NAT vertaalt privé IP-adressen naar publieke Azure IP-adressen voor uitgaand verkeer; Destination NAT vertaalt publieke IP-adressen naar privé IP-adressen voor inkomend verkeer
+    - Threat intelligence — integreert met Microsofts Threat Intelligence feed om bekende kwaadaardige IP-adressen en domeinen te blokkeren of te melden
+    - Logging and Monitoring; logs kunnen verstuurd worden naar Azure Monitor, Log Analytcs of Event Hubs
+    - Integration with Azure Service; naadloze integratie met Azure Virtual Networks, Azure Policy en Azure Security Center
+   
+    - Azure Firewall is beschikbaar in 3 SKUs:Standard, Premium en Basic
+
+- Integration with Security Copilot
+  - Azure Firewall is geintegreerd met Microsoft Security Copilot via de standalone experience
+  - Helpt analysts bij het onderzoeken van kwaadaardig verkeer onderschept door het IDPS (Network intrusion detection and prevention system) via natural language vragen
+  - Vereisten voor integratie:
+    - Azure Firewall geconfigureerd met resource specific structured logs voor IDPS, verstuurd naar een Log Analytics workspace
+    - Gebruiker heeft zowel Security Copilot rol als de juiste Azure RBAC rollen
+    - De Azure Firewall plugin in Security Copilot moet ingeschakeld zijn
 
 
 
