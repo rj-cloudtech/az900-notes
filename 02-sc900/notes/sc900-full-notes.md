@@ -819,13 +819,13 @@
 
   - Top security uitdagingen
     - Toenemend aantal complexiteit van aanvallen
-    - Tekort aan security talent; behoefte aan automatisering en consoidatie van tools
+    - Tekort aan security talent; behoefte aan automatisering en consolidatie van tools
     - Zichtbaar in security, privacy, compliance en governance
 
   - Use cases
     - Investigate and remediate security threats: complexe security alerts omzetten naar bruikbare samenvattingen met stap-voor-sap response guidance
     - Build KQL queries or analyze suspicious scripts: technische taken uitvoeren via natural language zonder handmatig scripts te schrijven
-    - Understand risks and manage security posture: breed inzicht van de omgeving met geprioriteerde risico;s
+    - Understand risks and manage security posture: breed inzicht van de omgeving met geprioriteerde risico's
     - Troubleshoot IT issues faster: relevante informatie snel samenvatten en actionable insights geven
     - Define and manage security policies: policies definieren, conflicten controleren en samenvatten
     - Configure secure lifecycle workflows; groups aanmaken en access parameters instellen met stap-voor-stap guidance
@@ -845,6 +845,198 @@
     - Integreert via plug-ins met Microsoft security producten; non-Microsoft producten en open-source intelligence feeds
     - Verbinding met organisatie knowledge bases voor meer context en relevante responses
     - Jouw data wordt niet gebruikt om de AI modellen te trainen
+
+
+**Describe Microsoft Security Copilot terminology**
+  - Terminology
+    - Session: en gesprek binnen Copilot; Copilot onthoudt de conext binnen een sessie
+    - Promt: een specifieke vraag of opdracht die je invoert in de promt bar
+    - Capability: een functie die Copilot gebruikt om een deel van een probleem op te lossen; ook wel skill genoemd
+    - Plugin: een verzameling van capabilities voor een specifieke resourc
+    - Workspace: een aparte Copilot werkomgeving binnen de tenant
+    - Agents: AI-powered tools die autonoom security en IT taken beheren
+    - Orchestrator: het systeem dat capabilities combineert om een promt te beantwoorden
+
+  - Promt bar en sessions
+    - Prompt bar is het centrale punt van Security Copilot; je geeft hier opdrachten in natural language
+    - Wees specifiek in je promts voor betere resultaten
+    - Copilot promtbooks met voorgeselecteerde prompts voor minder ervaren gebruikers
+    - De hele dialoog van vraag en antwoord heet een session; context wordt bijgehouden binnen een sessie
+   
+  - Plugins and capabilities
+    - Plugins integreren Copilot met externe bronnen zoals Microsoft Sentinel, Microsoft Defender XDR en Microsoft Intune
+    - Elke plugin biedt een verzameling van capabilities specifiek voor die databron
+    - Voorbeelden van Defender XDR capabilites: incident samenvatten, scripts analyseren, KQL queries genereren, incident reports maken
+    - Ondersteunt Microsoft plugins, non-microsoft plugins zoals ServiceNow en Splunk, en custom plugins
+    - Soomige plugins vereisen configuratie of authenticatie
+
+  - Workspaces
+    - Aparte werkomgevingen binnen een tenant; vergelijkbaar met kamers in een huis
+    - Tenant = het huis, workspace = een kamer
+    - Gebruikers kunnen toegang hebben tot bepaalde workspaces op basis van hun rol
+    - Voordelen: kosten monitoren per team, sessiedata opslaan volgens geo-specifieke regelgeving en lokale data protection wetgeving
+
+  - Agents
+    - Geavanceerde AI-powered assistants die verder gaan dan alleen vragen beantwoorden
+    - Kunnen autonoom high-volume security en IT taken beheren
+    - Geintegreerd met Microsoft security tools en partner oplossingen
+    - Leren van feedback en passen zich aan aan de workflows van de organisatie
+    - Werken binnen Microsoft Zero Trust framework
+   
+  - Orchestrator
+    - Het systeem dat capabilities combineert om een promt te beantwoorden
+    - Composeert meerdere capabilities samen tot 1 coherent antwoord
+
+
+**Describe how Microsoft Security Copilot processes prompt requests**
+  - Process flow
+    - Submit a promt: Het proces begint wanneer een gebruiker een promt invoert in de promt bar
+    - Orchestrator: De promt gaat naar de copilot-backend, de orchestrator. Deze bepaalt de initiele context en stelt een plan op door beschikbare capabilities (skills) te combineren om de vraag te beantwoorden
+    - Build context: Zodra het plan staat, voert Copilot dit uit om alle benodigde data en context op te halen
+    - Plugins: Tijdens het uitvoeren van het plan analyseert Copilot alle beschikbare data, patronen en plugin-bronnen om relevante inzichten te genereren.
+    - Responding: Copilot combineert alle verzamelde informatie en gebruikt het LLM om een reactie te formuleren die logisch en begrijpelijk is voor een mens
+    - Response: De reacie wordt geformatteerd en gecontroleerd volgens Microsoft's Responsible AI-richtlijnen voordat deze wordt teruggestuurd
+    - Recieves response: De gebruiker ontvangt de uiteindelijke reactie van Copilot
+
+  - Process log
+    - Tijdens het verwerken van prompt genereert Copilot een zichtbaar process log
+    - Dit log toont welke capability is gebruikt, zodat de gebruiker kan beoordelen of de informatie uit een betrouwbare bron komt
+    - Het log laat ook zien dat de output safety checks heeft doorlopen, onderdeel van Microsoft's Responsible AI-commitment
+ 
+
+**Describe the elements of an effective prompt**
+  - Een effectieve prompt geeft Microsoft Security Copilot voldoende richting, context en beperkingen om een waardevolle, bruikbare reactie te genereren. De kwaliteit van de output hangt sterk af van hoe duidelijk, specifiek en volledig de promt is
+
+  - Wat een effectieve prompt bevat: bestaat uit 4 kernonderdelen die samen bepalen hoe Copilot redeneert en welke data het gebruikt
+    - Goal: Het concrete security-doel of de specifieke informatie die je nodig hebt. Dit kan een vraag, opdracht of instructie zijn
+    - Context: Waarom je deze informatie nodig hebt of hoe je de output gaat gebruiken. Denk aan tijdsperiode, relevant incident, of dat het bedoeld is voor een rapport.
+    - Expections: De gewenste vorm van de output, zoals een tabel, lijst met acties, samenvatting, diagram of doelgroepgerichte tekst
+    - Source: Bekende informatie, relevantie data sources of specifieke plugins die Copilot moet gebruiken. Sommige plugins hebben extra context nodig om goed te functioneren
+   
+  - Voorbeelden van hoe deze elementen werken
+    - Goal: Informatie over een threat actor
+    - Contect: Je gebruikt het voor een incidentrapport
+    - Expectations: Een lijst met IoCs en TTPs
+    - Source: Microsoft Defender XDR data of specifieke plugins
+  - Deze vier elementen vormen samen de basis voor een prompt die Copilot effectief kan verwerken
+
+  - Additional prompting tips: Naast de 4 basiselementen zijn er aanvullende richtlijnen die helpen om betere resultaten te krijgen
+    - Schrijf duidelijk, specifiek en beknopt
+      - Basic prompt: Pearl Sleet actor
+      - Better prompt: Give me information about Pearl Sleet activity, including know IoCs and TTPs
+    - Itereer op je prompts
+      - LLM-systemen kunnen verieren in hun antwoorden. door vervolgprompts te geven kun je verfijnen, verduidelijken of alternatieve invalshoeken proberen
+    - Geef voldoende context
+      - Basic prompt: Summarize incident 15134
+      - Better prompt: Summarize incident 15314 in Microsoft Defender XDR into a paragraph for my manager and list all involed intities
+    - Gebruik positieve instructies
+      - Basic prompt: Give me list of unmanaged devices
+      - Better prompt: Give me a list of high-risk unmanaged devices, Exlude devices named "test"
+    - Spreek Copilot direct aan
+      - Gebruik you should of you must, omdat dit duidelijker is dan het model indirect aanspreken
+
+  - Flexibiliteit in promtopbouw
+    - Hoewel deze richtlijnen helpen om sterke prompts te schrijven, ben je niet beperkt tot een vaste structuur. Copilot is ontworlpen om natuurlijke taal te begrijpen, dus je kunt prompts formuleren op een manier die voor jou logisch voeld. De 4 elementen en tips zijn hulpmiddelen, geen verplicht format
+
+
+**Describe how to enable Microsoft Security Copilot**
+  - Provision Capacity
+    - Security Copilot werkt met provisioned capactiy (per uur betaald) en overage capacity (op gebruik betaald)
+    - De rekeneenheid heet Security Compute Unit (SCU); dit wordt gebruikt in zowel de standalone als ambedded ervaring
+    - Je kunt overage SCUs instellen (unlimited of een maximum) voor onverwachte pieken in gebruik
+    - Vereisten om capacity te provisionen:
+      - Een actief Azure subscription
+      - Minimaal de rol Azure Owner of Azure Contributor op resource group niveau
+      - Let op: een Global Microsoft Entra Administrator heeft deze Azure rollen niet automatisch
+    - Er zijn 2 manieren om capacity in te stellen:
+      - Via Security Copilot zelf (aanbevolen); een wizard begeleidt je door het proces
+      - Via de Azure Portal; handmatig de gegevens invoeren
+    - Minimum: 1 SCU; Maximum 100 SCUs
+    - Na het inrichten komt er een usage monitoring dashboard beschikbaar met tot 90 dagen aan data, inclusief welke plugins gebruikt zijn en door wie
+   
+  - Set Up the Default Enviroment
+    - Vereiste rol: minimaal Security Administrator
+    - Tijdens de setup configureer je de volgende instellingen:
+      - SCU capacity; koppel de eerder ingerichte capacity aan de workspace (elke workspace heeft zijn eigen capacity)
+      - Data storage; kies in welke regio klantdata opgeslagen wordt (bv EU, UK, US, Aus, Japan, Canada, Z-A)
+      - Prompt evaluation; beperk dit tot jouw geo of sta wereldwijde evaluatie toe
+      - Microsoft Purview audit logging; optioneel inschakelen voor het opslaan van admin- en gebruikersacties en Copilot-responses
+      - Data sharing opties (per workspace)
+          - Toestaan dat Microsoft data gebruikt om productprestaties te valideren via human review
+          - Toestaan dat Microsoft data gebruikt om het security AI model te verbeteren; dit geeft Microsoft geen toestemming om foundational models te trainen met jouw data
+      - Plugin settings; beheer wie plugins mag toevoegen, welke plugins beschikbaar zijn voor de organisatie, en of Copilot toegang krijgt tot Microsoft 365 services
+     
+  - Role Permissions
+    - Permissies worden per workspace ingesteld
+    - Gebruik altijd het principe van least privilege
+    - Er zijn 2 soorten rollen die toegang geven:
+      - Microsoft Entra ID roles (bredere scope, niet alleen Copilot)
+        - Global Admin
+        - Security Admin
+        - Security Operator
+        - Security Reader
+      - Microsoft Security Copilot roles (aleen voor Copilot platform:
+        - Copilot Owner; volledige beheertoegang
+        - Copilot Contributor; gebruikerstoegang
+        - Security Admin en Global Admin erven automatisch de Copilot Owner rol
+        - Alleen owners/admins kunnen rol-toewijzingen doen in Copilot
+        - Er is een speciale groep: Recommended Microsoft Security roles; Voeg je deze toe als Contributor, dan krijgen alle gebruikers met relevante Entra ID rollen automatisch toegang tot Copilot
+
+  - Copilot Plugins en Role Requirements
+    - Copilot gaat nooit verder dan de toegang die jij hebt; je eigen rechten bepalen wat Copilot kan doen
+    - Individuele plugins hebben soms eigen rolvereisten, naast je Copilot-rol. Voorbeeld:
+      - Microsoft Sentinel plugin; vereist minimaal de rol Sentinel Reader
+      - Microsoft Intune plugin; vereist iets als de Intune Endpoint Security Manager rol
+    - De meeste Microsoft plugins gebruiken het OBO-model (On Behalf Of); Copilot logt automatisch in op gekoppelde producten als de plugin is ingeschakeld
+    - Plugin-instellingen worden per workspace beheerd
+
+**Summary**
+  - Microsoft Security Copilot is een AI-powered, cloud-based security tool gebouwd op Azure OpenAI Service en getraind op meer dan 65 biljoen dagelijkse threat intelligence signalen.
+  - Het helpt security analysts om bedreigingen sneller te onderzoeken, risico's te beoordelen en technische taken uit te voeren via natural language.
+      - Beschikbaar als Standalone (eigen portal) en Embedded in producten zoals Microsoft Defender XDR
+      - Werkt via plugins (integraties met Microsoft- en non-Microsoft producten zoals Microsoft Defender XDR
+      - Verwerkt prompts via orchestrator die capabilities combineert en output toetst aan Responsible AI-richtlijnen
+      - Een effectieve prompt bevat: Goal, Context, Expectations en Source
+      - Capacity wordt gemeten in SCUs en vereist minimaal een Azure Owner/Contributer rol om in te richten
+      - Role Permissions worden per workspace ingesteld; Copilot gaat nooit verder dan de toegangsrechten van de gebruiker zelf
+
+
+
+  - **Learning Path 3:** Introduction to Microsoft security solutions
+    - **Module 2:** Describe core infrastructure security services in Azure 
+      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
