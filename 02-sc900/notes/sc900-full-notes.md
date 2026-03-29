@@ -813,8 +813,17 @@
   - **Learning Path 3:** Introduction to Microsoft security solutions
     - **Module 1:** Describe Microsoft Security Copilot
       - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
+        
+**Get acquainted with Microsoft Security Copilot**
+  - Microsoft Security Copilot is een AI-powered, cloud-based security analyse tool die analysts helpt om bedreigingen snel te onderzoeken, signalen op machine speeds te verwerken en risico's sneller te beoordelen
 
+  - Top security uitdagingen
+    - Toenemend aantal complexiteit van aanvallen
+    - Tekort aan security talent; behoefte aan automatisering en consoidatie van tools
+    - Zichtbaar in security, privacy, compliance en governance
 
+  - Use cases
+    - Investigate and remediate security threats: complexe security alerts omzetten naar bruikbare samenvattingen met stap-voor-sap response guidance
 
 
 
