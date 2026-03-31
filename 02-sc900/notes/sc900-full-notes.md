@@ -1226,16 +1226,50 @@
     - Defender CSPM plan: Betaalde uitbreiding met geavanceerde posture management en ondersteuning voor aanvullende benchmarks, reulagory standards en custom policies
 
 
+**Describe the enhanced security of Microsoft Defender for Cloud**
+  - Cloud Workload Protection (CWPP) is de derde hoofdpijler van Defender for Cloud en detecteert en verhelpt bedreigingen voor resources, workloads en services via Defender Plans
+
+  - Defender Plans
+      - Specifieke plans per resourc etype, die apart ingeschakeld kunnen worden en tegelijk draaien voor een complete bescherming:
+        - Defender for Server: Threat detection voor Windows en Linux Machines
+        - Defender for App Service: Detecteert aanvallen op applicaties via App Service
+        - Defender for Storage: Detecteert schadelijke activiteit op Azure Storage accounts
+        - Defender for SQL: beveiligt databases met data ongeacht locatie
+        - Defender for Kubernetes: Security hardening, workload protection en runtime bescherming voor Kubernetes
+        - Defender for Container Registries: Beschermt Azure Resource Manager gebaseerde registries
+        - Defender for Key Vault: Advanced threat protection voor Azure Key Vault
+        - Defender for Resource Manager: Monitort resource management operaties
+        - Defender for DNS: Extra beschermingslaag voor resources die Azure DNS gebruiken
+        - Defender for Open-source Relational Databases: Threat protection voor open-source relationele databases
+       
+      - Enhanced Security Features
+        - Endpoint Detection and response (EDR): Via Microsoft Defender for Endpoint in Defender for Servers
+        - Vulnerability scanning: Voor VMs, container registries en SQL resources
+        - Multicloud security: Verbinding met AWS en GCP voor cross-cloud bescherming
+        - Hybrid security: Unified view van security across on-premises en cloud workloads
+        - Threat protection alert: Monitoring van netwerken, machines en cloud services op aanvallen
+        - Compliance tracking: Continu beoordelen tegen industry en regulatory standards via het regulatory compiance dashboard
+        - Acces and application controls: Blokkeren van malware via machien learning: Just-in-Time toegang tot management ports op Azure VMs om het aanvalsoppervlak te verkleinen
 
 
+**Describe DevOps security management**
+  - DevOps combineert development en operations voor applicatieplanning, ontwikkeling en delivery. Hackers richting zich steeds vaker op DevOps pipelines en productieomgevingen; Dit wordt ook wel **Shifting left** genoemd. Defender for DevOps,onderdeel van Defender for cloud, biedt een centrale console om DevOps security te beheren across muli-pipeline omgevingen zoals Github en Azure DevOps.
+
+  - Key Capabilities
+    - Unified visibility into DevOps security posture; volledig inzicht in DevOps inventory en security posture van applicatiecode; inclusief findings van code, secrets en open-source dependency vulnerability scans in 1 overzicht
+    - Stregthen cloud resource configurations; beveiliging IaC (Infrastructure as Code) templates om cloud misconfigurations te voorkomen voordat ze productie bereiken
+    - Prioritize remediation of critical issues in code; koppelt cloud security inzichten aan code; developers krijgen prioriteit via Pull Request annotations en custom workflows in hun eigen tools
+
+  
+ ---
 
 
+  - **Learning Path 3:** Introduction to Microsoft security solutions
+    - **Module 3:** Part 4: Describe security capabilities of Microsoft Sentinel
+      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
 
-
-
-
-
-
+**Describe threat detection and mitigation capabilities in Microsoft Sentinel**
+  - 
 
 
 
