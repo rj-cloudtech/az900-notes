@@ -1340,16 +1340,84 @@
  ---
 
 
-  - **Learning Path 4:** 
-    - **Module 1:** 
+  - **Learning Path 3:** Introduction to Microsoft security solutions
+    - **Module 5:** Describe threat protection with Microsoft Defender XDR
       - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
 
+**Describe Microsoft Defender XDR services**
+  - XDR is een enterprise defense suite die beschermt tegen geavanceerde cyberaanvallen. Het beoordeeldt threat signals van endpoints, applications, email en identiteiten om de scope en impact van een aanval te bepalen en kan automatisch actie ondernemen om aanvallen te stoppen
+
+  - De Defender XDR suite
+    - Defender for Endpoint: Unified endpoint platform voor preventieve bescherming, post-breach detection, automated investigation en response
+    - Defender Vulnerability Management: Continu inzicht in assets, risico-gebaseerde beoordelingen en ingebouwde remediation tools voor kwetsbaarheden en misconfigurations
+    - Defender for Office 365: Beschermt tegen kwaadaardige bedreigingen via email, links (URLs) en collaboration tools
+    - Defender for Identity: Gebruikt Active Directory signalen om advanced threats, gecompromitteerde identiteiten en kwaadaardige insider acties te detecteren
+    - Defender for Cloud Apps: Volledige bescherming voor SaaS applicaties als CASB (Cloud Access Security Broker; biedt zichtbaarheid, datacontrole en threat protection voor cloud apps
+   
+  - Centralisatie en Integratie
+    - Alle inzichten zijn gecentraliseerd in het Microsoft Defender portal als unified security operations platform
+    - Inclusief informatie van Microsoft Sentinel en Microsoft Defender for Cloud
+    - Integreert met Microsoft Security Copilot via standalone en embedded experience
+    - Microsoft Defender Threat Intelligence (TI); bundelt en verrijkt threat informatie voor triage, incident response, threat hunting en vulnerability management
+
+**Describe Microsoft Defender for Office 365**
+  - Geintegreerde beveiligingsoplossing voor Office 365 die beschermt tegen bedreigingen via email, links (URLs), bijlagen en collaboration tools zoals SharePoint, Teams en Outlook. Beschikbaar in Plan 1 en Plan 2
+
+  - Prevent and detect
+    - Anti-malware; beschermt tegen virussen, spyware en ransomware
+    - Anti-spam; filtert junk email via content filtering
+    - Anti-phishing; beschermt tegen spoofed emails die gevoelige informatie proberen te stelen
+    - Safe Attachments; opent bijlagen in een virtuele omgeving (detonation) voor extra malware controle
+    - Safe Links; scant links op kwaadaardige URLs in real-time
+    - Attack simulation training; laat admins realistische aanvalsscenario's uitvoeren om kwetbare gebruikers te trainen
+
+  - Investigate
+    - Audit log search; inzicht in activiteiten binnen de organisatie
+    - Message trace; volgt emails door de Microsoft 365 omgeving en toont wat er mee is gebeurd
+    - Threat Explorer; near real-time tool voor SecOps teams om dreigingen te onderzoeken en te remedieren
+    - Threat trackers; opgeslagen queries om cyberdreigingen automatisch of handmatig te ontdekken
+    - Campaings; identificeert en categoriseert gecoordineerde phishing en malware aanvallen
+
+  - Respond
+  - ZAP (zero-hour Auto Purge); detecteert en neutraliseert achteraf kwaadaardige berichten die al zijn afgeleverd in Exhange Online mailboxes
+  - AiR (automated Investigation en Response); geautomatiseerde onderzoeksprocessen bij bekende dreigingen
+  - SIEM integratie; voor alerts, detecties en geautomatiseerde responses
 
 
+**Describe Microsoft Defender for Endpoint**
+  - Een platform dat enterprise netwerken beschermt door advanced threats op endpoints (laptops, telefoons, tablets, PCs, routers, firewalls) te voorkomen, detecteren, onderzoeken en verhelpen. Gebouwd op technologie uit Windows 10 en Microsoft cloud services. Beschikbaar in Plan 1 en Plan 2
+  
+  - Kerncomponenten
+    - Core Defender Vulnerability Management; risico-gebaseerde aanpak voor het ontdekken, beoordelen en remedieren van endpoint kwetsbaarheden en misconfigurations
+    - Attack Surface Reduction; eerste verdedigngslaag; zorgt voor correcte configuraties en exploit mitigation; inclusief network protection en web protection tegen kwaadaardige IP-adressen, domeinen en URLs
+    - Next Generation Protection; vangt nieuwe en opkomende dreigingen via behavior-based, heuristische en real-time antivirusbescherming en cloud-deliverd protection
+    - Endpoint Detection and Response (EDR); near real-time detectie van geavanceerde aanvallen; analysts kunnen alerts prioriteren en response acties utvoeren
+    - AIR (Automated Investigation en Remediation); geautomatiseerd onderzoek en directe actie bij breaches; vermindert alert volume zodat SecOps zich kan focussen op complexere dreigingen
+    - Microsoft Threat Experts; managed threat hunting service die proactief jaagt op dreigingen en extra contect biedt aan SOCs (security Operations Centers)
+    - Management and APIs; API model gebaseerd op Microsoft Entra ID authenticatie en autorisatie
 
 
+**Describe Microsoft Defender for Cloud Apps**
+  - Describe Microsoft Defender for Cloud Apps biedt volledige bescherming voor SaaS applicaties en fungeert als CASB (Cloud Access Security Broker); een gatekeeper tussen enterprise gebruikers en cloud resources
 
+  - Vier hoofdfunctionaliteiten
+    - CASB functionaliteit; zichtbaarheid in cloud app gebruik en shadow IT, bescherming tegen app-gebaseerde dreigingen, information protection en compliance
+    - SSPM (SaaS Security Posture Management); ondekt misconfigurations en geeft specifieke aanbevelingen per app op basis van CIS standaarden; data wordt automatisch doorgezet naar Microsoft Secure Score
+    - Advanced Threat Protection; gecombineerd met Microsoft Defender XDR voor full kill chain zichtbaarheid via UEBA (User and Entity Behavior Analysis) en AAC (Adaptive Access Contrtol)
+    - App-to-App protection; beschermt inter-app data uitwisseling via OAuth app governance; bewaakt ongebruikte apps en verlopen credentials
+   
+  - Discover SaaS applications
+    - Identify; identificeert apps op basis van netwerkverkeer en een uitgebreide app catalogus
+    - Assess; beoordeelt app op meer dan 90 risico-indicatoren
+    - Manage; policies die apps 24/7 monitoren en automatisch waarschuwen bij afwijkend gedrag
 
+  - Information Protection
+    - Scant SaaS apps op bestanden met gevoelige data
+    - Mogelijke controls: Sensitivity labels toepassen, downlaods blokkeren op onbeheerde apparaten, externe collaborators verwijderen van vertrouwelijke bestanden
+    - Integratie met Microsoft Purview voor DLP (Data Loss Prevention) en data classificatie
+
+   
+**Describe Microsoft Defender for Identity**
 
 
 
