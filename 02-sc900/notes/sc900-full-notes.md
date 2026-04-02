@@ -1470,9 +1470,59 @@
    
  - Integration with Microsoft Security Copilot
    - Via de Defender TI plugin levert Copilot informatie over threat activity groups, IOCs, tools en contextuele threat intelligence
-
-
-
+   - Twee ingebouwde promptbooks:
+     - Vulnerability impact assessment: Rapport over een bekende kwetsbaarheid inclusief oplossingsstappen
+     - Threat actor profile: Rapport over een bekende threat actor inclusief verdedigingsaanbevelingen
+   - Integratie beschikbaar via standalone embedded experience in het Microsoft Defender portal
+  
+**Describe the Microsoft Defender portal**
+  - The Microsoft Defender portal is een unified security operations platform dat SIEM, XDR, posture management en threat intelligence combineert in 1 centrale omgeving voor het voorkomen, detecteren, onderzoeken en reageren op dreigingen
+    - Toegang vereists een passende rol zoals Global Administrator, Security Administrator, Security Operator of Security Reader in Microsoft Entra ID
+    - Navigatiepaneel is aanpasbaar per gebruiker op basis van dagelijkse behoeften
+    - Dashboard toont cards op basis van rol-gebaseerde toegangscontrole (RBAC)
+   
+  - Belangrijkste secties in het Defender Portal
+    - Exposure Management: Unified view van security posture across alle assets; genereert automatisch attack paths en biedt security insights, metric en aanbevelingen
+    - Secure Score: Weergave van de security posture van de organisatie; hogere schore = betere bescherming; inclusief vergelijking met vergelijkbare organisaties
+    - Incidents & Alerts: Centrale case files met alle gerelateerde alerts, assets, onderzoeken en evidence van Defender XDR, Microsoft Sentinel en andere oplossingen
+    - Advanced Hunting: Query-gebaseerde threat hunting tool met toegang tot 30 dagen aan raw data via KQL of via Security Copilot in natural language
+    - Action Center: Centrale locatie voor alle remediation acties voor devices, email en identiteiten
+    - Threat Intelligence: Toegang tot Microsoft Defender Threat Intelligence
+    - Assets: Overzicht van alle beschermde en ontdekte assets zoals devices en identiteiten
+    - Microsoft Sentinel: Toegang tot Sentinel capalities inclusief unified incident queue
+    - SOC Optimizations: Identificeert optimalisatiemogelijkheden voor security controls en processen
+    - Report: Unified rapportage over endpoints, email, cloud apps, infrastructure en identiteiten
+   
+  
+**Describe Copilot integration with Microsoft Defender XDR**
+  - Copilot integration with Microsoft Defender XDR
+    - Microsoft Defender XDR integreert met Microsoft Security Copilot via zowel de standalone als embedded experience
+   
+    - Standalone Experience
+    - 2 plugins beschikbaar in het Copilot portal:
+      - Microsoft Defender XDR plugin: Ingebouwde prompts voor het analyseren van bestanden, genereren van incident reports, guided responses, incident reports, guided responses, incident samenvatting en device security state
+      - Natural language to KQL plugin: Converteert natural language vragen naar kant-en-klare KQL queries voor threat hunting
+     
+  - Embedded Experience (Copilot in Microsoft Defender XDR)
+  - Directe integratie binnen het Defender XDR portal met de volgende functies:
+    - Summarize incidents: Automatische samenvatting bij het openen van een incident; tot 100 alerts per samenvatting
+    - Guided responses: AI-gedreven aanbevelingen voor triage, containment, investigation en remediation; beschikbaar voor incident types zoals phishing, business email compromise en randsomware
+    - Script analysis: Analyseert script en code (bv PowerShell) zonder externe tools; beoordeelt of een script kwaadaardig of benign is
+    - Natural language to KQL: genereert KQL queries natural language in Advanced Hunting
+    - Incident report: Uitgebreid rapport met data uit Microsoft Sentinel en defender XDR; inclusief analyst acties, geautomatiseerde stappen en opmerkingen
+    - Analyze files: AI-gedreven bestandanalyse via de incident graph om kwaadaardige bestanden te identificeren
+    - Device en identity summaries: samenvatting van security posture, kwetsbare software en afwijkend gedrag van devices en identiteiten
+    - Vanuit de embedded experience kan je altijd overstappen naar de standalone experience via Open in Security Copilot
+   
+**Summary**
+  - Microsoft Defender XDR is een enterprise defense suite die threat signals van endpoints, email, identiteiten en cloud apps centraliseert in het Microsoft Defender portal voor geintegreerde bescherming detectie en response
+    - Defender for Office 365: beschermt tegen email-gebaseerde dreigingen via anti-malware, anti-phising, Safe Attachments, Safe Links en ZAP
+    - Defender for Endpoint: Beschermt endpoints via Attack Surface Reduction, EDR, Next generation Protection en AIR
+    - Defender for Cloud Apps: CASB oplossing voor SaaS applicaties met SSPM, advanced threat protetion en OAuth app governance
+    - Defender for Identity: Gebruikt Active Diretory signalen om threats zoals lateral movement en privilege escalation te detecteren across de volleidge kill-chain
+    - Defender Vulnerability Management: Continue asset dicscovery met risico-gebaseerde prioritering van kwetsbaarheden via CVEs en remediation tracking via Microsoft Intune
+    - Defender Threat Intelligence (TI): Verzamelt en verrijkt threat intelligence via Threat Analytics, Intel Profiles, Intel Explorer en Intel Projects
+    - Copilot Integratie: Beschikbaar via standalone en embedded experience vor incident summaries, Guided responses, script analysis, KQL queries en file analysis
 
 
 
