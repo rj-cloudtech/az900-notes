@@ -1,5 +1,4 @@
 # Cloud Security & IAM Portfolio
-
 A personal study repository documenting my learning journey toward a career in
 Identity & Access Management (IAM) and Cloud Security. This repository combines
 theory, hands-on exercises and exam preparation across multiple Microsoft
@@ -8,7 +7,6 @@ certifications.
 ---
 
 ## Goal
-
 Become an IAM Specialist / Cloud Security Engineer.
 
 ---
@@ -34,7 +32,7 @@ Planned:
 │   ├── exam-prep/
 │   ├── exercises/
 │   └── notes/
-├── 05-ab900/
+└── 05-sc200/
     ├── exam-prep/
     ├── exercises/
     └── notes/
@@ -43,21 +41,19 @@ Planned:
 ---
 
 ## Certifications & Progress
-
 | # | Certification | Status | Date |
 |---|--------------|--------|------|
 | 01 | AZ-900 – Azure Fundamentals | ✅ Passed | Mar 12, 2026 |
 | 02 | SC-900 – Security, Compliance & Identity Fundamentals | 🔄 In Progress | — |
 | 03 | AZ-104 – Azure Administrator Associate | 📅 Planned | — |
 | 04 | SC-300 – Identity and Access Administrator Associate | 📅 Planned | — |
-| 05 | AB-900 – Microsoft 365 Copilot and Agent Administration Fundamentals | 📅 Planned | — |
+| 05 | SC-200 – Microsoft Security Operations Analyst | 📅 Planned | — |
 
 ---
 
 ## Content Overview
 
 ### 01 — AZ-900: Azure Fundamentals
-
 **Notes**
 - [Learn Notes](/01-az900/notes/az900-learn-notes.md) — Cloud concepts, Azure architecture and services, Azure management and governance
 
@@ -74,7 +70,6 @@ Planned:
 ---
 
 ### 02 — SC-900: Security, Compliance, and Identity Fundamentals
-
 **Notes**
 - [Learn Notes](/02-sc900/notes/sc900-learn-notes.md) — Full module notes from Microsoft Learn
 - [Identity & Security Clusters](/02-sc900/notes/sc900-identity-security-clusters.md) — Microsoft security products grouped by function
@@ -95,7 +90,7 @@ Planned:
 ### 04 — SC-300: Identity and Access Administrator Associate
 *Coming soon*
 
-### 05 — AB-900: Microsoft 365 Copilot and Agent Administration Fundamentals
+### 05 — SC-200: Microsoft Security Operations Analyst
 *Coming soon*
 
 ---
@@ -111,13 +106,14 @@ Planned:
 - SC-300 – Identity and Access Administrator Associate
 - PowerShell & Microsoft Graph API
 
-**Phase 3 — Bonus**
-- AB-900 – Microsoft 365 Copilot and Agent Administration Fundamentals
+**Phase 3 — After employment (to be determined)**
+- SC-200 – Microsoft Security Operations Analyst
+- AZ-500 – Azure Security Engineer Associate
+- MS-500 – Microsoft 365 Security Administrator
 
 ---
 
 ## Technologies Used
-
 - Azure Portal
 - Azure CLI
 - PowerShell
@@ -127,5 +123,4 @@ Planned:
 ---
 
 ## Status
-
 Actively learning and updating.
