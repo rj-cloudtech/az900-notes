@@ -1827,11 +1827,11 @@
   
 **Summary**
   - Microsoft biedt een set van tools en principes om data privacy en compliance te waarborgen voor organisaties wereldwijd.
-    - Service Trust Portal (STP): Publieke site met audit rapporten en compliance documenten; georganiseerd in 4 categorieen: certifications, Reports, Industry Resroucses en Resources for your Organization; inclusief My Library met notificaties
+    - Service Trust Portal (STP): Publieke site met audit rapporten en compliance documenten; georganiseerd in 4 categorieen: certifications, Reports, Industry Resources en Resources for your Organization; inclusief My Library met notificaties
     - Privacy principes: 4 kernprincipes: You control your data, Know where your data is located, Your data is secured (AES-256), IPsec, Azure Key Vault) en Microsoft defends your data (geen directe overheidstoegang)
     - Microsoft Priva: Privacy oplossing met Privacy Risk Management (data overexposure, data transfers, data minimization) en Subject Rights Requests (DSR/DSAR)
     - Data Classification: via SIT (Patroonherkenning) en Trainable Classifiers (AI/ML); inzichten via Content Explorer en Activity Explorer
-    - Sensitivity Labels: Customizalbe, persistent labels voor encryptie, content markings en auto-labeling; gepubliceerd via label policies; gerespecteerd door Microsoft 365 Copilot
+    - Sensitivity Labels: Customizable, persistent labels voor encryptie, content markings en auto-labeling; gepubliceerd via label policies; gerespecteerd door Microsoft 365 Copilot
     - DLP: Beschermt gevoelige data via deep content analysis across Microsoft 365, endpoints en AI interacties; Alert Triage Agent via Security Copilot
     - Adaptive Protection: Past DLP, Data Lifecycle Management en Conditional Access automatisch aan op basis van 3 insider risk levels: Elevated, Moderate en Minor
     - DSPM: Unified view van data security posturel beantwoordt wie, wat, waar en hoe; inclusief AI observability en one click policies via Objectives
