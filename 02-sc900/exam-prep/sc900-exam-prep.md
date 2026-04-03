@@ -23,5 +23,4 @@
   - LP3 Security Solutions — targeted practice (Defender product line distinctions)
   - Defender for Identity vs Defender for Cloud Apps vs Defender for Endpoint — scenario-based questions
   - Azure RBAC vs Microsoft Entra roles — when each applies
-  - Conditional Access policy logic (AND conditions, risk-based triggers)
   - Defender for Endpoint Plan 1 vs Plan 2 feature differences
