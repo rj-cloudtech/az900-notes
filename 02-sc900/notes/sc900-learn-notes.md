@@ -1616,6 +1616,13 @@
   - Biedt automatisering, inzichten en workflows om verzoeken efficient af te handelen binnen de Microsoft 365 omgeving.
 
 
+---
+
+
+  - **Learning Path 4:** Introduction to Microsoft Priva and Microsoft Purview
+    - **Module 2:** Describe the data security solutions of Microsoft Purview
+      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
+
 **Describe the data classification capabilities of Microsoft Purview Information Protection**
   - Organisaties moeten hun data kennen om gevoe*lige informatie te identificeren en te beschermen. Microsoft Purview biedt hiervoor data classification via het Microsoft Purview portal
     
@@ -1837,6 +1844,276 @@
     - DSPM: Unified view van data security posturel beantwoordt wie, wat, waar en hoe; inclusief AI observability en one click policies via Objectives
     - AI-powered onderzoeksoplossing voor data breaches en insider leaks; drie AI capabilities: vector search, categorization en examination; integreert met Insider Risk Management, Defender XDR en DSPM; pay-as-you-go billing
    
+
+
+---
+
+
+  - **Learning Path 4:** Introduction to Microsoft Priva and Microsoft Purview
+    - **Module 3:** Describe the data compliance solutions of Microsoft Purview 
+      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
+
+
+**Describe Compliance Manager**
+  - Microsoft Purview Compliance Manager is een oplossing in het Microsoft Purview portal (onder Risk & Compiance) die organisaties helpt compliance te beoordelen en beheren across een multicloud omgeving; niet alleen Microsoft 365 maar ook andere cloud omgevingen
+
+  - Compliance Score
+    - De compliance score geeft in 1 oogopslag inzicht in de compliance posture van een organisatie. Bestaat uit 2 soorten punten:
+     - Your points; punten voor improvement actions die de organisatie zelf completeert
+     - Microsoft managed points; punten voor acties die Microsoft al heeft uigevoerd als cloud service provider
+
+  - De score helpt bij het prioriteren van acties, voortang bijhouden en rapporteren aan auditors en management
+
+  - 4 kernonderdelen
+    - Controls; een vereiste uit een regulering, standaard of policy; 3 typen:
+      - Microsoft managed; Microsoft is verantwoordelijk
+      - Your controls; organisatie is verantwoordelijk
+      - Shared controls; gedeelde verantwoorlijkheid
+
+    - Assessments: groepering van controls uit een specifieke regulering of standaard; toont voortgang via een assessment score; aangemaakt via templates
+    - Regulations: Meer dan 360 regulatory templates beschikbaar; inclusief templates voor AI regulations en standaarden
+    - Improvement actions: Aanbevolen acties om te voldoen aan regelgeving; kunnen toegewezen worden aan gebruikers; inclusief documentatie en statusupdates
+   
+  - Voordelen:
+    - Vertaalt complexe regelgeving naar begrijpelijke taal
+    - Out-of-the-box en custom assessments beschikbaar
+    - Koppelt regulatory controls aan aanbevolen improvement actions
+    - Stap-voor-stap guidance voor implementatie
+    - Prioriteert acties op basis van impact op de compliance score
+
+
+**Describe Communication Compliance**
+  - Microsoft Purview Communication Compliance is een insider risk oplossing die ongepaste berichten detecteert, vastlegt en aanpakt die kunnen leiden tot data security of compliance incidenten. Het evalueert tekst- en afbeeldingsberichten in Microsoft en non-microsoft apps zoals Teams, Viva Engage, Outlook en WhatsApp
+
+  - Workflow, 4 stadia
+    - Configure: Admins identificeren compliance vereisten en configureren policies
+    - Investigate: Dieper onderzoek via alerts, document reviews, user history en filters
+    - Remediate: Oplossen via alert sluiten, gebruiker notificeren, bericht verwijderen in Teams, escaleren naar reviewer of markeren als false positive
+    - Maintain: Voortdurend bijhouden via dashboard widgets, export logs en unified audit logs
+   
+  - Toegangsgebieden
+     - Corporate policies: Scannen op ongepast taalgebruik of intimidatie in dagelijkse communicatie
+     - Risk management: scannen op ongeautoriseerde communicatie over vertrouwelijke projecten zoals overnames of winstcijfers
+     - Regulatory compliance: Voldoen aan regelgeving zoals het monitoren van broker communiactie tegen insider trading, witwassen of omkoping
+
+  - Generative AI Coverage
+    - Communication Compliance policies kunnen ook AI interacties analyseren zoals prompts en responses in:
+      - Microsoft 365 Copilot
+      - Apps gebouwd via Microsoft Copilot Studio
+      - AI applicaties verbonden via Microsoft Entra of Microsoft Purview Data Map
+     
+  - Integraties
+    - Insider Risk Management: Detecteert waarschuwingssignalen in communicatie bij medewerkers onder werkdruk voordat ernstige incidenten optreden
+    - Microsoft Security Copilot: Via embedded experience; genereert contextuele samenvatting van een bericht en bijlagen; reviewers kunnen vervolg vragen stellen via de Security Copilot side panel
+
+
+**Describe eDiscovery**
+  - Microsoft Purview eDiscovery is het proces van het identificeren en leveren van elektronische informatie als bewijs in juridische zaken. Beschikbaar via het Microsoft Purview portal onder Risk & Compliance
+  - Ondersteunde Microsoft 365 services: Exchange Online, Teams, Microsoft 365 groups, OneDrive, SharePoint en Viva Engage
+
+  - Workflow, 5 stadia
+    - Escalate from trigger event: Een activiteit triggert het aanmaken van een nieuwe case
+    - Create and manage case: Een case bevat alle searches, holds en review sets voor een specifiek onderzoek
+    - Search, evaluate and refine: Zoeken naar content via ingebouwde zoektools
+    - Actions: Search results exporteren, review sets aanmaken of holds instellen om content te bewaren
+    - Review and take action: Analytics uitvoeren, items taggen of exporteren voor review buiten het onderzoeksteam
+   
+  - Key Features
+    - Search for content: Zoeken in Exchange, OneDrive, SharePoint, Teams, Groups en Viva Engage
+    - Export search results: Naar lokale computer exporteren
+    - Place content on hold: Content bewaren om onbedoelde of opzettelijke verwijdering te voorkomen
+    - Search and delete data: Schadelijke content verwijderen zoals emails en Teams berichten
+    - Review sets (premium): Beveiligde Azure Storage locatie; statische set content om te zoeken, filteren, taggen en analyseren
+    - OCR (premium): Tekst uit afbeeldingen extraheren voor doorzoekbaarheid
+    - Converstaion threading (premium): Volledige Teams of Viva Engage gesprekken verzamelen als context
+    - Decryption (premium): Automatisch decrypten van content beveiligd met Microsoft encryptie en sensitivity labels
+   
+  - Integraties
+    - Microsoft Security Copilot; via embedded experience:
+      - Contextuele samenvatting van items in review sets
+      - Natural language to KeyQL queries genereren
+    - Insider Risk Management: Insider risk cases direct escaleren naar een nieuw eDiscovery case voor juridische review
+
+
+**Describe audit in Microsoft Purview**
+  - Microsoft Purview Audit legt gebruikers- en beheerdersactiviteiten vast across tientallen Microsoft 365 services in een unified audit log; bruikbaar voor security investigations, forensisch onderzoek, interne onderzoeken en compliance verplichtingen
+
+  - Wat het audit log vastlegt:
+    - Exchange Online: Email toegang, verwijdering, forwarding en mailbox permissies
+    - SharePoint en OneDrive: Bestandstoegang, downloads, uploads en sharing events
+    - Microsoft Teams: Berichten, meetings en kanaalwijzigingen
+    - Microsoft Entra ID: Sign-ins, wachtwoordwijzigingen, role assignments en Conditional Access Wijzigingen
+    - Microsoft 365 Copilot: user prompts en AI responses; automatisch vastgelegd across Teams, Outlook en Word
+    - Microsoft Security Copilot: vereist opt-in door een Copilot owner
+   
+  - Toegang tot audit data, 4 methoden
+    - Audit log search tool: In het Microsoft Purview portal; exporteerbaar naar CSV
+    - Audit Search Graph API: Programmatische toegang via Microsoft Graph
+    - Search-UnifiedAuditLog cmdlet: Via Exchange Online PowerShell
+    - Office 365 Magagement Activity API: Importeren naar SIEM oplossing
+   
+  - 2 tiers
+    - Audit (standaard)
+      - Standaard ingeschakeld
+      - Duizende doorzoekbare events
+      - 180 dagen retentie
+      - Export naar CSV
+     
+    - Audit (Premium)
+      - Alles van standaard plus:
+      - Audit log retention policies: tot 1 jaar retentie, tot 10 jaar met add-on licentie
+      - Longer retention: Microsoft Entra ID, Exchange, OneDrive en SharePoint standaard 1 jaar
+      - Intelligent insights: Inzicht in mail access, forwarding en zoekopdrachten in Exchange en SharePoint
+      - Higher bandwidth naar de Office 365 management Activity API
+     
+  
+**Describe Data Lifecycle Management**
+  - Microsoft Purview Data Lifecycle Management biedt tools om content te bewaren die je nodig hebt en te verwijderen wat je niet meer nodig hebt; voor compliance, regulatory requirements en het verkleinen van het aanvalsoppervlak.
+
+  - Retention Poicies en Retention Labels
+    - 2 Hoofdtools voor het beheren van content. 3 mogelijke configuraties:
+      - Retain-only: Bewaren voor altijd of een bepaalde periode
+      - Delete-only: Permanent verwijderen na een bepaalde periode
+      - Retain and then delete: Bewaren voor een periode en daarna permanent verwijderen
+
+  - Werkt met: SharePoint, OneDrive, Microsoft Teams, Viva Engage en Exchange
+
+  - Retention Policies; toegepast op site- of mailbox niveau:
+    - 1 policy kan op meerdere locaties of specifieke users toegepast worden
+    - Items erven retentie-instellingen van hun container
+    - Instellingen reizen niet meer als content buiten de container wordt verplaatst
+   
+  - Retention Labels; toegepast op item niveau (folder, document, email):
+    - 1 item kan maar 1 retention label hebben
+    - Instellingen reizen wel mee binnen de Microsoft 365 tenant
+    - Kunnen handmatig of automatisch toegepast worden
+    - Ondersteunen disposition review voordat content permanent verwijderd wordt
+
+  - Aanvullende Capabilities
+    - Mailbox Archiving: Extra mailbox storage met auto-expanding archiving
+    - Inactive mailboxes: Mailbos content bewaren na vertrek van een medewerker; indefinite retentie voor jurische vereisten
+    - Adaptive Protection: retention labels automatisch toepassen op basis van insider risk signalen van machine learning modellen
+    - Retention van AI interacties: prompts en responses van Microsoft 365 Copilot worden opgeslagen in de Exchange mailbox van de gebruiker; kunnen beheerd worden via retention policies
+
+
+**Describe Microsoft Purview Records Management**
+  - Microsoft Purview Records Management bouwt voort op Data Lifecycle Management maar voegt meer controle toe voor high-value items met juridische, regelgevende of kritieke zakelijke betekenis. Items die als record worden aangemerkt hebben specifieke beperkingen en worden gevogld gedurende hun volledige lifecycle
+
+  - Wat er gebeurt als content als record gelabeld wordt
+    - Bepaalde activiteiten worden geblokkeerd
+    - Activiteiten worden gelogd
+    - Proof of dispostion wordt bewaard aan het einde van de retentie periode
+   
+  - Records vs Regulatory Records
+    - Records: beperkingen op activiteiten via retention labels
+    - Regulatory records; strengere beperkingen:
+      - Label kan niet verwijderd worden, zelfs niet door Global Admin
+      - Retentieperiode kan niet verkort worden na toepassing
+      - Niet standaard beschikbaar; moet ingeschakeld worden via PowerShell
+
+  - Event-based Retention
+    - Retentieperiode start bij een specifieke gebeurtenis in plaats van een vaste datum
+      - Employee lifecyle: Retentie start bij vertrek van medewerker
+      - Product records: Retentie start bij stopzetting van een product
+      - Contract records: Retentie start bij verlopen van een contract
+     
+  - Disposition Reviews
+    - Voordat content permanent verwijderd wordt kunnen aangewezen reviewers de content beoordelen en verwijdering goedkeuren of de retentieperiode verlengen. Biedt proof of disposition als bewijs voor auditors.
+   
+  - File Plan
+    - Tool voor het gestructureerd beheren van retentievereisten:
+      - Importeren van bestaande retention schedules uit andere systemen
+      - Alle retention labels op 1 locatie beheren
+      - Beschrijvende informatie toevoegen zoals regulatory authority en business funtion
+     
+**Summary**
+  - Microsoft Purview biedt een volledig pakket aan compliance oplossingen voor het beheren van regulatory verplichtingen, interne risico's en data lifecycle across de organisatie
+    - Compliance Manager: Beoordeelt en beheert compliance across multicloud via controls, assessments, regulations (360+ templates) en improvement actions; compliance score toont voortgang
+    - Communication Compliance: Detecteert ongepaste berichten in Teams, Outlook, WhatsApp en AI interacties via 4 stadia: Configure, Investigate, Remediate en maintain
+    - eDiscovery: Identificeert en levert elektronisch bewijs voor juridische zaken; premium features zoals review sets, OCR, conversation threatding en decryption
+    - Audit: Unified audit log voor gebruikers- en beheerdersactiviteiten; Standaard (180 dagen) en Premium (tot 10 jaar retentie, intelligent insights)
+    - Data Lifecyle Management: Bewaart en verwijdert conent via retention policies (site/mailbox niveau) en retention labels (item niveau); inclusief mailbox archiving en Adaptive Protection
+    - Records Management: High-value items beheren als records of regulatory records; ondersteunt event-based retention, disposition reviews en file plan
+      
+
+---
+
+
+  - **Learning Path 4:** Introduction to Microsoft Priva and Microsoft Purview
+    - **Module 4:** Describe the data governance solutions of Microsoft Purview
+      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
+
+
+**Describe the concepts and benefits of data governance**
+  - Data governance was historisch gezien een verdeigingsmechanisme voor security en compliance, maar goede data governance maakt data ook zichtbaar en toegankelijk voor gebruikers. Microsoft Purview gebruikt AI en moderne technologieen voor data kwaliteit, security en compliance
+    - Data Governance Concepten
+      - Federated governance: Gecentraliseerde standaarden maar gedistribueerd eigenschap; vermindert bottlenecks en stimuleer participatie
+      - Data Access: Snel de juiste toegang verlenen met de juiste gebruiksregels; balans tussen veiligheid en innovatie
+      - Data curation: Organiseren, annoteren en publiceren van data zodat het veilig toegankelijk en herbruikbaar is
+      - Data discovery: Gebruikers kunnen de data vinden die ze nodig hebben
+      - Data health: datakwaliteitsstandaarden handhaven en data actueel en veilig houden
+      - Data understanding: data heeft kwaliteitsbeschrijvingen zodat gebruikers begrijpen wat het is en hoe het gebruikt moet worden
+     
+  - Data Roles
+    - Data consumers: Vinden en gebruiken relevante datasets via gestroomlijnde toegangsverzoeken
+    - Data owners: Registreren data assets, beheren classificaties en toeang en waarborgen kwaliteit
+    - Data stewards: zorgen voor datakwaliteit, vindbaarheid, glossary consistentie en lineage
+    - Centrale data office: Stellen governance policies vast en bewaken compliance en governance health
+   
+  - Voordelen per rol
+    - Data consumers: Data discovery, veilige toegang en data understanding
+    - Data owners en stewards: Data curation, responsible data use en impact analysis
+    - Data officers en CxO: data value creation en data estate standardization via federated accountability
+   
+
+**Describe Microsoft Purview Data Catalog**
+  - Microsoft Purview Data Catalog is het centrale platform voor data governance en business value creatie. Het organiseert de date estate via business concepten en maakt data vindbaar, begrijpelijk en toegankelijk
+
+  - Governance Domains
+    - Organiseert de data estate via business concepten zoals Marketing of Finance, Soorten boundaries:
+      - Fundamentele business gebieden: HR, sales, finance, supply chain
+      - Overkoepelende onderwerpen: Product, partijen
+      - Organisatiefuncties: Customer experience, business intelligence
+     
+  - Data Products
+    - Een data product is een business construcct met naam, beschrijving, eigenaren en een lijst van gekoppelde data assets. Het geeft context aan assets en een use case voor data consumers. Een governance domain kan meerdere data products bevatten maar een data product wordt beheerd door 1 governance domain.
+   
+  - Glossary Terms
+    - Individuele begrippen die business, processen en system definieren. ze:
+      - Bieden business context aan data assets en data products
+      - Bevatten policies voor data governance, data health goals en terms of use
+      - Worden aagemaakt per governance domain voor organisatiespecifieke context
+
+  - Critical Data Elements (CDEs)
+    - Logische groepering van belangrijke data-elementen die standaardisatie bevorderen. Voorbeeld: "Customer ID" groepeert "CustID" en "CID" uit verschillende tabellen. Data quality rules en access policies kunnen aan CDEs gekoppeld worden
+   
+  - OKRs
+    - OKRs (Objectives and Key Results) koppelen data products direct aan zakelijke doelstellingen om de kloof tussen business en data estate te overbruggen.
+   
+  - Overige Features
+    - Data access policies: Self-service toegangsverzoeken voor data products; balans tussen innovatie en security
+    - Search and browse: Data consumers kunnen zoeken of bladeren door de data catalog per collectie of hierarchie
+    - Health management: healt controls monitoren governance gezondheid; health actions geven stappen om data heatlh te verbeteren
+    - Data Quality: No-code/low-code rules inclusief out-of-the-box en AI-generated rules; scores op iveau van data assets, data products en governance domains
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
