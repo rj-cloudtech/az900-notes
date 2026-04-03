@@ -1795,9 +1795,38 @@
     - AI observability: Inventory van AI apps en agents met risicobeoordeling
     - Asset explorer: Unified View van data per workload en locatie
     - Reports: Dashboards voor gevoelige data gebruik, DLP activiteit en risky user behavior
+
+
+**Describe Microsoft Purview Data Security Investigations**
+  - Data Security Investigations is een Microsoft Purview oplossing voor cybersecurity teams om data security incidenten te onderzoeken van begin tot eind; databreach, insider leak of onverwachte data exposure. Het gebruikt generative AI om grote hoeveelheden data snel te analyseren
+
+  - 3 AI Capabilities
+    - Vector search: Begrijpt de betekenis achter een zoekopdracht in plaats van alleen exacte woorden te matchen, Vindt relevante content ook als de exacte termen niet in het bestand staan
+    - Categorization: Sorteert content automatisch op onderwerp en risiconiveau via default, custom of AI-suggesties; helpt teams prioriteren
+    - Examination: Scant bestandsinhoud op specifieke security risico's zoals exposed credentials, netwerkkwetsbaarheden of threat actor activiteit
+
+  - Veelvoorkomende scenario's
+    - Data breach onderzoek: identificeert welke intellectuele eigendom, persoonlijke data of financiele informatie mogelijk compromised is
+    - Insider data leak: Direct te openen vanuit een Insider Risk Management case; data wordt automatisch gecategoriseerd op risiconiveau
+    - Proactieve risicobeoordeling: Scan data sources of steekproef van users voordat een incident plaats vindt
    
+  - Integratie met andere oplossingen
+    - Insider Risk Management: Cases direcht doorsturen naar Data Security Investigations voor diepere content analyse
+    - Microsoft Defender XDR: Vanuit het defender portal een onderzoek openen voor inzicht in data impact van een security alert
+    - DSPM: Bij gedetecteerde exfiltration events automatisch een onderzoek starten
+    - Unified audit log: gebruikersactiviteiten zoals downloads en label wijzingen opvragen en toevoegen aan een onderzoek; alle acties worden gelogd
+   
+  - Acties na onderzoek
+    - Soft purge: Items verplaatsen naar recoverable deleted state
+    - Hard Purge: Items permanent verwijderen
+    - Toegangscontroles aanscherpen, extra encryptie toepassen of documentatie opstellen voor regulatory requirements
+   
+  - Billing
+    - Pay-as-you-go model; Betaal alleen voor gebruikte storage en verwerking; geen vaste per0user licentie vereist
+
+  
 **Summary**
-  - Microsoft biedt een set van tools en principes om data privacy en compliance te waarborgen voor organisaties wereldwij.
+  - Microsoft biedt een set van tools en principes om data privacy en compliance te waarborgen voor organisaties wereldwijd.
     - Service Trust Portal (STP): Publieke site met audit rapporten en compliance documenten; georganiseerd in 4 categorieen: certifications, Reports, Industry Resroucses en Resources for your Organization; inclusief My Library met notificaties
     - Privacy principes: 4 kernprincipes: You control your data, Know where your data is located, Your data is secured (AES-256), IPsec, Azure Key Vault) en Microsoft defends your data (geen directe overheidstoegang)
     - Microsoft Priva: Privacy oplossing met Privacy Risk Management (data overexposure, data transfers, data minimization) en Subject Rights Requests (DSR/DSAR)
@@ -1806,6 +1835,7 @@
     - DLP: Beschermt gevoelige data via deep content analysis across Microsoft 365, endpoints en AI interacties; Alert Triage Agent via Security Copilot
     - Adaptive Protection: Past DLP, Data Lifecycle Management en Conditional Access automatisch aan op basis van 3 insider risk levels: Elevated, Moderate en Minor
     - DSPM: Unified view van data security posturel beantwoordt wie, wat, waar en hoe; inclusief AI observability en one click policies via Objectives
+    - AI-powered onderzoeksoplossing voor data breaches en insider leaks; drie AI capabilities: vector search, categorization en examination; integreert met Insider Risk Management, Defender XDR en DSPM; pay-as-you-go billing
    
 
 
