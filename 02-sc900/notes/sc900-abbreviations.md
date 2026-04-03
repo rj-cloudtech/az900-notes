@@ -150,7 +150,27 @@ Organized by category for studying, followed by an alphabetical index for quick 
 | Abbreviation | Full Name | Context |
 |---|---|---|
 | HTTPS | Hypertext Transfer Protocol Secure | Encryption in transit |
+| AES | Advanced Encryption Standard | Encryption at rest (bijv. AES-256) |
+| IPsec | Internet Protocol Security | Encryption in transit |
+
+---
+
+### Microsoft Purview Compliance & Data Security
+
+| Abbreviation | Full Name | Context |
+|---|---|---|
 | DLP | Data Loss Prevention | Microsoft Purview |
+| SIT | Sensitive Information Type | Microsoft Purview data classification |
+| EDM | Exact Data Match | Microsoft Purview custom SIT type |
+| DSPM | Data Security Posture Management | Unified data security view |
+| DSR | Data Subject Request | Microsoft Priva |
+| DSAR | Data Subject Access Request | Microsoft Priva |
+| OCR | Optical Character Recognition | eDiscovery premium feature |
+| KeyQL | Keyword Query Language | eDiscovery Copilot queries |
+| CDE | Critical Data Element | Microsoft Purview Data Catalog |
+| OKR | Objectives and Key Results | Data governance / Data Catalog |
+| BCP | Business Continuity Plan | Service Trust Portal |
+| DR | Disaster Recovery | Service Trust Portal |
 
 ---
 
@@ -163,15 +183,18 @@ Organized by category for studying, followed by an alphabetical index for quick 
 | AD CS | Active Directory Certificate Services |
 | AD DS | Active Directory Domain Services |
 | AD FS | Active Directory Federated Services |
+| AES | Advanced Encryption Standard |
 | AIR | Automated Investigation and Remediation |
 | ASIM | Advanced Security Information Model |
 | AuthN | Authentication |
 | AuthZ | Authorization |
 | B2B | Business-to-Business |
+| BCP | Business Continuity Plan |
 | BYOD | Bring Your Own Device |
 | CAE | Continuous Access Evaluation |
 | CASB | Cloud Access Security Broker |
 | CBA | Certificate-Based Authentication |
+| CDE | Critical Data Element |
 | CIA | Confidentiality, Integrity, Availability |
 | CIAM | Customer Identity and Access Management |
 | CIS | Center for Internet Security |
@@ -184,6 +207,11 @@ Organized by category for studying, followed by an alphabetical index for quick 
 | DID | Decentralized Identifier |
 | DLP | Data Loss Prevention |
 | DNAT | Destination Network Address Translation |
+| DR | Disaster Recovery |
+| DSAR | Data Subject Access Request |
+| DSR | Data Subject Request |
+| DSPM | Data Security Posture Management |
+| EDM | Exact Data Match |
 | EDR | Endpoint Detection and Response |
 | FIDO2 | Fast Identity Online 2 |
 | FQDN | Fully Qualified Domain Name |
@@ -197,8 +225,10 @@ Organized by category for studying, followed by an alphabetical index for quick 
 | IDTR | Identity Threat Detection and Response |
 | IoC | Indicator of Compromise |
 | IoT | Internet of Things |
+| IPsec | Internet Protocol Security |
 | JEA | Just-Enough-Access |
 | JIT | Just-in-Time |
+| KeyQL | Keyword Query Language |
 | KQL | Kusto Query Language |
 | LLM | Large Language Model |
 | MAM | Mobile Application Management |
@@ -212,16 +242,18 @@ Organized by category for studying, followed by an alphabetical index for quick 
 | NSG | Network Security Group |
 | OATH | Open Authentication |
 | OBO | On Behalf Of |
+| OCR | Optical Character Recognition |
+| OKR | Objectives and Key Results |
 | PaaS | Platform as a Service |
 | PCI DSS | Payment Card Industry Data Security Standards |
 | PIM | Privileged Identity Management |
 | RBAC | Role-Based Access Control |
 | RDP | Remote Desktop Protocol |
 | SaaS | Software as a Service |
-| CASB | Cloud Access Security Broker |
 | SCIM | System for Cross-domain Identity Management |
 | SCU | Security Compute Unit |
 | SIEM | Security Information and Event Management |
+| SIT | Sensitive Information Type |
 | SKU | Stock Keeping Unit |
 | SNAT | Source Network Address Translation |
 | SOAR | Security Orchestration, Automation and Response |
