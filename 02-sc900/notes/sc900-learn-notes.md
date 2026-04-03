@@ -1564,16 +1564,249 @@
     - Copilot Integratie: Beschikbaar via standalone en embedded experience vor incident summaries, Guided responses, script analysis, KQL queries en file analysis
 
 
+---
 
 
+  - **Learning Path 4:** Introduction to Microsoft Priva and Microsoft Purview
+    - **Module 1:** Describe Microsoft’s Service Trust portal and privacy capabilities
+      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
 
 
+**Describe the offerings of the Service Trust portal**
+  - Microsoft Service Trust Portal (STP) is Microsoft's publieke site voor het publiceren van audit rapporten en compiance-gerelateerde informatie over Microsoft cloud services. Sommige content vereist inloggen met een Microsoft Entra organization account
+
+  - 4 Contentcategorieen
+    - Certifications, Regulations, and Standards: Security implementatie- en designinformatie om te voldoen aan regulatory compiance; documenten per standaard zoals ISO/IEC
+    - Reports, whitepapers, and artifacts; algemene documenten over:
+      - BCP en DR (Business Continuity and Disaster Recovery)
+      - Pen Test en Security Assessments: Uitgevoerd door 3rd parties
+      - Privacy and DAta Protection
+      - FAQ and Whitepapers
+    - Industry and Regional Resources: Documenten per industrie (Financial Services, Healthcare, Media) en regio (US Government, Regional Resources)
+    - Resources for your Organization: Documenten specifiek voor jouw organisatie op basis van subscription en permissions
+  - My Library
+    - Sla relevantie documenten op in My Library voor snelle toegang vanuit 1 locatie
+    - Notifications instellen zodat je automatisch een email ontvangt wanneer een opgeslagen document wordt bijgewerkt
+    - Kies de frequentie van notificaties en het emailadres voor de notificaties
+
+        
+**Describe Microsoft's privacy principles**
+  - You control your data: Data is van jou; je kunt het op elk moment inzien, wijzigen of verwijderen; Microsoft gebruikt jouw data alleen voor de services die je hebt gekozen en deelt het niet met adverteerders; Microsoft voldoet aan ISO/IEC 37018; de internationale standaard voor cloud privacy
+  - Know where your data is located: Microsoft biedt data residency opties wereldwijd via Azure, Dynamics 365 en Microsoft 365; jij bepaalt waar data opgeslagen wordt; vastgelegd in contractuele verplichtingen
+  - Your data is secured at rest and in transit: geavanceerde encryptie met meerdere onafhankelijke lagen:
+    - Data at rest: Encryptie tot AES-256
+    - Data in transit: Via TLS (Transport Layer Security) en IPsec
+    - Encryption keys: beheerd via Azure Key Vault
+  - Microsoft defends your data: Microsoft geeft geen enkel overheid direct toegang tot klantdata; overheidsvragen worden doorgestuurd naar jou als klant; Microsoft betwits juridisch onrechtmatige overheidseisen en informeert je wanneer wettelijk toegestaan
 
 
+**Describe Microsoft Priva**
+  - Microsoft Priva is een set van privacy oplossingen die privacy operaties beheert across de hele digitale omgeving van een organisatie. Het helpt organisaties een 'privacy by default' aanpak te implementeren, compliance te stroomlijnen en privacy risico's te verminderen
+
+  - 2 hoofdoplossingen
+    - Privacy Risk Managemnt: indentificeert en remedieert privacy risico's in de Microsoft 365 omgeving via 3 soorte policies:
+      - Data overexposure: Detecteert situaties waar opgeslagen data onvoldoende beveiligd is, zoals te brede toegangsrechten; remediation via content prive maken, content owners notificieren of items taggen voor review
+      - Data transfers: monitort overdrachten tussen regio's, afdelingen of buiten de organisatie; gebruikers ontvangen email notificaties met directe correctie-opties
+      - Data minimization: Identificeert data die langer opgeslagen is dan nodig; remediation via markeren voor verwijdering, contnt owners notificeren of taggen voor review
+
+  - Subject Rights Requests: Stelt organisaties in staat om te voldoen aan privacyregelgeving waarbij individuen (data subjects) het recht hebben om hun persoonlijke data in te zien of te beheren. Ook bekend als:
+    - DSR: Data Subject Request
+    - DSAR: Data Subject Access Request
+    - Consumer rights request
+  - Biedt automatisering, inzichten en workflows om verzoeken efficient af te handelen binnen de Microsoft 365 omgeving.
 
 
+**Describe the data classification capabilities of Microsoft Purview Information Protection**
+  - Organisaties moeten hun data kennen om gevoe*lige informatie te identificeren en te beschermen. Microsoft Purview biedt hiervoor data classification via het Microsoft Purview portal
+    
+  - Sensitive Information types (SITs): SITs zijn patroon-gebaseerde classifiers die gevoelige informatie detecteren zoals creditcardnummers, BSN-nummer en bankrekeningen. Elke SIT bestaat uit 4 componenten
+    - Primary element: Het hoofdpatroon om op te matchen (regex, keyword list, dictionary of funtion)
+    - Supporting elements: Aanvullend bewijs dat de betrouwbaarheid van een match vergroot
+    - Confidence level: Laag, medium of hoog; hoog = minder false positives maar mogelijk meer gemiste matches
+    - Proximity: hoe dicht een supporting element bij het primary element moet staan
+   
+  - 4 typen SITs:
+    - Built-in: Door Microsoft gemaakt en onderhouden; niet direct te bewerken, wel te kopieren als template
+    - Named entity: Detecteert persoonnamen, adressen en medische termen; unbundled (smal) of Bundled (breed)
+    - Custom: Zelf aanmaken via Regex, Keywords en keyword dictionaries
+    - EDM (Exact Data Match): Match exacte waarden uit een database; voor zeer specifieke data zoals employee IDs of patientnummers
+
+  - Trainable Classifiers
+    - Gebruiken AI en Machine Learning om data te classificeren op basis van wat het is, in plaats van patroonherkenning, Nutting voor organisatiesspecifieke content zoals contracten of facturen
+      - Pre-Trained classifiers: Door Microsoft gemaakt en direct beschikbaar, categorieen zoals HR, financieel, juridisch en gedragssignalen
+      - Custom trainable classifiers: Zelf trainen via Seeding (voorbeelden wat wel en niet in de categorie valt); model verbetert via ture/false positives en negatives
+     
+  - Data Classification en AI
+    - SITs en trainable classifiers detecteren gevoelige data ook in AI Interacties zoals Microsoft 365 Copilot prompts. Resultaten zijn zichtbaar in DSPM (Data Security Posture Management) via Activity explorer
+
+  - Content Explorer en Activity Explorer
+    - Content explorer: Snapshot van alle items met een sensitivity label, retention label of SIT classificatie; toont waar gevoelige data staat en hoe het verdeeld is; strikt toegangsbeleid vereist
+    - Activity explorer: Toont welke acties gebruikers uitvoeren op geclassificeerde content zoals label wijzigingen, kopieren naar USB of printen; ook signalen van endpoint DLP voor windows en macOS
+   
+
+**Describe sensitivity labels and policies in Microsoft Purview Information Protection**
+  - Sensitivity labels classificeren en beschermen data terwijl gebruikersproductiviteit en samenwerking behouden blijven. Een label werkt als een stempel dat meereist met de content.
+  - 3 kenmerken van sensitivity labels
+    - Customizable: Admins maken categorieen zoals Personal, Public, Confidential en Highly Confidential
+    - Clear text: Opgeslagen in de metadata van de content; leesbaar door third party apps
+    - Persistent: Label blijft in de metadata van het document of email, inclusief alle beschermingsinstellingen
+
+  - Wat sensitivity labels kunnen doen
+    - Encryptie: voorkomt ongeautoriseerde toegang; admins bepalen wie welke acties mag uitvoeren en hoe lang
+    - Content markings: watermarks, headers en footers toevoegen aan documenten en emails
+    - Auto-labeling: label automatisch toepassen of gebruiker een aanbeveling geven op basis van het type gevoelige informatie
+    - Containers Beschermen: SharePoint sites, Teams en Micrsoft 365 groups beveiligen via toegangscontrole op de container
+    - 3rd party integratie: via Microsoft Information Protection SDK
+    - Classificatie zonder bescherming: label als tag toevoegen voor rapportage en activiteitsdata
+
+  - Label Scopes: Bepaalt op welk type content een label van toepassing is:
+    - Files & other data assets: Word, Excel, PowerPoint, PDF, Fabric en Power BI
+    - Emails: Outlook emails
+    - Meetings: Calendar events, Teams meeting en chats
+    - Groups & Sites: SharePoint, Teams sites en Microsoft 365 groups; beschermt de container maar labelt individuele items automatisch
+   
+  - Sensitivity Labels en Microsoft 365 Copilit
+    - Copilot herkent en respecteert sensitivity labels
+    - Bij response op basis van meerdere bronnen erft Copilot het meest restrictieve label
+    - Copilot controleert of de gebruiker de juiste permissies heeft voordat geencrypteerde content gebruikt wordt
+   
+  - Sensitivity Labels Policies
+    - Labels moeten gepubliceerd worden via Sensitivity label policies voordat ze zichtbaar zijn voor gebrukers en services. Policies stellen admins in staat om:
+      - Te bepalen welke users en groups labels kunnen zien
+      - Een default label in te stellen voor nieuwe documenten en emails
+      - Justification te vereisen bij het verwijderen of verlagen van een label
+      - Mandatory labeling in te stellen zodat gebruikers verplicht een label moeten toepassen
+      - Gebruikers te vewijzen naar custom help pages
 
 
+**Describe data loss prevention in Microsoft Purview**
+  - DLP (Data Loss Prevention) detecteert en beschermt gevoelige informatie via policies die risky behavior monitoren en voorkomen dat data onrechtmatig gedeeld wordt.
+  - DLP werkt via Deep content analysis; niet alleen tekst scannen maar ook regex, keyword evaluatie, interne validatie en machine learning.
+
+  - Waar DLP policies op van toepassing zijn
+    - Microsoft 365 services: Teams, Exchange, SharePoint, OneDrive
+    - Office apps: Word, Excel, PowerPoint
+    - Endpoints: Windows 10, Windows 11 en macOS
+    - Non-Microsoft cloud apps
+    - On-premises file shares en SharePoint
+    - Microsoft Fabric en Power BI
+    - Microsoft Edge for Business
+   
+  - Protective Actions van DLP policies
+    - Policy tip: Waarschuwing aan de gebruiker dat ze mogelijk gevoelige informatie proberen te delen
+    - Block met override: Blokkeren maar gebruiker kan overschrijven met justification
+    - Blcok zonder override: Volledig blokkeren
+    - Quarantine: Gevoelige items vergrendelen en verplaatsen naar een beveiligde locatie
+    - Teams chat: Gevoelige informatie niet weergeven
+
+  - Alle DLP activiteiten worden gelogd in Microsoft 365 Audit log en doorgestuurd naar Activity explorer en het Microsoft Defender portal als incidents
+
+  - DLP Policy opbouw: Elke DLP policy vereist dezelfde informatie:
+    - Type data om te monitoren: Via predefined templates (Financial, Medical, Privacy) of custom policy
+    - Administrative scoping: Alle users of beperkt tot administrative units
+    - Locatie: Exchange, SharePoint, OneDrive, Teams etc
+    - Conditions: wanneer de policy actief wordt
+    - Protective action: Welke actie ondernomen wordt
+   
+  - Endpoint DLP
+    - Monitort activiteiten op Windows 10, windows 11 en macOS zoals:
+      - Kopieren naar removable media of network shares
+      - Printen van documenten
+      - Aanmaken of hernoemen van items
+      - Toegang via niet-toegestane apps of browser
+
+  - DLP en AI Interactions
+    - DLP beschermt ook tegen het delen van gevoelige data via generative AI apps; bijvoorbeeld blokkeren of waarschuwen als een gebruiker creditcarnummers probeert te plakken in ChatGPT via een browser op een windows device
+   
+  - Intergration with Microsoft Security Copilot
+    - Beschikbaar via standalone en embedded experience
+    - Alert Triage Agent: AI-powered agent die DLP alerts autonoom evalueert op content risk, exfiltration risk en policy risk; categoriseert en prioriteert alerts in een managed queue
+    - Alert summarization: Copilot genereert een samenvatting van een geselecteerde DLP alert
+
+
+**Describe adaptive protection in Microsoft Purview**
+  - Adaptive Protection gebruikt machien learning om de meest kritieke risico's te identificeren en automatisch de juiste beschermingscontroles toe te passen op basis van het actuele risiconiveau van een gebruiker. Het integreert met 3 oplossingen:
+    - Microsoft Purview DLP
+    - Microsoft Purview Data Lifecycle Management
+    - Microsoft Entra Conditional access
+  - 3 Kernfuncties
+    - Context-awere detection
+    - Dynamic controls
+    - Automated mitigation
+
+  - Insider Risk Level
+    - Drie niveaus die continu en automatisch bijgewerkt worden op basis van gebruikersgedrag:
+      
+| Niveau | Wanneer | Controls |
+|---|---|---|
+| **Elevated** | Hoge severity alerts of meerdere high-severity sequences | Sterkste bescherming |
+| **Moderate** | Medium severity alerts of meerdere high-severity exfiltration activiteiten | Balans tussen security en productiviteit |
+| **Minor** | Lage severity alerts of minimaal 1 high-severity exfiltration activiteit | Lichte controls zoals policy tips |
+
+  - Adaptive Protection in DLP: DLP policies worden automatisch aangepast op basis van riskniveau:
+    - Minor: Policy tip met educatieve informatie
+    - Moderate: Waarschuwing met verplichte justification
+    - Elevated: Blokkeren van opslaan of delen buiten de organisatie
+   
+  - Adaptive Protection in Data LIfecycle Management
+    - Bij een elevated riskniveau worden verwijderede bestanden van SharePoint, OneDrive en Exchange online automatisch 120 dagen bewaard; ook als de gebruiker bewijs probeert te verwijderen
+   
+  - Adaptive Protection in Conditional Access
+    - Conditional Access policies reageren automatisch op riskniveaus:
+      - Minor: Terms of Use accepteren vereist
+      - Moderate: Blokkeren van toegang tot specifieke high-sensitivity applicaties
+      - Elevated: Volledige blokkering van toegang tot organisatieapplicaties
+
+
+**Describe Data Security Posture Management**
+  - DSPM biedt een unified view van de data security landscape van een organisatie; het ontdekt waar gevoelige data staa, beoordeelt hoe het beschermd is en geeft aanbevelingen om risico's te verminderen. DSPM centraliseert inzichten van DLP, Insider Risk Management, sensitivity labels en Data Security Investigations
+  - DSPM beantwoord 4 vragen:
+    - Welke data hebben we?
+    - Waar staat het?
+    - Wie heeft er toegang toe?
+    - Hoe is het beschermd?
+   
+  - Data Security Objectives
+    - Prominente cards in het Purview portal die specifieke security doelen vertegenwoordigen zoals:
+      - Voorkomen van data exposure in Microsoft 365 Copilot interacties
+      - Voorkomen van overscharing van gevoelige data
+      - Voorkomen van exfiltration naar risicovolle locaties
+      - Ontdekken van gevoelige data in de organisatie
+     
+    - Elke objective card toont key metrics, geprioriteerde acties en one-click policies.
+   
+    - Visiblity
+      - Unified visibility across Microsoft 365, Azure, Microsoft Fabric en non-Microsoft platforms zoals Google Cloud Platform, Snowflake en Databricks
+      - Asset explorer: Unified view van unlabeled of geclassificeerde data per workload; ontdekt shadow data buiten bekende locaties
+     
+  - AI Observaility
+      - Monitort AI-gerelateerde risico's zoals oversharing, exfiltration en ongebruikelijke toegangspatronen via AI apps en agents
+      - Toont inventory van alle AI apps en agents met activiteit van de afgelopen 30 dagen
+      - Geeft inzicht in welke agents high risk zijn en welke policies op hen van toepassing zijn
+
+  - Hoe AI helpt bij data security
+    - Analyseert toegangspatronen, sharing gedrag en policy gaps
+    - AI-driven triage agents filteren ruis uit DLP en Insider Risk Management Alerts
+    - AI agents kunnen directe actie ondernemen zoals verwijderen van public sharing links, toepassen van DLP policies of intrekken van permissies; altijd onder menselijk toezicht en geauditeerd
+
+  - Key Pages in DSPM
+    - Posture: Hoofddashboard met Security Copilot integratie, key metrics en 30 dagen trending graph
+    - Objectives: Data security doelen met remediation plans en one-click policies
+    - AI observability: Inventory van AI apps en agents met risicobeoordeling
+    - Asset explorer: Unified View van data per workload en locatie
+    - Reports: Dashboards voor gevoelige data gebruik, DLP activiteit en risky user behavior
+   
+**Summary**
+  - Microsoft biedt een set van tools en principes om data privacy en compliance te waarborgen voor organisaties wereldwij.
+    - Service Trust Portal (STP): Publieke site met audit rapporten en compliance documenten; georganiseerd in 4 categorieen: certifications, Reports, Industry Resroucses en Resources for your Organization; inclusief My Library met notificaties
+    - Privacy principes: 4 kernprincipes: You control your data, Know where your data is located, Your data is secured (AES-256), IPsec, Azure Key Vault) en Microsoft defends your data (geen directe overheidstoegang)
+    - Microsoft Priva: Privacy oplossing met Privacy Risk Management (data overexposure, data transfers, data minimization) en Subject Rights Requests (DSR/DSAR)
+    - Data Classification: via SIT (Patroonherkenning) en Trainable Classifiers (AI/ML); inzichten via Content Explorer en Activity Explorer
+    - Sensitivity Labels: Customizalbe, persistent labels voor encryptie, content markings en auto-labeling; gepubliceerd via label policies; gerespecteerd door Microsoft 365 Copilot
+    - DLP: Beschermt gevoelige data via deep content analysis across Microsoft 365, endpoints en AI interacties; Alert Triage Agent via Security Copilot
+    - Adaptive Protection: Past DLP, Data Lifecycle Management en Conditional Access automatisch aan op basis van 3 insider risk levels: Elevated, Moderate en Minor
+    - DSPM: Unified view van data security posturel beantwoordt wie, wat, waar en hoe; inclusief AI observability en one click policies via Objectives
+   
 
 
 
