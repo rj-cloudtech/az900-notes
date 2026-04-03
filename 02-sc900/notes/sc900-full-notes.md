@@ -1379,9 +1379,9 @@
     - Campaings; identificeert en categoriseert gecoordineerde phishing en malware aanvallen
 
   - Respond
-  - ZAP (zero-hour Auto Purge); detecteert en neutraliseert achteraf kwaadaardige berichten die al zijn afgeleverd in Exhange Online mailboxes
-  - AiR (automated Investigation en Response); geautomatiseerde onderzoeksprocessen bij bekende dreigingen
-  - SIEM integratie; voor alerts, detecties en geautomatiseerde responses
+    - ZAP (zero-hour Auto Purge); detecteert en neutraliseert achteraf kwaadaardige berichten die al zijn afgeleverd in Exhange Online mailboxes
+    - AiR (automated Investigation en Response); geautomatiseerde onderzoeksprocessen bij bekende dreigingen
+    - SIEM integratie; voor alerts, detecties en geautomatiseerde responses
 
 
 **Describe Microsoft Defender for Endpoint**
