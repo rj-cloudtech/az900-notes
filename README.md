@@ -54,12 +54,24 @@ Planned:
 
 ---
 
-## Notes & Exam Prep Overview
+## Content Overview
 
 ### 01 — AZ-900: Azure Fundamentals
 
 **Notes**
 - [Learn Notes](/01-az900/notes/az900-learn-notes.md) — Cloud concepts, Azure architecture and services, Azure management and governance
+
+**Exam Prep**
+- [Exam Preparation](/01-az900/exam-prep/az900-exam-prep.md) — Progress, scores and study approach
+
+**Exercises** — completed three times: Azure Portal, Azure CLI and PowerShell
+- [Exercise 1 — Create an Azure Resource](/01-az900/exercises/1-create-azure-resource.md)
+- [Exercise 2 — Create a Virtual Machine and Configure Network Access](/01-az900/exercises/2-create-an-azure-virtual-machine-and-configure-network-access.md)
+- [Exercise 3 — Create a Storage Blob](/01-az900/exercises/3-create-a-storage-blob.md)
+- [Exercise 4 — Estimate Workload Costs using the Pricing Calculator](/01-az900/exercises/4-estimate-workload-costs-by-using-the-pricing-calculator.md)
+- [Exercise 5 — Configure a Resource Lock](/01-az900/exercises/5-configure-a-resource-lock.md)
+
+---
 
 ### 02 — SC-900: Security, Compliance, and Identity Fundamentals
 
@@ -72,6 +84,11 @@ Planned:
 - [Exam Preparation](/02-sc900/exam-prep/sc900-exam-prep.md) — Progress, scores and study approach
 - [Exam Strategy](/02-sc900/exam-prep/sc900-exam-strategy.md) — Red thread and domain overview for exam day
 
+**Exercises**
+- No hands-on exercises — SC-900 is theory only.
+
+---
+
 ### 03 — AZ-104: Azure Administrator Associate
 *Coming soon*
 
@@ -79,31 +96,6 @@ Planned:
 *Coming soon*
 
 ### 05 — AB-900: Microsoft 365 Copilot and Agent Administration Fundamentals
-*Coming soon*
-
----
-
-## Exercises
-
-All hands-on exercises are completed three times:
-- Via the Azure Portal (UI)
-- Via the Azure CLI (Bash)
-- Via PowerShell
-
-### 01 — AZ-900 Exercises
-- [Exercise 1 — Create an Azure Resource](/01-az900/exercises/1-create-azure-resource.md)
-- [Exercise 2 — Create a Virtual Machine and Configure Network Access](/01-az900/exercises/2-create-an-azure-virtual-machine-and-configure-network-access.md)
-- [Exercise 3 — Create a Storage Blob](/01-az900/exercises/3-create-a-storage-blob.md)
-- [Exercise 4 — Estimate Workload Costs using the Pricing Calculator](/01-az900/exercises/4-estimate-workload-costs-by-using-the-pricing-calculator.md)
-- [Exercise 5 — Configure a Resource Lock](/01-az900/exercises/5-configure-a-resource-lock.md)
-
-### 02 — SC-900 Exercises
-- No hands-on exercises — SC-900 is theory only.
-
-### 03 — AZ-104 Exercises
-*Coming soon*
-
-### 04 — SC-300 Exercises
 *Coming soon*
 
 ---
