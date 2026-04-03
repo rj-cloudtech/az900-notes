@@ -1390,7 +1390,7 @@
   - Kerncomponenten
     - Core Defender Vulnerability Management; risico-gebaseerde aanpak voor het ontdekken, beoordelen en remedieren van endpoint kwetsbaarheden en misconfigurations
     - Attack Surface Reduction; eerste verdedigngslaag; zorgt voor correcte configuraties en exploit mitigation; inclusief network protection en web protection tegen kwaadaardige IP-adressen, domeinen en URLs
-    - Next Generation Protection; vangt nieuwe en opkomende dreigingen via behavior-based, heuristische en real-time antivirusbescherming en cloud-deliverd protection
+    - Next Generation Protection; vangt nieuwe en opkomende dreigingen via gedragsgebaseerde, patroonherkenning en real-time antivirusbescherming en cloud-delivered protection
     - Endpoint Detection and Response (EDR); near real-time detectie van geavanceerde aanvallen; analysts kunnen alerts prioriteren en response acties utvoeren
     - AIR (Automated Investigation en Remediation); geautomatiseerd onderzoek en directe actie bij breaches; vermindert alert volume zodat SecOps zich kan focussen op complexere dreigingen
     - Microsoft Threat Experts; managed threat hunting service die proactief jaagt op dreigingen en extra contect biedt aan SOCs (security Operations Centers)
