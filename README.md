@@ -95,7 +95,7 @@ Planned:
 
 **Exam Prep**
 - [Exam Preparation](/02-sc900/exam-prep/sc900-exam-prep.md) — Progress, scores and study approach
-- [Exam Strategy](/02-sc900/exam-prep/sc900-exam-strategy.md) — Red thread and domain overview for exam day
+- [Exam Strategy](/02-sc900/exam-prep/sc900-exam-strategy.md) — Quick reference for domains, products and comparisons for exam day
 
 **Exercises**
 - No hands-on exercises — SC-900 is theory only.
