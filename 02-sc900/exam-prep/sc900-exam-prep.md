@@ -15,7 +15,7 @@
 | Custom practice exam 1 (Parts 1 & 2 — mid‑way baseline) | 82% | Parts 3 & 4 not yet studied. Triggered creation of the [Identity & Security Clusters](/02-sc900/notes/sc900-identity-security-clusters.md)|
 | Custom practice exam 2 (Parts 1 & 2 — post study) | 90% | Retaken after creation of the clusters.|
 | Custom practice exam 3 (All parts — exam style, harder and mixed question types) | 85% | 34/40. Weakest: LP3 — Defender product distinctions, Azure RBAC vs Entra roles; LP2 — statement questions.|
-| Custom practice exam 4 (All parts — exam style, harder and mixed question types) | 85% | 34/40. Weakest: LP2 — Conditional Access edge cases, PIM scope (non-Microsoft apps), Password Protection hybrid; LP4 — eDiscovery Standard vs Premium.|
+| Custom practice exam 4 (All parts — exam style, harder and mixed question types) | 85% | 34/40. New question set with correct topic distribution matching official SC-900 exam weights. Weakest: LP2 — Conditional Access edge cases, PIM scope (non-Microsoft apps), Password Protection hybrid; LP4 — eDiscovery Standard vs Premium.|
 
 ## Study Approach
   - Reviewed incorrect answers and grouped them by topic
