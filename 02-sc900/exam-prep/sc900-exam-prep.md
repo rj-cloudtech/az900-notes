@@ -40,3 +40,5 @@
 
 ## Next Focus Areas after targeted retake
   - LP3 M3 — CSPM vs CWPP: misconfigurations and Secure Score = CSPM; active runtime threats = CWPP
+  - LP3 M4 — Sentinel: analytics rule detects → automation rule triggers → playbook executes (all three required)
+  - LP4 M2 — DLP vs Communication Compliance: DLP blocks data; Communication Compliance routes to human reviewer
