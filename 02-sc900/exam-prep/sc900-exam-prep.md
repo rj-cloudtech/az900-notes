@@ -49,5 +49,4 @@
   ## Next Focus Areas after exam 6
   - LP1 M1 — Shared Responsibility: application code is always customer responsibility in all service models
   - LP2 M1 — Managed Identities: FIDO2 = phishing-resistant hardware key; OATH = physical OTP token — do not confuse
-  - LP2 M3 — Conditional Access AND-logic: all assignments must be met simultaneously for policy to activate
-  - LP3 M5 — Network infrastructure in IaaS is Microsoft responsibility, not customer
+ - LP3 M5 — Network infrastructure in IaaS is Microsoft responsibility, not customer
