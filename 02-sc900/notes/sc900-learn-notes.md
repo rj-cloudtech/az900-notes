@@ -180,11 +180,9 @@
   
 ---
 
+## Learning Path 1: Introduction to Security, Compliance, and Identity
+### Module 2: Describe identity concepts 
 
-  - **Learning Path 1:** Introduction to Security, Compliance, and Identity
-    - **Module 2:** Describe identity concepts 
-      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
-        
 **Define authentication and authorization**
   - Authentication (AuthN)
     - Bewijzen dat je bent wie je zegt dat je bent
@@ -304,10 +302,8 @@
 
 ---
 
-
-  - **Learning Path 2:** Introduction to Microsoft Entra
-    - **Module 1:** Describe the function and identity types of Microsoft Entra ID 
-      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
+## Learning Path 2: Introduction to Microsoft Entra
+### Module 1: Describe the function and identity types of Microsoft Entra ID 
         
 **Describe Microsoft Entra ID**
   - Microsoft Entra ID (voorheen Azure Active Directory) is Microsoft's cloud-based identity and access management service. Organistaies gebruiken het zodat medewerkers, gasten en anderen kunnen inloggen en toegang krijgen tot resources.
@@ -411,12 +407,9 @@
 
 ---
 
-
-  - **Learning Path 2:** Introduction to Microsoft Entra
-    - **Module 2:** Describe the authentication capabilities of Microsoft Entra ID
-      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
-
-
+## Learning Path 2: Introduction to Microsoft Entra
+### Module 2: Describe the authentication capabilities of Microsoft Entra ID
+  
 **Describe authentication methods**
   - Passwords zijn de meest voorkomende vorm van authenticatie maar ook de meest kwetsbare. Microsoft Entra ID biedt meerdere authenticatiemethoden als aanvulling of vervanging
 
@@ -535,10 +528,8 @@
 
 ---
 
-
-  - **Learning Path 2:** Introduction to Microsoft Entra
-    - **Module 3:** Describe access management capabilities of Microsoft Entra
-      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
+## Learning Path 2: Introduction to Microsoft Entra
+### Module 3: Describe access management capabilities of Microsoft Entra
 
 **Describe Conditional Access**
   - Conditional Access is een feature van Microsoft Entra ID die een extra beveilingslaag toevoegt voordat geauthenticeerde users toegang krijgen tot data of resources. Werkt via policies die signalen analyseren zoals user, locatie, device, applicatie en risico om automatisch toegangbeslissingen te nemen
@@ -648,6 +639,9 @@
 
 ---
 
+
+## Learning Path 2: Introduction to Microsoft Entra
+### Module 4: Describe access management capabilities of Microsoft Entra
 
   - **Learning Path 2:** Introduction to Microsoft Entra
     - **Module 4:** Describe the identity protection and governance capabilities of Microsoft Entra
@@ -836,9 +830,9 @@
 ---
 
 
-  - **Learning Path 3:** Introduction to Microsoft security solutions
-    - **Module 1:** Describe Microsoft Security Copilot
-      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
+## Learning Path 3: Introduction to Microsoft security solutions
+### Module 1: Describe Microsoft Security Copilot
+
         
 **Get acquainted with Microsoft Security Copilot**
   - Microsoft Security Copilot is een AI-powered, cloud-based security analyse tool die analysts helpt om bedreigingen snel te onderzoeken, signalen op machine speeds te verwerken en risico's sneller te beoordelen
@@ -1030,9 +1024,9 @@
 ---
 
 
-  - **Learning Path 3:** Introduction to Microsoft security solutions
-    - **Module 2:** Describe core infrastructure security services in Azure 
-      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
+## Learning Path 3: Introduction to Microsoft security solutions
+### Module 2: Describe core infrastructure security services in Azure 
+
 
 **Describe Azure DDoS protection**
   - Distributed Denial of Service Attacks: een aanval probeert de resources van je applicaties en server te overbelasten zodat echte gebruikers er niet meer bij kunnen. de 3 meest voorkomende typen:
@@ -1198,10 +1192,10 @@
  ---
 
 
-  - **Learning Path 3:** Introduction to Microsoft security solutions
-    - **Module 3:** Describe the security management capabilities in Azure
-      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
-    
+## Learning Path 3: Introduction to Microsoft security solutions
+### Module 3: Describe the security management capabilities in Azure
+
+
 **Describe Microsoft Defender for Cloud**
   - Microsoft Defender for Cloud is een Cloud-Native Appication Protection Platform (CNAPP) dat cloud applicaties beschermt tegen cyberbedeigingen en kwetsbaarheden. Het combineert drie capabilities:
     - DevSecOps: Integreert beveiliging vroeg in het ontwikkelproces; beheert security across multi-pipeline omgevingen via Deferder for DevOps
@@ -1296,9 +1290,9 @@
  ---
 
 
-  - **Learning Path 3:** Introduction to Microsoft security solutions
-    - **Module 4:** Describe security capabilities of Microsoft Sentinel
-      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
+## Learning Path 3: Introduction to Microsoft security solutions
+### Module 4: Describe security capabilities of Microsoft Sentinel
+
 
 **Describe threat detection and mitigation capabilities in Microsoft Sentinel**
   - Microsoft Sentinel is een schaalbare, cloud-native SIEM (Security Information and Event Management) / SOAR (security Orchestration, Automation en Response) oplossing die security analystcs en threat intelligence levert across de hele organisatie. Het biedt 1 oplossing voor threat detection, investigation, response en proactive hunting.
@@ -1363,11 +1357,9 @@
 
         
  ---
-
-
-  - **Learning Path 3:** Introduction to Microsoft security solutions
-    - **Module 5:** Describe threat protection with Microsoft Defender XDR
-      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
+ 
+## Learning Path 3: Introduction to Microsoft security solutions
+### Module 5: Describe threat protection with Microsoft Defender XDR
 
 **Describe Microsoft Defender XDR services**
   - XDR is een enterprise defense suite die beschermt tegen geavanceerde cyberaanvallen. Het beoordeeldt threat signals van endpoints, applications, email en identiteiten om de scope en impact van een aanval te bepalen en kan automatisch actie ondernemen om aanvallen te stoppen
@@ -1592,9 +1584,8 @@
 ---
 
 
-  - **Learning Path 4:** Introduction to Microsoft Priva and Microsoft Purview
-    - **Module 1:** Describe Microsoft’s Service Trust portal and privacy capabilities
-      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
+## Learning Path 4: Introduction to Microsoft Priva and Microsoft Purview
+### Module 1: Describe Microsoft’s Service Trust portal and privacy capabilities
 
 
 **Describe the offerings of the Service Trust portal**
@@ -1644,9 +1635,9 @@
 ---
 
 
-  - **Learning Path 4:** Introduction to Microsoft Priva and Microsoft Purview
-    - **Module 2:** Describe the data security solutions of Microsoft Purview
-      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
+## Learning Path 4: Introduction to Microsoft Priva and Microsoft Purview
+### Module 2: Describe the data security solutions of Microsoft Purview
+
 
 **Describe the data classification capabilities of Microsoft Purview Information Protection**
   - Organisaties moeten hun data kennen om gevoe*lige informatie te identificeren en te beschermen. Microsoft Purview biedt hiervoor data classification via het Microsoft Purview portal
@@ -1873,10 +1864,8 @@
 
 ---
 
-
-  - **Learning Path 4:** Introduction to Microsoft Priva and Microsoft Purview
-    - **Module 3:** Describe the data compliance solutions of Microsoft Purview 
-      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
+## Learning Path 4: Introduction to Microsoft Priva and Microsoft Purview
+### Module 3: Describe the data compliance solutions of Microsoft Purview 
 
 
 **Describe Compliance Manager**
@@ -2063,10 +2052,8 @@
 
 ---
 
-
-  - **Learning Path 4:** Introduction to Microsoft Priva and Microsoft Purview
-    - **Module 4:** Describe the data governance solutions of Microsoft Purview
-      - Extra Sources: FreeCodeCamp SC‑900 & John Savill's Technical Training
+## Learning Path 4: Introduction to Microsoft Priva and Microsoft Purview
+### Module 4: Describe the data governance solutions of Microsoft Purview
 
 
 **Describe the concepts and benefits of data governance**
