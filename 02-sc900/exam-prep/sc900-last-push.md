@@ -1,8 +1,7 @@
 # SC-900 — Last Push Study Notes
 
 This document summarizes the topics I got wrong most often across all practice exams.
-Read this the morning before the real exam. Focus on the exam-style traps section —
-those cost the most points not because of missing knowledge but because of subtle wording.
+Read this the morning before the real exam. Focus on the exam-style traps section; those cost the most points not because of missing knowledge but because of subtle wording.
 
 ---
 
