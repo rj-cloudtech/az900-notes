@@ -74,6 +74,10 @@ Read this the morning before the real exam. Focus on the exam-style traps sectio
 | Improve compliance score | Compliance Manager |
 | Classify and encrypt sensitive data | Sensitivity Labels |
 | See where sensitive data is stored | Content Explorer |
+| Retain mailbox and file data for a required period | Data Lifecycle Management |
+| Identify invoice numbers or known data patterns | Sensitive Information Types (SITs) |
+
+**Remember:** Microsoft Purview portal = home for ALL compliance solutions: Communication Compliance, eDiscovery, Audit, DLP, Insider Risk Management, Compliance Manager. Not Defender portal, not Entra admin center.
 
 ---
 
@@ -87,8 +91,11 @@ Read this the morning before the real exam. Focus on the exam-style traps sectio
 | Defender for Cloud | Azure workloads | CSPM, CWPP, Secure Score |
 | Defender for Cloud Apps | SaaS applications | CASB, shadow IT |
 | Defender for Office 365 | Email and Teams | phishing, Safe Links, ZAP |
+| **Defender XDR** | **Unified across endpoints, identities, email AND applications** | **unified, cross-domain** |
 
 **Remember:** Misconfigurations are vulnerabilities → Vulnerability Management, not Endpoint.
+
+**Remember:** If the question asks for unified detection across ALL domains (endpoints + identities + email + apps) → always Defender XDR, never a single Defender product.
 
 ---
 
@@ -110,17 +117,53 @@ Read this the morning before the real exam. Focus on the exam-style traps sectio
 
 ---
 
-## 9. Edge knowledge Microsoft tests
+## 9. SIEM vs SOAR
+
+| | SIEM | SOAR |
+|---|---|---|
+| Function | Collect and correlate security data | Action-driven workflows and issue mitigation |
+| Key words | collection, correlation | automated response, remediation |
+
+**Remember:** Collection and correlation = SIEM. Action-driven workflows and issue mitigation = SOAR.
+
+---
+
+## 10. Identity types — service principal vs managed identity
+
+- **Service principal** = identity for any registered application in Entra ID; credentials must be managed
+- **Managed identity** = credential-free service principal for Azure resources only; credentials managed automatically by Microsoft
+
+**Exam trap:** "allow an Azure VM to access storage without handling credentials" → managed identity. "Identity for an application" → service principal.
+
+---
+
+## 11. Microsoft privacy principles — which principle covers what
+
+| Principle | What it covers |
+|---|---|
+| Control | Customers are in control of their own data |
+| Transparency | Microsoft informs how data is used and accessed |
+| **Security** | **Encryption and key management** |
+| Strong legal protections | Government data requests go to the customer, not Microsoft |
+| No content-based targeting | Data is not used for advertising |
+| Benefits to you | Data is used to improve your experience |
+
+**Exam trap:** "defines use and management of encryption keys" → Security, not Control.
+
+---
+
+## 12. Edge knowledge Microsoft tests
 
 - **Verified ID** → cryptographically signed credentials stored in a digital wallet (did:web trust system)
 - **SCIM** → standard protocol for automated identity provisioning and deprovisioning
 - **Honeytoken** → fake accounts used as bait in Defender for Identity to detect reconnaissance
-- **Microsoft privacy principles** → control, transparency, security, strong legal protections, no content-based targeting, benefits to you
 - **Security baselines** → apply Azure Security Benchmark guidance to specific services like Microsoft Entra
+- **ASR vs AIR** → ASR blocks malicious URLs and IPs before execution; AIR automatically investigates after detection
+- **Defender for Office 365 Plan 2 only** → Attack simulation training, Threat Explorer, Campaign views
 
 ---
 
-## 10. Exam-style traps — wording matters
+## 13. Exam-style traps — wording matters
 
 | If you see this | Answer |
 |---|---|
@@ -132,3 +175,5 @@ Read this the morning before the real exam. Focus on the exam-style traps sectio
 | "Security Reader can access Purview portal" | FALSE — Security Reader is a Defender portal role |
 | "PIM is included in P1" | FALSE — PIM requires P2 |
 | "SMS is the most secure MFA method" | FALSE — SMS is the least secure MFA method |
+| "defines use of encryption keys" | Security principle — not Control |
+| "unified detection across endpoints, identities, email and apps" | Defender XDR — not a single Defender product |
