@@ -24,6 +24,7 @@
 | Custom practice exam 6 — external platform (open-exam-prep.com, 35 questions) | 96% | Questions significantly easier and more conceptual than custom exams. Exam appears outdated — several questions outside current SC-900 objectives.|
 | Custom practice exam 7 (mixed question types & extra hard) | 90% | 72/80. First exam with all four question types: multiple choice, true/false, matching, drop-down. 3 lost points due to careless reading; morning exams recommended over late evening. Only real knowledge gap: FIDO2 vs OATH hardware token distinction. Weakest: LP2 M1, LP3 M5, LP1 M1.|
 | Custom practice exam 8 (Microsoft-style, mixed question types) | 92% | 59/64. Weakest: LP2 M1 — SCIM, Verified ID; LP3 M4 — Sentinel automation rules vs playbooks; LP3 M5 — Defender Vulnerability Management vs Defender for Endpoint.|
+| Microsoft Learn official practice assessment | 82% | Gaps: LP2 M1, LP1 M1, LP3 M5, LP3 M5 , LP4 M1, LP4 M2.|
 
 ## Study Approach
   - Reviewed incorrect answers and grouped them by topic
@@ -55,3 +56,11 @@
   - LP2 M1 — SCIM: standard protocol for automated identity provisioning and deprovisioning across systems
   - LP3 M4 — Sentinel: automation rules trigger playbooks; playbooks execute the actual response actions — "execute" always = playbook
   - LP3 M5 — Defender Vulnerability Management = CVEs and misconfigurations; Defender for Endpoint = EDR for active threats
+
+## Next Focus Areas after exam 9 — Microsoft Learn official practice assessment
+  - LP2 M1 — Service principal vs managed identity: service principal = identity for any registered application; managed identity = credential-free service principal for Azure resources only
+  - LP1 M1 — SIEM vs SOAR: SIEM = collect and correlate data; SOAR = action-driven workflows and issue mitigation
+  - LP3 M5 — ASR vs AIR: ASR = blocks malicious URLs and IPs before execution; AIR = automatically investigates after detection
+  - LP3 M5 — Defender XDR = unified detection across endpoints, identities, email AND applications; single Defender products cover only one domain
+  - LP4 M1 — Microsoft privacy principles: security principle = encryption and key management; control principle = customer owns their data
+  - LP4 M2 — Microsoft Purview portal = home for all compliance solutions: Communication Compliance, eDiscovery, Audit, DLP, Insider Risk Management, Compliance Manager
