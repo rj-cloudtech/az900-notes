@@ -8,7 +8,7 @@
   - Completing all Microsoft Learn modules
   - Watching the FreeCodeCamp SC‑900 course
   - Watching John Savill's Technical Training SC‑900
-  - Creating detailed notes in [Full Notes](/02-sc900/notes/sc900-full-notes.md)
+  - Creating detailed notes in [Learn Notes](/02-sc900/notes/sc900-learn-notes.md)
   - Building a product‑cluster overview in [Identity & Security Clusters](/02-sc900/notes/sc900-identity-security-clusters.md)
   - Practicing with custom AI-generated exams (claude.ai) based on official SC-900 exam objectives
 
