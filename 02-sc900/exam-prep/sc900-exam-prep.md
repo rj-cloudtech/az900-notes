@@ -23,7 +23,7 @@
 | Exam 5 — Custom targeted retake (weak areas only, 40 questions) | 92.5% | 37/40. Weakest: LP3 M3, LP3 M4, LP4 M3.|
 | Exam 6 — Custom (mixed question types & extra hard) | 90% | 72/80. First exam with all four question types: multiple choice, true/false, matching, drop-down. 3 lost points due to careless reading; morning exams recommended over late evening. Only real knowledge gap: FIDO2 vs OATH hardware token distinction. Weakest: LP2 M1, LP3 M5, LP1 M1.|
 | Exam 7 — Custom (Microsoft-style, mixed question types) | 90% | 47/52. Drop-down answers pre-filled due to widget issue — excluded from score. Weakest: LP2 M1 — SCIM, Verified ID; LP3 M4 — Sentinel automation rules vs playbooks; LP3 M5 — Defender Vulnerability Management vs Defender for Endpoint.|
-| | | *Switching to the official Microsoft Learn practice assessment. After each attempt, incorrect answers were studied and weak areas retested with custom AI-generated exams.* |
+| | | *Switching to the official Microsoft Learn practice assessment. After 1st attempt, incorrect answers were studied and weak areas retested with custom AI-generated exams (Exam 9).* |
 | Exam 8 — Microsoft Learn official practice assessment (1st attempt) | 82% | Gaps: LP2 M1, LP1 M1, LP3 M5, LP4 M1, LP4 M2.|
 | Exam 9 — Custom targeted retake on exam 8 gaps | 88% | Focused on weak areas from exam 8. Remaining gaps: LP3 M2 — NSG priority order, LP1 M1 — SOAR characteristics, LP3 M5 — CASB four pillars, LP2 M4 — user risk vs sign-in risk.|
 | Exam 10 — Microsoft Learn official practice assessment (2nd attempt) | 98% | 49/50. Only gap: LP4 M3 — Audit Premium vs eDiscovery (investigate based on records = Audit Premium).|
