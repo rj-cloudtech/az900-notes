@@ -131,4 +131,4 @@ Planned:
 ---
 
 ## Status
-Actively studying toward SC-900 certification. Repository updated regularly.
+Actively studying toward AZ-104 certification. Repository updated regularly.
