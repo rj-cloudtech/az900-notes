@@ -54,10 +54,10 @@ Planned:
 
 **Phase 1 — Fundamentals**
 - AZ-900 – Azure Fundamentals ✅
-- SC-900 – Security, Compliance & Identity Fundamentals 🔄
+- SC-900 – Security, Compliance & Identity Fundamentals ✅
 
 **Phase 2 — Associate**
-- AZ-104 – Azure Administrator Associate
+- AZ-104 – Azure Administrator Associate 🔄
 - SC-300 – Identity and Access Administrator Associate
 - PowerShell & Microsoft Graph API
 
@@ -95,7 +95,7 @@ Planned:
 **Exam Prep**
 - [Exam Preparation](/02-sc900/exam-prep/sc900-exam-prep.md) — Progress, scores and study approach
 - [Exam Strategy](/02-sc900/exam-prep/sc900-exam-strategy.md) — Quick reference for domains, products and comparisons for exam day
-
+- [Exam Last Push](/02-sc900/exam-prep/sc900-last-push.md) — Final study reference covering recurring weak areas, product distinctions, exam-style traps and wording pitfalls. Written the just before the exam.
 **Exercises**
 - No hands-on exercises — SC-900 is theory only.
 
