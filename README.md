@@ -96,6 +96,7 @@ Planned:
 - [Exam Preparation](/02-sc900/exam-prep/sc900-exam-prep.md) — Progress, scores and study approach
 - [Exam Strategy](/02-sc900/exam-prep/sc900-exam-strategy.md) — Quick reference for domains, products and comparisons for exam day
 - [Exam Last Push](/02-sc900/exam-prep/sc900-last-push.md) — Final study reference covering recurring weak areas, product distinctions, exam-style traps and wording pitfalls. Written the just before the exam.
+
 **Exercises**
 - No hands-on exercises — SC-900 is theory only.
 
