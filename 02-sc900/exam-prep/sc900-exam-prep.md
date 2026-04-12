@@ -11,6 +11,7 @@
   - Creating detailed notes in [Learn Notes](/02-sc900/notes/sc900-learn-notes.md)
   - Building a product‑cluster overview in [Identity & Security Clusters](/02-sc900/notes/sc900-identity-security-clusters.md)
   - Practicing with custom AI-generated exams (claude.ai) based on official SC-900 exam objectives
+  - Practicing with the Official Microsoft Practice Assessment
 
 ## Practice Assessment Progression
 | Platform | Score | Notes |
