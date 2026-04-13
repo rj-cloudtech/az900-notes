@@ -56,7 +56,10 @@
     - Storage uit meerdere regio's nodig hebt; Cloud Shell ondersteunt slechts 1 regio per storage-allocatie, wat back-up en synchronisatie vereist
     - Meerdere sessies tegelijk nodig hebt; Cloud Shell staat slechts 1 instance tegelijk toe en is niet geschikt voor gelijktijdig werk over meerdere subscriptions of tenants
 
-
+**Summary**
+  - Azure Cloud Shell is een browser toegankelijk command-line omgeving voor het beheren van Azure resources; geen lokale installatie van Azure CLI of PowerShell vereist
+  - Je kiest zelf o je werkt in Bash of PowerShell, direcht vanuit de browser
+  - Cloud Shell biedt mechanismen om bestanden tussen sessies te bewaren, en geeft toegang tot minimalistische versie van Visual Studio Code editor voor complexere bewerkingen
 
 
 
