@@ -122,14 +122,40 @@
 - [Exercise 1 Create and deploy an Azure Resource Manager template](/03-az104/exercises/1-create-and-deploy-an-azure-resource-manager.md)
 
 **Add flexibility to your Azure Resource Manager template by using parameters and outputs**
+  - ARM-template parameter
+    - Parameters maken een ARM template herbruikbaar door waarden zoals SKU, naam of capaciteit per deployment te kunnen varieren; zonder de template zelf aan te passen
+    - Je kunt parameters meegeven via de command line of via parameter file
+    - Maximum aantal parameters per template is 256
+    - Beschikbare properties per parameter: type, defaultValue, allowedValues, minValue, maxValue, minLength, maxLength, en metadata (description
+    - Toegastane parameter types: string, secureString, integer, boolean, object, secureObject, array
+
+  - Aanbevelingen voor parameter
+    - Gebruik parameters voor omgevingsafhankelijke instellingen zoals SKU, grootte of capaciteit, en voor resource namen
+    - Geef altijd een description mee en gebruik default values waar mogelijk
+    - Hardcode nooit gebruikersnamen of wachtwoorden; gebruik altijd parameter met type secureString of secureObject. Deze waarden zijn na deployment niet meer uit te lezen
+   
+  - Parameter gebruiken in een ARM template
+    - Parameter definitie staat in de parameters sectie van de template
+    - Referentie in de resource definitie via de syntax [parameters('parameternaam')]
+    - Bij deployment meegegeven via CLI: --parameters storageAccountType=Standard_LRS
+
+  - ARM template outputs
+    - In de outputs sectie geef je aan welke waarden worden teruggegeven na een succesvolle deployment
+    - Beschikbare properties: condition (optioneel, boolean), type, value (optioneel, expression), copy (optioneel, voor meerdere output waarden)
+    - De reference () functie haalt de runtime state van een resource op, bijvoorbeeld voor het teruggeven van storage endpoints
+
+  - Deploy an ARM template again
+    - ARM templates zijn idempotent: opnieuw deployen naar dezelfde omgeving zonder wijzigingen heeft geen effect
+    - Alleen gewijzigde waarden worden opnieuw deployed. Resources worden aangemaakt als ze nog niet bestaan, of bijgewerkt als er een wijziging is
+
+**Exercise - Add parameters and outputs to your Azure Resource Manager template**
+- [Exercise 2 Add parameters and outputs to your Azure Resource Manager template](/03-az104/exercises/2-add-parameters-and-outputs-to-your-azure-resource-manager-template.md)
 
 
+---
 
-
-
-
-
-
+## Learning Path 2: 
+### Module 1: 
 
 
 
