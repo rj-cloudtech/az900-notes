@@ -7,7 +7,7 @@ In deze oefening maak ik een ARM template aan in VSCode, deploy ik deze naar Azu
 
 ---
 
-## Uitvoering 1 — Azure PowerShell (VSCode terminal, KDE Neon Linux)
+## Uitvoering 1 — Azure PowerShell (VSCode terminal)
 
 ### Task 1 Resource Group aanmaken
 
