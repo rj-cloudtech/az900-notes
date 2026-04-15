@@ -152,6 +152,15 @@
 - [Exercise 2 Add parameters and outputs to your Azure Resource Manager template](/03-az104/exercises/2-add-parameters-and-outputs-to-your-azure-resource-manager-template.md)
 
 
+**Summary**
+  - ARM Templates zijn JSON-bestanden voor het deployen van Azure infrastructuur via declarative syntac (IaC). Templates zijn idempotent, hebben ingebouwde validatie, en bestaan uit verplichte elementen (schema, contentVersion, resources) en optionele elementen (parameters, variables, functions, outputs)
+    - Parameters maken templates herbruikbaar met ondersteuning voor allowedValues, defaultValue en beveiligde types zoals secureString
+    - Outputs geven waarden terug na deployment via de reference () functie
+    - Deployments via CLI:az deployment group create
+    - Deployments via PowerShell: New-AzResourceGroupDeployment
+
+
+
 ---
 
 ## Learning Path 2: 
