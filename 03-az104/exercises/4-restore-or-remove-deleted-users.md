@@ -23,6 +23,4 @@ Uitgevoerd via **Microsoft Entra admin center > Identity > Users > Deleted users
 - Hersteld via **Restore user**
 - Gecontroleerd via **All users**: Chris Green staat er weer bij
 
-> Verwijderde accounts zijn herstelbaar tot 30 dagen na verwijdering. Na 30 dagen wordt het account automatisch en permanent verwijderd — herstel is dan niet meer mogelijk.
-
 ---
