@@ -255,7 +255,24 @@
 
 
 
+---
 
+
+
+## Learning Path 2: Manage identities and governance in Azure
+### Module 2: Create, configure, and manage identities 
+
+**Create, configure, and manage users**
+  - Elk account dat toegang nodig heeft tot resources vereist een user account in Entra ID. Na authenticatie bouwt Entra ID een access token om te bepalen welke resources de gebruiker kan benaderen
+  - Beheer via de Microsoft Entra admin center; je werkt altijd met 1 directory tegelijk, wisselen van Directory + Subscribtion panel of de Switch directory knop
+
+  - 3 typen gebruikers:
+    - Cloud identities: bestaan alleen in Entra ID (admins, zelf beheerde gebruiker)
+      - Source: Microsoft Entra ID.
+    - Directory-synchronized identities; bestaan in on-premises AD DS en worden gesynchroniseerd naar Entra ID. Aanbevolen tool: Microsoft Entra Cloud Sync (lichtgewicht, ondersteunt meerdere forests) Voor complexe scenario's (device sync, groupen > 50.000 leden): Microsoft Entra Connect Sync.
+       - Source Windows Server AD
+    - Guest users: bestaan buiten de organisateie (externe vendors, contractors, andere cloud providers)
+       - Source: invited User. Account verwijderen trekt direct alle toegang in
 
 
 
