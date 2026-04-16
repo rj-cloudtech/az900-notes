@@ -163,10 +163,44 @@
 
 ---
 
-## Learning Path 2: 
-### Module 1: 
+## Learning Path 2: Manage identities and governance in Azure
+### Module 1: Understand Microsoft Entra ID 
 
+**Examine Microsoft Entra ID**
+  - Microsoft Entra ID is een PaaS directory service beheerd door Microsoft in de cloud; geen eigen infrastructure nodig, maar ook minder controle over de implementatie
+  - Verschil met AD DS: AD DS draait als service op Windows Server (domain controller) en is gericht op on-premises apps. Entra ID is gericht op web-based appes en cloud resources
+  - Mogelijkheiden: SSO, MFA, identity protection, SSPR, Conditional Access, Application Proxy, federation tussen organisaties
+  - Gratis tier is automatisch inbegrepen bij elke Azure subscription. Premium features vereisen betaalde tiers (Basic/Premium), deels automatisch inbegrepen bij Microsoft 365
 
+  - Tenants
+    - Entra ID is multi-tenatn by design; elke tenant is een geisoleerde directory instantie
+    - Een tenatn vertegenwoordigt een organisatie die zich heeft aangemeld voor een Microsoft cloud service (Azure, Microsoft 365, Intune)
+    - Een Azure subscription is altijd gekoppeld aan precies 1 entra tenant, maar dezelfde tenant kan aan meerdere subscriptions gekoppeld zijn
+    - Elke tenant krijgt een standaard DNS naam met het suffix onmicrosoft.com. Een custom domain toevoegen is mogelijk en gebruikelijk
+   
+  - Schema
+    - Het Entra ID schema bevat minder object types dan AD DS; geen computer class (wel device), geen Organizational Units (OUs)
+    - Geen OUs betekent geen Group Policy Objects (GPOs); beheer via group membership in plaats van OU-hierarchie
+    - Applications wordne weergegeven door 2 classes:
+      - Application (definitie)
+      - servicePrincipal (instantie per tenant)
+     
+  **Compare Microsoft Entra ID and Active Directory Domain Services**
+  
+| Kenmerk | AD DS | Microsoft Entra ID |
+|---|---|---|
+| Structuur | Hiërarchisch (X.500) | Flat (geen OUs) |
+| Locating resources | DNS | REST API via HTTP/HTTPS |
+| Query protocol | LDAP | REST API |
+| Authenticatie | Kerberos | SAML, WS-Federation, OpenID Connect |
+| Autorisatie | - | OAuth |
+| Beheer | OUs en GPOs | Group membership |
+| Computer objects | Ja | Nee (wel device objects) |
+| Multi-tenant | Nee | Ja |
+| Primaire focus | On-premises apps | Web-based / internet apps |
+| Communicatie | - | HTTP (port 80) / HTTPS (port 443) |
+
+  - AD DS maakt deel uit van de bredere Windows Active Directory suite: AD CS, AD LDS, AD FS en AD RMS. AD DS op een Azure VM deployen is mogelijk maar maakt geen gebruik van Microsoft Entra ID.
 
 
 
