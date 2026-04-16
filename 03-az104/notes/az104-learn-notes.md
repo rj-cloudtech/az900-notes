@@ -275,12 +275,16 @@
        - Source: invited User. Account verwijderen trekt direct alle toegang in
 
 
+**Exercise - Restore or remove deleted users**
+- [Exercise 3 Assign licenses to users](/03-az104/exercises/3-assign-licenses-to-users.md)
 
 
+**Exercise - Restore or remove deleted users**
+- [Exercise 4 Restore or remove deleted users](/03-az104/exercises/4-restore-or-remove-deleted-users.md)
 
 
-
-
+**Create, configure, and manage groups**
+  - 
 
 
 
