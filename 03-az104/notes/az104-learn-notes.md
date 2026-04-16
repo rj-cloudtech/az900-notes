@@ -341,11 +341,34 @@
 - [Exercise 7 change user license assignments](/03-az104/exercises/7-change-user-license-assignments.md)
 
 
+**Create custom security attributes**
+  - Create custom security attributes
+    - Custom security attributes zijn business-specifieke key-value paris die je kunt definieren en toewijzen aan Entra objecten (users, service principles)
+    - Gebruik uitbreiden van user profiles, categoriseren van applicaties, fine-grained access control over Azure resources, attribuut-gebaseerde governance
+    - Niet ondersteund in: Entra Domain Services, SAML token claims, JWT clains
+   
+  - Features:
+    - Tenant-wide beschikbaar
+    - Data types: Boolean, integer, string
+    - Enkelvoudige of meervoudige waarden
+    - Vrije invoer of vooraf gedefinieerde waarden
+    - Toewijsbaar aan directory-synced users vanuit on-premises AD
 
 
+**Explore automatic user creation**
+  - SCIM (System for Cross-Domain Identity Management) is een open standaard protocol voor het automatisch uitwisselen van user identity informatie tussen systemen
+  - Doel: gebruikers die in het HR-systeem (HCM) worden toegevoegd of verwijderd, worden automatisch aangemaakt of gedeprovisioneerd in Entra ID of AD; minder risico op datalekken door verlaten accounts
 
+  - Componenten:
+    - HCM systeem: HR applicatie die de employee lifecycle beheert
+    - Microsoft Entra Provisioning Service: gebruikt SCM 2.0 protocol, verbindt met de SCIM endpoint van de applicatie
+    - Microsoft Entra Id: User repository voor identity lifecyle management
+    - Target system: Applicatie met SCIM endpoint die automatische provisioning ondersteunt
 
-
+  - API-driven inbound provisioning:
+    - Voor HR-systemen zonder SCIM endpoint ondersteunt Entra ID API-drivin inbound provisioning (GA maart 2024)
+    - Elk automation tool of script kan workforce data ophalen en naar de Entra provisioning API sturen
+    - Ondersteunde bronnen: Workday, SAP SuccessFactor, Custom HR systemen
 
 
 
