@@ -379,20 +379,49 @@
     - Ondersteunde bronnen: Workday, SAP SuccessFactor, Custom HR systemen
 
 
+**Summary** Module 2 — Create, configure, and manage identities
+  - Entra ID beheert 3 typen gebruikers (cloud identities, directory=synchronized, guest users) en 2 typen groepen (Security en Microsoft 365), met 3 membership types (Assigned, Dynamic User, Dynamic Device). Devices kunnen worden geregistreerd als Entra Registered (BYOD), Entra Joined (cloud-first) of Hybrid Entra Joined (on-premises + cloud)
+  - Licenties worden beheerd via group-based licencing; Entra ID P1 vereist, wijzigingen effectief binnen minuten
+  - Custom security attributes zijn key-value pairs voor fine-grained access control, ondersteunt Boolean, integer en string
+  - SCIM automatiseert user provisioning vanuit HR-systemen, voor systemen zonder SCIM endpoint: API-driven inbound provisioning
+  - P2-only: ID Protection en PIM
+
+---
+
+
+
+## Learning Path 2: Manage identities and governance in Azure
+### Module 3: Describe the core architectural components of Azure 
+
+
+
+
+---
+
+
+
+## Learning Path 2: Manage identities and governance in Azure
+### Module 4: Azure Policy initiatives 
+
+
+
+---
+
+
+
+## Learning Path 2: Manage identities and governance in Azure
+### Module 5: Secure your Azure resources with Azure role-based access control (Azure RBAC)
 
 
 
 
 
+---
 
 
 
-
-
-
-
-
-
+## Learning Path 2: Manage identities and governance in Azure
+### Module 5: Allow users to reset their password with Microsoft Entra self-service password rese
 
 
 
