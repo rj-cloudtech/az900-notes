@@ -386,6 +386,9 @@
   - SCIM automatiseert user provisioning vanuit HR-systemen, voor systemen zonder SCIM endpoint: API-driven inbound provisioning
   - P2-only: ID Protection en PIM
 
+
+
+
 ---
 
 
@@ -403,7 +406,19 @@
 ## Learning Path 2: Manage identities and governance in Azure
 ### Module 4: Azure Policy initiatives 
 
-
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  
+  - 
+  - 
+  - 
+  - 
+  - 
+  -   
 
 ---
 
@@ -412,7 +427,19 @@
 ## Learning Path 2: Manage identities and governance in Azure
 ### Module 5: Secure your Azure resources with Azure role-based access control (Azure RBAC)
 
-
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  
+  - 
+  - 
+  - 
+  - 
+  - 
+  -   
 
 
 
@@ -423,6 +450,18 @@
 ## Learning Path 2: Manage identities and governance in Azure
 ### Module 5: Allow users to reset their password with Microsoft Entra self-service password rese
 
-
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  
+  - 
+  - 
+  - 
+  - 
+  - 
+  -   
 
 
