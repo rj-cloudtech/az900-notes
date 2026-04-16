@@ -163,8 +163,11 @@
 
 ---
 
+
+
 ## Learning Path 2: Manage identities and governance in Azure
 ### Module 1: Understand Microsoft Entra ID 
+
 
 **Examine Microsoft Entra ID**
   - Microsoft Entra ID is een PaaS directory service beheerd door Microsoft in de cloud; geen eigen infrastructure nodig, maar ook minder controle over de implementatie
@@ -184,8 +187,10 @@
     - Applications wordne weergegeven door 2 classes:
       - Application (definitie)
       - servicePrincipal (instantie per tenant)
+
+
      
-  **Compare Microsoft Entra ID and Active Directory Domain Services**
+**Compare Microsoft Entra ID and Active Directory Domain Services**
   
 | Kenmerk | AD DS | Microsoft Entra ID |
 |---|---|---|
@@ -204,7 +209,31 @@
 
 
 
+**Examine Microsoft Entra ID as a directory service for cloud apps**
+  - Elke cloud service die authenticatie nodig heeft zou standaard een eigen Entra tenant aanmaken; het is efficienter om 1 gedeelde directory te gebruiken voor alle microsoft cloud services
+  - Entra ID biedt 1 identity service voor Microsoft 365, Azure, Dynamics 365 en intune, inclusief SSO voor externe services zoals Facebook, Google en Yahoo
+  - Ontwikkelaars kunnen Entra ID gebruiken als centralized authentication en authorization provider voor applicaties in Azure, ook in combinatie met on-premises AD DS
+  - Voor Azure App Service kun je Entra authenticatie direct inschakelen via de Authentication/Authorization blade in de Azure portal; per deployment slot instelbaar
 
+
+    
+**Compare Microsoft Entra ID P1 and P2 plans**
+  - P1 en P2 zijn betaalde tiers bovenop de Free en Office 365 edities, beschikbaar als losse licentie of via Microsoft Enterprise Mobility + Security (inclusief Intune en Auzre Information Protection)
+
+  - P1 Features
+    - Self-service group management: Gebruikers kunnen groepen aanmaken en beheren
+    - Advanced security reports en alerts: Machine learning-based anomaly detection
+    - Multi-factor authentication (MFA): Werkt op on-premises apps (VPN, RADIUS, Azure, Microsoft 365, Dynamics 365 en 3rd party gallery apps
+    - Microsoft Identity Manager (MIM): Bridge tussen on-premises authenticaton stores (AD DS, LDAP, Oracle) en Entra ID
+    - SLA van 99,9 beschikbaarheid
+    - Password reset with writeback: SSPR volgt het on-premises AD password policy
+    - Cloud App Discovery: ontdekt meest gebruikte cloud apps
+    - Conditional Access op basis van device, group of location
+    - Microsoft Entra Connect Health; Monitoring en operationeel inzicht in Entra ID
+   
+  - P2 Features
+    - Microsoft Entra ID Protection: User risk policies en sign-in policies, gedragsanalyse en risk flagging
+    - Microsoft Entra Privilged Identity Management (PIM): extra beveiliging voor privileged users, permanent en tijdelijke admins, policy workflow voor gebruik en admin privileges
 
 
 
