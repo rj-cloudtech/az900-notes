@@ -533,9 +533,39 @@
   - Event-driven reacties:
     - Policy state changes worden via Azure Event Grid gepusht naar Event Handlers (Azure Functions, Logic Apps, webhooks). Geen polling nodig.
 
+**What is Azure RBAC?**
+  - Azure RBAC is een autorisatiesysteem gebouwd op Azure Resource Manager voor fine-grained access management van Azure resources. Toegang wordt verleend via role assignment.
+    - 3 delen:
+    - Security principal (WHO): User, group of application
+    - Role definition (WHAT): Verzameling van permissions (read, write, delete).
+       - 4 delen
+       - Owner: Volledige toegang, inclusief toegang delegeren
+       - Contributor: Aanmaken en beheren van resources, geen toegang verlenen
+       - Reader: alleen bekijken
+       - User Access Administrator: Gebruikerstoegang beheren'
+    - Scope (WHERE): Management group, subscription, resource group, of resource. Hogere scopres worden geerfd door lagere scopes
+   
+  - Allow model: RBAC verleent toegang via `Actions`. Met `NotActions` kun je specifieke permissies uitsluiten. effectieve permissies = Action minus NotActions.
+
+
+**Exercise - List access using Azure RBAC and the Azure portal**
+- [Exercise 8 List access using Azure RBAC and the Azure portal](/03-az104/exercises/8-list-access-using-azure-rbac-and-the-azure-portal.md)
 
 
 
+**Exercise - Grant access using Azure RBAC and the Azure portal**
+- [Exercise 9 Grant access using Azure RBAC and the Azure portal](/03-az104/exercises/9-grant-access-using-azure-rbac-and-the-azure-portal.md)
+
+
+
+**Exercise - View activity logs for Azure RBAC changes**
+- [Exercise 9 View activity logs for Azure RBAC changes](/03-az104/exercises/9-view-activity-logs-for-azure-rbac-changes.md)
+
+
+
+
+
+  
 
 ---
 
