@@ -119,7 +119,7 @@
       - kind
         
 **Exercise - Create and deploy an Azure Resource Manager template**
-- [Exercise 1 Create and deploy an Azure Resource Manager template](/03-az104/exercises/1-create-and-deploy-an-azure-resource-manager.md)
+- [Exercise 1 Create and deploy an Azure Resource Manager template](/03-az104/exercises/01-create-and-deploy-an-azure-resource-manager.md)
 
 **Add flexibility to your Azure Resource Manager template by using parameters and outputs**
   - ARM-template parameter
@@ -149,7 +149,7 @@
     - Alleen gewijzigde waarden worden opnieuw deployed. Resources worden aangemaakt als ze nog niet bestaan, of bijgewerkt als er een wijziging is
 
 **Exercise - Add parameters and outputs to your Azure Resource Manager template**
-- [Exercise 2 Add parameters and outputs to your Azure Resource Manager template](/03-az104/exercises/2-add-parameters-and-outputs-to-your-azure-resource-manager-template.md)
+- [Exercise 2 Add parameters and outputs to your Azure Resource Manager template](/03-az104/exercises/02-add-parameters-and-outputs-to-your-azure-resource-manager-template.md)
 
 
 **Summary**
@@ -276,11 +276,11 @@
 
 
 **Exercise - Restore or remove deleted users**
-- [Exercise 3 Assign licenses to users](/03-az104/exercises/3-assign-licenses-to-users.md)
+- [Exercise 3 Assign licenses to users](/03-az104/exercises/03-assign-licenses-to-users.md)
 
 
 **Exercise - Restore or remove deleted users**
-- [Exercise 4 Restore or remove deleted users](/03-az104/exercises/4-restore-or-remove-deleted-users.md)
+- [Exercise 4 Restore or remove deleted users](/03-az104/exercises/04-restore-or-remove-deleted-users.md)
 
 
 **Create, configure, and manage groups**
@@ -296,7 +296,7 @@
 
 
 **Exercise - Add groups in Microsoft Entra ID**
-- [Exercise 5 Add groups in Microsoft Entra ID](/03-az104/exercises/5-add-groups-in-microsoft-entra-id.md)
+- [Exercise 5 Add groups in Microsoft Entra ID](/03-az104/exercises/05-add-groups-in-microsoft-entra-id.md)
 
 
 
@@ -334,7 +334,7 @@
 
 
 **Exercise - Change group license assignments**
-- [Exercise 6 change group license assignments](/03-az104/exercises/6-change-group-license-assignments.md)
+- [Exercise 6 change group license assignments](/03-az104/exercises/06-change-group-license-assignments.md)
 
 | Foutcode | Oorzaak |
 |---|---|
@@ -346,7 +346,7 @@
 
 
 **Exercise - Change user license assignments**
-- [Exercise 7 change user license assignments](/03-az104/exercises/7-change-user-license-assignments.md)
+- [Exercise 7 change user license assignments](/03-az104/exercises/07-change-user-license-assignments.md)
 
 
 **Create custom security attributes**
@@ -549,12 +549,12 @@
 
 
 **Exercise - List access using Azure RBAC and the Azure portal**
-- [Exercise 8 List access using Azure RBAC and the Azure portal](/03-az104/exercises/8-list-access-using-azure-rbac-and-the-azure-portal.md)
+- [Exercise 8 List access using Azure RBAC and the Azure portal](/03-az104/exercises/08-list-access-using-azure-rbac-and-the-azure-portal.md)
 
 
 
 **Exercise - Grant access using Azure RBAC and the Azure portal**
-- [Exercise 9 Grant access using Azure RBAC and the Azure portal](/03-az104/exercises/9-grant-access-using-azure-rbac-and-the-azure-portal.md)
+- [Exercise 9 Grant access using Azure RBAC and the Azure portal](/03-az104/exercises/09-grant-access-using-azure-rbac-and-the-azure-portal.md)
 
 
 
