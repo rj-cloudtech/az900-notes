@@ -184,7 +184,7 @@
   - Schema
     - Het Entra ID schema bevat minder object types dan AD DS; geen computer class (wel device), geen Organizational Units (OUs)
     - Geen OUs betekent geen Group Policy Objects (GPOs); beheer via group membership in plaats van OU-hierarchie
-    - Applications wordne weergegeven door 2 classes:
+    - Applications worden weergegeven door 2 classes:
       - Application (definitie)
       - servicePrincipal (instantie per tenant)
 
@@ -396,11 +396,146 @@
 ## Learning Path 2: Manage identities and governance in Azure
 ### Module 3: Describe the core architectural components of Azure 
 
+**Cloud Adoption Framework for Azure**
+  - Het Cloud Adoption Framework (CAF) biedt end-to-end guidance voor cloud adoptie. Best practices, documentatie en tools voor cloud architects, IT experts en business leaders
+  - Cloud governance: Beheer van cloud gebruik, gericht op compliance, security, kosten, resource management en AI
+
+  - 5 stappen voor cloud governance:
+    - Build a governance team
+    - Assess cloud risks
+    - Document cloud governance policies
+    - Enforce cloud governance policies
+    - Monitor cloud governance
+   
+  - 5 core disciplines
+    - Cost management, Security baselin, Resource consistency, Identitiy baseline, Deployment acceleraton
+
+  - Azure Policy als governance tool:
+    - Contrale tool voor governance; afdwingen van standards, compliance monitoren, noncompoliant resources remedieren
+    - Automatische remediatie voor nieuwe resources, bulk remediate voor bestaande
+    - Integreert met Azure DevOps voor CI/CD pipelines policies
+    - Voorbeelden: Regio restricties, VM sizes beperken, tags afdwingen, MFA vereisen, diagnostic logs sturen naar Azure Monitor
+
+
+**Azure Policy design principles**
+  - Governance hierarchie (hoog naar laag):
+    - Management Groups
+    - Subscription
+    - Resource Groups
+    - Resources
+  - Lagere niveaus erven settings van hogere niveau
+
+  - Azure Resource Manager (ARM)
+    - Deployment en management service voor Azure; centrale laag voor aanmaken, updaten en verwijderen van resources
+    - 2 operatietypes:
+      - Control plane: Beheert resources (RBAC, policies, templates, tagging). Azure policy opereert hier. Volgorde: RBAC wordt eerst geevalueerd, daarna Azure Policy
+      - Data plane: Directe data operaties (uploaden naar storage, query's op SQL, secruits uit Key Vault). Wordt niet door ARM beheerd maar direct door de resource provide
+     
+    - 2 deployment scenario's
+      - Greenfield (policy first): Nieuwe resources worden direct geevalueerd tegen policies bij aanmaken/update
+      - Brownfield (resource-first): bestaande resources bij een nieuwe policy worden geevalueerd via compliance scan, automatisch elke 24 uur of handmatig getriggerd. Noncompliant resources worden geflagd maar niet verwijderd
+
+
+**Azure Policy resources**
+  - 6 policy resources in Azure:
+    - Definitions: beschrijven compliance condities en het effect bij een match. Opgeslagen in een management group of subscription. De locatie bepaalt de scope waarvoor de policy gebruikt kan worden
+    - Initiatives (policy sets): Groepering van meerdere policy definitions voor vereenvoudigd beheer:
+    - 2 types
+      - Built-in: Gegenereerd door Azure Resource Providers, standaard beschikbaar
+      - Custom: Zelf geschreven wanneer geen buil-in policy voldoet
+
+  - Assignments: Bepalen welke resources geevalueerd worden door een policy of initiative
+  - OPties bij assingment:
+    - Resources selectors voor gefaseerde uitrol
+    - Overrides om effect te wijzigen zonder de definitie aan te passen
+    - `enforcementMode` uitschakelen voor what-if scenario's
+    - Excluded scopes voor uitzonderingen
+    - Parameters en noncompliance messages
+
+  - Exemptions: vrijstelling van evaluatie voor een resource of resource hierarchy
+  - 2 categorieen:
+    - Mitigated: Policy intent wordt via andere methode bereikt
+    - Waiver: Noncompliance tijdelijk geaccepteerd
+
+  - Attestations: Handmatig instellen van compliance status voor resources die niet automatisch geevalueerd kunnen worden
+  - Remediations: Brengen noncompliant resources terug naar compliance via een remediation task. Automatisch voor nieuwe/geupdatete resources met `deployIfNotExists` of `modify` effect
+
+
+**Azure Policy Definitions**
+  - Een policy definition bestaat uit 2 delen:
+    - If block: Conditie die bepaalt wanneer de policy van toepassing is
+    - Then block: Effect dat plaatsvindt als de conditie waar is
+   
+  - Anatomy van een policy definition (JSON elementen)
+| Element | Verplicht | Beschrijving |
+|---|---|---|
+| displayName | Ja | Naam, max 128 tekens |
+| description | Nee | Context, max 512 tekens |
+| policyType | Readonly | Built-in, Custom, of Static |
+| mode | Ja | All, Indexed, of Resource Provider mode |
+| parameters | Nee | Herbruikbaarheid via variabele waarden |
+| policyRule | Ja | if/then logica |
+
+  - Logische operatoren (if block)
+    - `not`: inverteert de conditie
+    - `allOf`: alle condities moeten waar zijn (AND)
+    - `anyOf`: Minimaal 1 conditie moet waar zijn (OR)
+   
+  - Effect types (then block):
+| Effect | Type | Beschrijving |
+|---|---|---|
+| disabled | Synchroon | Policy gedeactiveerd |
+| append | Synchroon | Velden toevoegen bij aanmaken/updaten (grotendeels obsoleet) |
+| modify | Synchroon | Properties of tags toevoegen, updaten of verwijderen |
+| deny | Synchroon | Request blokkeren |
+| denyAction | Synchroon | Acties blokkeren op schaal (alleen DELETE) |
+| audit | Asynchroon | Warning in activity log, request niet gestopt |
+| auditIfNotExists | Asynchroon | Audit gerelateerde resources die niet aan conditie voldoen |
+| deployIfNotExists | Asynchroon | Template deployment triggeren als conditie waar is |
+| manual | Handmatig | Compliance handmatig attesteren |
+
+
+**Evaluation of resources through Azure Policy**
+  - Evaluation trigger: policy evaluatie wordt getriggerd door:
+    - Nieuwe of geupdatete policy/initiative assignment
+    - Resource aangemaakt of geupdated in een scope
+    - Subscription aangemaakt of verplaatst in management group hierarchie
+    - Exemption aangemaakt, geupdated of verwijderd
+    - Automatisch volledige scan elke 24 uur
+    - Handmatige scan via `az policy state trigger-scan`
+      
+  - Timing: Nieuwe policy kan tot 30 minuten nodig hebben om van kracht te worden door ARM caching. Uitloggen en inloggen bypast dit.
+
+  - Compliance states (volgorde van prioriteit):
+    - Non-compliant
+    - Compliant
+    - Error
+    - Conflicting
+    - Protected
+    - Exempted
+    - Unknown
+   
+  - Compilance percentage = (Compliant + Exempt + Unknow) / totaal resources
+
+  - enforcementMode:
+    
+| Mode | JSON waarde | Effect afgedwongen | Activity log |
+|---|---|---|---|
+| Enabled | Default | Ja | Ja |
+| Disabled | DoNotEnforce | Nee | Nee |
+
+  - Safe deployment best practices:
+    - Start met `enforcementMode Disabled` voor what-if evaluatie
+    - Gebruik deployment ring; begin met test/dev, daarna productie in gefaseerde uitrol
+   
+  - Event-driven reacties:
+    - Policy state changes worden via Azure Event Grid gepusht naar Event Handlers (Azure Functions, Logic Apps, webhooks). Geen polling nodig.
+
+
 
 
 
 ---
-
 
 
 ## Learning Path 2: Manage identities and governance in Azure
