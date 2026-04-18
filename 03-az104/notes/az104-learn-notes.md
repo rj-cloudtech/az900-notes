@@ -663,7 +663,23 @@
     - Password writeback naar on-premises AD vereist P1 of P2. Via Microsoft Entra Connect of cloud sync
  
 **Implement Microsoft Entra self-service password reset**
-  - 
+  - Vereisten
+    - Entra organisatie met minimaal P1 of P2 trial licentie
+    - Account met Authentication Policy Administrator rol
+    - Non-admin testgebruiker met geldige licentie
+    - Security group voor testgroep
+
+  - Scope opties:
+    - None: Niemand kan SSPR gebuiken (standaard)
+    - Selected: Alleen leden van een specifieke security group
+    - All: Alle gebruiker
+   
+  - Configuratiestappen via Azure Portal - Microsoft Entra ID - Manage - Password reset:
+    - Properties: SSPR inschakelen voor All of Selected
+    - Authentication methods: 1 of 2 methoden vereisen, methoden kiezen
+    - Registration: Verplichte registratie bij volgende login, herbevestiginginterval instellen
+    - Notifications: Notificaties voor gebruikers en admins instellen
+    - Customization: Helpdesk emailadres of URL opgeven
 
 
 
