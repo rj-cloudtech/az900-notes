@@ -1,4 +1,5 @@
 # AZ-104: Azure Administrator Associate
+## Learning Path 1: Prerequisites for Azure administrators
 
   - **Started:** 11-4-2026
   - **Exam passed:** 
@@ -682,12 +683,23 @@
     - Customization: Helpdesk emailadres of URL opgeven
 
 
-
-
 **Exercise - Set up self-service password reset**
-
-
+- [Exercise 11 Set up self-service password reset](/03-az104/exercises/11-set-up-self-service-password-reset.md)
 
 
 **Exercise - Customize directory branding**
+- [Exercise 12 Customize directory branding](/03-az104/exercises/12-customize-directory-branding.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
