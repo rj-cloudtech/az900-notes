@@ -14,8 +14,8 @@
 ## Practice Assessment Progression
 | Platform | Score | Notes |
 |----------|-------|-------|
-| Exam 1 — Official Microsoft Practice Assessment (baseline, no prior study) | 46% | 23/50. Weakest: Identities & Governance, Storage, Networking, Monitor & Backup.|
-| Exam 2 — Custom LP1 & LP2 only | 70% | 14/20. Weakest: LP1 M2, LP2 M2, LP2 M3, LP2 M6.|
+| Exam 1 — Official Microsoft Practice Assessment (baseline, no prior study) | 46% | 23/50. Weakest: LP2 M1, LP2 M2, LP2 M4, LP3 M1, LP3 M2, LP4 M1, LP5 M1.|
+| Exam 2 — Custom LP1 & LP2 | 70% | 14/20. Weakest: LP1 M2, LP2 M2, LP2 M3, LP2 M6.|
 
 ## Next Focus Areas after Exam 2
   - LP1 M2 — ARM templates: subscription scope for multi-resource group deployments
