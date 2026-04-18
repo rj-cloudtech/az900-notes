@@ -1,7 +1,7 @@
 # AZ-104: Azure Administrator Associate
 
   - **Started:** 11-4-2026
-  - **Exam passed:** -
+  - **Exam passed:** 
 
   ---
 
