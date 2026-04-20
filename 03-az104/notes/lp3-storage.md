@@ -24,15 +24,11 @@
   - Table Storage: Schemaless NoSQL key/attribute store voor gestructureerde, niet-relationele data. Goedkoper dan traditionele SQL voor vergelijkbare datavolumes. Maakt deel uit van Azure Cosmos DB
 
 
-
-
-
 **Explore Azure Storage services**
   - Standard: Backed by HDD, laagste kosten per GB, geschikt voor bulk storage of infrequent access
   - Premium: Backed by SSD, consistent lage latency, geschikt voor I/O intensieve workloads zoals databases
 
   - Conversie tussen Standard en Premium is niet mogelijk. Je moet een nieuw account aanmaken en data kopieren. Alle storage accounts zijn versleuteld via Storage Service Engryption (SSE)
-
 
 | Account type | Ondersteunde services | Redundancy | Gebruik |
 |---|---|---|---|
@@ -41,28 +37,28 @@
 | Premium file shares | Azure Files | LRS, ZRS | Enterprise file shares, SMB én NFS ondersteuning |
 | Premium page blobs | Page blobs only | LRS only | OS disks, VM data disks, databases |
 
-
   - Legacy account types GPv1, BlobStorage) worden niet meer aanbevolen. Upgrade naar General-purpose v2 via portal, CLI of PowerShell
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-
-
-
-  
+      
 
 **Determine storage account types**
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+
+| Strategie | Beschrijving | Durability | Lezen tijdens regio-uitval |
+|---|---|---|---|
+| **LRS** (Locally Redundant Storage) | 3 kopieën binnen 1 datacenter | Laagste | Nee |
+| **ZRS** (Zone Redundant Storage) | 3 kopieën over 3 availability zones binnen 1 regio | Hoog | Nee |
+| **GRS** (Geo Redundant Storage) | LRS + async replicatie naar secundaire regio | 16 negens | Nee (alleen bij failover door Microsoft) |
+| **RA-GRS** (Read-Access GRS) | GRS + leestoegang tot secundaire regio altijd beschikbaar | 16 negens | Ja |
+| **GZRS** (Geo Zone Redundant Storage) | ZRS + replicatie naar secundaire regio | 16 negens | Nee |
+| **RA-GZRS** (Read-Access GZRS) | GZRS + leestoegang tot secundaire regio | 16 negens | Ja |
+
+| Scenario | Minimale strategie |
+|---|---|
+| Node in datacenter unavailable | LRS |
+| Heel datacenter unavailable | ZRS |
+| Regio-uitval | GRS |
+| Lezen tijdens regio-uitval | RA-GRS of RA-GZRS |
+
+  - Microsoft adviseert GZRS voor productie workloads die hoge beschikbaarheid én disaster recovery vereisen.
 
 
 
