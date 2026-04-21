@@ -98,17 +98,127 @@
 ## Learning Path 3: Implement and manage storage in Azure
 ### Module 2: Configure Azure Blob Storage
 
-  - 
-  -  
-  -  
-  -  
-  -  
-  -  
-  -  
-  -  
-  -  
-  -  
-  -  
+**Implement Azure Blob Storage**
+  - Blob Storage slaat ongestructureerde data op als object/blobs in de cloud. Tekst, afbeeldingen, video, binaire bestanden.
+  - 3 resources: Storage account -> Containers -> Blobs
+  - Configuratie-instellingen: container options, Blob types en upload opties, access tiers, lifecycle rules, object replicatie
+
+  - Gebruik:
+    - Browser uploads, distributed access, streaming, backup/archivering, data-analyese
+
+**Create blob containers**
+  - Elke blob moet in een container zitten. Een blob kan niet zelfstandig bestaan
+  - Een Container kan onbeperkte blobs bevatten, een storage account kan onbeperkt containers bevatten
+
+  - Container naam vereisten:
+    - Alleen lowercase letters, cijfers en hyphens
+    - Begint met een letter of cijfer
+    - Minimal 3, maximaal 63 tekens
+
+  - Public access levels:
+    - Private (standaar): Geen anonieme toegang
+    - Blob: Anonieme leestoegang tot blobs alleen
+    - Container: anonieme lees- en lijsttoegang tot de hele container
+
+  - Blob en Container access levels hebben geen effect tenzij Allow Blob Anonymous Access is ingeschakeld op het storage account. Microsoft adviseert dit uitgeschakeld te laten tenzij je publieke content serveert.
+
+**Assign blob access tiers**
+
+| Tier | Gebruik | Storage kosten | Access kosten | Min. opslag | Latency | Availability |
+|---|---|---|---|---|---|---|
+| **Hot** | Frequent gelezen/geschreven data | Hoogste | Laagste | Geen | Milliseconden | 99,9% |
+| **Cool** | Infrequent, min 30 dagen | Lager dan Hot | Hoger dan Hot | 30 dagen | Milliseconden | 99% |
+| **Cold** | Infrequent, min 90 dagen | Lager dan Cool | Hoger dan Cool | 90 dagen | Milliseconden | 99% |
+| **Archive** | Offline, zelden nodig | Laagste | Hoogste | 180 dagen | Uren | 99% |
+
+  - Rehydratie vanuit Archive:
+    - Copy Blob (aanbevolen): Maakt nieuwe blob in online tier
+    - Set Blob Tier: Wijzigt tier in place
+    - Standard priority: tot 15 uur
+    - High priority: binnen 1 uur voor objecten onder 10 GB (hogere kosten
+
+
+| Comparison | Hot | Cool | Cold | Archive |
+|---|---|---|---|---|
+| Availability | 99,9% | 99% | 99% | 99% |
+| Availability (RA-GRS reads) | 99,99% | 99,9% | 99,9% | 99,9% |
+| Latency (time to first byte) | Milliseconds | Milliseconds | Milliseconds | Hours |
+| Minimum storage duration | N/A | 30 days | 90 days | 180 days |
+
+
+   
+**Add blob lifecycle management rules**
+  - Lifecycle management stelt je in staat blobs automatisch te verplaatsen naar goedkopere tiers of te verwijderen op basis van leeftijd of toegangspatroon
+  - Ondersteund voor GPv2 en Premium block blobs accoutns
+
+  - Mogelijke acties:
+    - Blob transitie naar cooler tier: Hot -> Cool -> Cold -> Archive
+    - Blob verwijderen aan het einde van de lifecycle
+    - Automatisch terugzetten van Cool naar Hot bij onverwachte toegang
+    - Regels toepassen op hele storage account, specifieke containers, of subsets via naam prefix of blob index tags
+   
+  - Lifecycle policy regel structuur (If -> Then):
+    - If: Conditie op basis van aantal dagen sinds laatste toegang of wijziging
+    - Then: Actie: Verplaats naar Cool, Cold, Archive of verwijder
+  - Voorbeeld
+    - Dag 0-14: Hot
+    - Dag 14-30: Cool
+    - Na dag 30: Archive
+
+  **Determine blob object replication**
+  - Object replication kopieert blobs asynchroon tussen storage accounts op basis van policy rules. Inclusief blob content, metadata en versies
+
+  - Vereisten:
+    - Blok versioning moet ingeschakeld zijn op zowel source als destination account
+    - Ondersteund voor Hot, Cool en Cold tier. Source en destination mogen verschillende tiers hebben
+    - Blob snapshots worden niet gerepliceerd
+   
+  - Configuratie:
+    - Replication policy: specificeert source en destination storage account
+    - Policy bevat 1 of meer rules: per rule een source container en destination container
+
+  - Voordelen:
+    - Lagere latency voor read requests: Client lezen vanuit dichtstbijzijnde regio
+    - Efficiente compute workloads: Zelfde blobs beschikbaar in meerdere regio's
+    - Data distributie: verwerkt data op 1 locatie, repliceer alleen resultaten
+    - Kosten optimalisatie: gerepliceerde data verplaatsen naar Archive tier via lifecylce management
+   
+  **Manage blobs**
+    - 3 blob types:
+      - Block blob: Standaard type, opgebouwd uit blokken data. Ideaal voor tekst, afbeeldingen, video's
+      - Append blob: Vergelijkbaar met block blob maar geoptimaliseerd voor append operaties. Ideaal voor logging.
+      - Page blob: Tot 8 GB, geoptimaliseerd voor frequent lezen/schrijven. Gebruikt door Azure VMs voor OS disks en data disks.
+
+  - Na aanmaken kun je het blob type niet meer wijzigen
+
+  - Tools voor blob beheer:
+    - Azure portal: Geschikt voor kleine aantallen bestanden
+    - Azure Storage Explorer: GUI tool voor upload, download, beheer van blobs, files, queues, tables en Data Lake Storage
+    - AzCopy: Command-line tool voor Windows en Linux, kopieren van/naar Blob Storage en tussen storage accounts
+    - Azure Data Box Disk: Fysieke SSDs van Microsoft voor grote datasets of wanneer netwerk upload niet realistisch is
+
+
+**Determine Blob Storage pricing**
+  - Kosten van Blob Storage worden bepaald door:
+    - Volume data opgeslagen per maand
+    - Aantal en type operaties + data transfer kosten
+    - Gekozen redundancy opties
+   
+  - Kostenfactoren:
+    - Performance tier: Hoe koeler de tier, hoe lager de kosten per GB opslag
+    - Data access kosten: Hoe koeler de tier, hoe hoger de kosten per GB bij lezen (Cool, Cold, Archive)
+    - Transaction kosten: Per transactie, neemt toe bij koelere tiers
+    - Geo-replication transfer: Per GB, alleen bij accounts met geo-replicatie
+    - Outbound data transfer: Per GB bandwidth
+    - Tier wijzigen: Cool -> Hot kost zoveel als alle data lezen. Hot -> Cool kost zoveel als alle data schrijven (alleen GPv2)
+
+  - Gebruik de Azure Pricing Calculator voor kostenramingen
+
+
+
+**Exercise - Provide storage for the public website**
+
+- [Exercise 5 Add groups in Microsoft Entra ID](/03-az104/exercises/05-add-groups-in-microsoft-entra-id.md)
 
 
   ---
