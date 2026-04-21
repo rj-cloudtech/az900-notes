@@ -297,7 +297,31 @@
 | Customer-managed keys (CMK) | Keys beheerd door de klant via eigen Key Vault of HSM. BYOK (Bring Your Own Key) is een CMK scenario waarbij keys van buiten worden geïmporteerd |
 
 
+**Create customer-managed keys**
+  - Customer-managed keys (CMK) geven meer flexibileit en controle over encryptie. Je kunt keys aanmaken, uitschakelen, auditen, roteren en toegangscontroles definieren
+  - Opgeslagen in een Azure Key Vault of Azure Key Vault Managed HSM (FIPS 140-2 Level 3 voor hoogste compliance eisen)
+  - Storage account en Key Vault moeten in dezelfde regio zijn, maar mogen in verschillende subscriptions zitten
 
+  - Configuratie in Azure portal:
+    - Encryption type: Microsoft-managed of customer-managed
+    - Encryption key: Opgegeven via URI of selecteren uit bestaande Key Vault
+      
+**Apply Azure Storage security best practices**
+  - Storage Insights, passieve monitoring en historische analyse:
+    - Gedetailleerde metrics, logs en diagnostische informatie (latency, throughput, capaciteit, transacties)
+    - Unified view van performance, capaciteit en beschikbaarheid
+    - Integreert met RBAC, Entra ID, connection strings en ACL permissies
+    - Gebruik voor: Real-time monitoring, security auditing, health analyse
+   
+  - Microsoft Defender for Storage, proactieve bedreigingsdetectie:
+    - Malware scanning: Automatisch scannen van blob uploads
+    - Sensitive data threat detection: Detecteert onterecht opgeslagen PII of credentials
+    - Activity-based threat detection: Ongewone toegangspatronen, verdachte downloads, hash reputatie analyse.
+   
+  - Storage Insights = Reactief monitoren
+  - Microsoft Defender for Storage = Actieve bedreigingsdetectie
+
+- [Exercise 14 Manage Azure Storage](/03-az104/exercises/14-manage-azure-storage.md)
 
 
   ---
