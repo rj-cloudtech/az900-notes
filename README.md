@@ -104,9 +104,9 @@ Planned:
 
 ### 03 — AZ-104: Azure Administrator Associate
 **Notes**
-- [LP1 Prerequisites](/03-az104/notes/lp1-prerequisites.md) — Compleet
-- [LP2 Identities & Governance](/03-az104/notes/lp2-identities-governance.md) — Compleet
-- [LP3 Storage](/03-az104/notes/lp3-storage.md) — In progress
+- [LP1 Prerequisites](/03-az104/notes/lp1-prerequisites.md) — Complete
+- [LP2 Identities & Governance](/03-az104/notes/lp2-identities-governance.md) — Complete
+- [LP3 Storage](/03-az104/notes/lp3-storage.md) — Complete
 - [LP4 Compute](/03-az104/notes/lp4-compute.md) — In progress
 - [LP5 Networking](/03-az104/notes/lp5-networking.md) — In progress
 - [LP6 Monitor & Backup](/03-az104/notes/lp6-monitor-backup.md) — In progress
@@ -125,6 +125,12 @@ Planned:
 - [Exercise 8 List access using Azure RBAC and the Azure portal](/03-az104/exercises/08-list-access-using-azure-rbac-and-the-azure-portal.md)
 - [Exercise 9 Grant access using Azure RBAC and the Azure portal](/03-az104/exercises/09-grant-access-using-azure-rbac-and-the-azure-portal.md)
 - [Exercise 10 View activity logs for Azure RBAC changes](/03-az104/exercises/10-view-activity-logs-for-azure-rbac-changes.md)
+- [Exercise 11 — Set up Self-Service Password Reset](/03-az104/exercises/11-set-up-self-service-password-reset.md)
+- [Exercise 12 — Customize Directory Branding](/03-az104/exercises/12-customize-directory-branding.md)
+- [Exercise 13 — Provide Storage for the Public Website](/03-az104/exercises/13-provide-storage-for-the-public-website.md)
+- [Exercise 14 — Manage Azure Storage](/03-az104/exercises/14-manage-azure-storage.md)
+- [Exercise 15 — Create a VM using the Azure Portal](/03-az104/exercises/15-create-a-vm-using-the-azure-portal.md)
+
 
 ---
 
