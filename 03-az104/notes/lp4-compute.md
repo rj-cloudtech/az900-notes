@@ -375,10 +375,45 @@
     
 
 
+---
 
 
+## Learning Path 4: Deploy and manage Azure compute resources
+### Module 4: Configure Azure App Service
+
+**Implement Azure App Service**
+  - Azure App Service is een platform voor het hosten van websites, mobile backends en web APIs op Windows en Linux
+
+  - Voordelen:
+
+| Voordeel | Beschrijving |
+|---|---|
+| Multiple languages | ASP.NET, Java, Node.js, PHP, Python, PowerShell |
+| DevOps optimization | CI/CD met Azure DevOps, GitHub, BitBucket, Docker Hub, Container Registry |
+| Global scale | Handmatig of automatisch schalen, wereldwijd datacenter netwerk, hoge beschikbaarheid SLA |
+| Security & compliance | ISO, SOC, PCI compliant — Entra ID, social logins, IP restricties |
+| Application templates | Azure Marketplace templates: WordPress, Joomla, Drupal |
+| Visual Studio integration | Dedicated tools voor aanmaken, deployen en debuggen |
+| API & mobile features | CORS support, authenticatie, offline sync, push notifications |
 
 
+**Create an app with App Service**
+  - Basis configuratie-instellingen:
+
+| Instelling | Beschrijving |
+|---|---|
+| Name | Unieke naam — identificeert de app (`webappces1.azurewebsites.net`) of custom domain |
+| Publish | Code of Docker Container |
+| Runtime stack | Software stack: .NET Core, .NET Framework, Node.js, PHP, Python |
+| Operating system | Linux of Windows |
+| Region | Bepaalt beschikbare App Service plans |
+| Pricing plan | Koppelt app aan een App Service plan |
+
+| Instelling | Beschrijving |
+|---|---|
+| Always On | App geladen houden zonder traffic — vereist voor continue WebJobs of CRON-triggered WebJobs |
+| Session affinity | Client altijd naar dezelfde instance gerouteerd in multi-instance deployment |
+| HTTPS Only | Alle HTTP traffic automatisch omgeleid naar HTTPS |
 
 
 
