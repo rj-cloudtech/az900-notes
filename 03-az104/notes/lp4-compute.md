@@ -298,16 +298,81 @@
 ### Module 3: Configure Azure App Service plans
 
 **Implement Azure App Service plans**
-  - 
+  - Een App Service plan definieert de compute resources waarop een of meerdere web applicaties draaien. Vergelijkbaar met een server farm
+  - Meerdere applicaties kunnen dezelfde App Service plan delen
+
+  - Instellingen per App Service plan:
+    - OS: Linux of Windows
+    - Region: Regio voor het plan
+    - Pricing tier: Bepaalt beschikbare features en kosten
+    - Aantal VM Instances: Bepaald door het plan
+    - VM instance grootte: CPU, memory en remote storage
+   
+  - Overwegingen:
+    - Meerdere apps in 1 plan bepaart kosten. Gedeelde VM instances
+    - Monitor capaciteit voor het toevoegen van nieuwe apps. Overbeslasting kan downtime veroorzaken
+    - Isoleer een app in een nieuw plan als de app resource-intensief is, onafhankelijk moet schalen, of resources in een andere regio nodig heeft
+   
+  **Determine Azure App Service plan pricing**
+    - 3 compute categorieen:
+
+| Categorie | Tiers | Beschrijving |
+|---|---|---|
+| Shared compute | Free, Shared | Gedeelde Azure VMs met andere klanten — alleen voor dev/test, geen SLA, kan niet uitschalen |
+| Dedicated compute | Basic, Standard, Premium, PremiumV2, PremiumV3 | Dedicated VMs — alleen apps in hetzelfde plan delen resources |
+| Isolated | Isolated, IsolatedV2 | Dedicated VMs op dedicated VNets — netwerk + compute isolatie, maximale uitschaal capaciteit |
+
+| Feature | Free F1 | Basic B1 | Standard S1 | Premium P1V3 | Isolated V2 |
+|---|---|---|---|---|---|
+| Gebruik | Dev/Test | Dev/Test | Productie | Enhanced scale | Netwerk-isolatie |
+| Staging slots | N/A | N/A | 5 | 20 | 20 |
+| Auto scale | N/A | Handmatig | Rules | Rules + Elastic | Rules |
+| Max instances | N/A | 3 | 10 | 30 | 200 |
+| Daily backups | N/A | N/A | 10 | 50 | 50 |    
+
+  - PremiumV3 en IsolatedV2 zijn de aanbevolen tiers voor nieuwe deployments.
+
+**Scale up and scale out Azure App Service**
+
+| Methode | Beschrijving |
+|---|---|
+| **Scale up** | Meer CPU, memory en disk — hogere pricing tier, extra features (staging slots, custom domains, autoscaling) |
+| **Scale out** | Meer VM instances — handmatig of via autoscale op basis van regels en schema's. Max instances afhankelijk van pricing tier, tot 100 via App Service Environments (Isolated tier) |
+
+  - Belangrijke punten:
+    - Scale up en down door pricing tier te wijzigen: Geen redeployment nodig, wijzigingen binnen seconden actief
+    - Autoscale vermindert kosten bij lage load door atuomatisch te schalen
+    - Schaalwijzigen gelden voor alle apps in hetzelfde App Service plan
+    - Afhankelijke Azure servicess zoals SQL Database of Storage worden apart geschaald
 
 
+**Configure Azure App Service autoscale**
+  - Autoscale past het aantal VM instances automatisch aan op basis van regels en condities
+  - Autoscale settings worden gegroepeerd in profiles
 
+  - Twee typen autoscale regels:
 
+| Type | Beschrijving |
+|---|---|
+| Metric-based | Schaalt op basis van load (bijv. CPU > 50%, response time, requests) |
+| Time-based (schedule) | Schaalt op basis van tijdpatronen (bijv. elke zaterdag 08:00) |
 
+  - Best practices:
+    - Stel altijd een minimum en maximum instance count in
+    - Gebruik altijd een scale-out en scale-in regel combinatie
+    - Kies de juiste metric statistiek (average, minimum, maximum, total)
+    - Stel een veilige default instance count in voor als metrics niet beschikbaar zijn
+    - Configureer altijd notificaties (email of webhook)
+   
+  - Autoscale vs Automatic scaling:
 
-
-
-
+| | Autoscale | Automatic scaling |
+|---|---|---|
+| Configuratie | Regels handmatig instellen | Platform-managed, geen regels nodig |
+| Basis | Metrics of schema | HTTP traffic |
+| Beschikbaar | Alle tiers | Alleen PremiumV2 en PremiumV3 |
+| Gebruik | Custom logica, meerdere metrics, schema | Minder beheer, onvoorspelbare load |
+    
 
 
 
