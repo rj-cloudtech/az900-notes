@@ -415,7 +415,7 @@
 | Session affinity | Client altijd naar dezelfde instance gerouteerd in multi-instance deployment |
 | HTTPS Only | Alle HTTP traffic automatisch omgeleid naar HTTPS |
 
-
+- [Exercise 16 Create a web app in the Azure portal](/03-az104/exercises/16-create-a-web-app-in-the-azure-portal.md)
 
 
 
