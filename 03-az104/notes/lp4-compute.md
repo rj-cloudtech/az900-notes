@@ -415,9 +415,18 @@
 | Session affinity | Client altijd naar dezelfde instance gerouteerd in multi-instance deployment |
 | HTTPS Only | Alle HTTP traffic automatisch omgeleid naar HTTPS |
 
-- [Exercise 16 Create a web app in the Azure portal](/03-az104/exercises/16-create-a-web-app-in-the-azure-portal.md)
 
+**Explore continuous integration and deployment**
+  - App Service ondersteunt CI/CD via de Doployment Center. Code wijzigingen worden automatisch gesynchroniseerd
 
+  - Continuous deployment (CI/CD) bronner:
+    - Github: Via Github Actions (standaard) of App Service Build Service
+    - Bitbucket: Vergelijkbaar met GitHub
+    - Local Git: Locale URL toevoegen als repository
+    - Azure Repos: Version control tools voor code beheer
+   
+  - Manual deployment
+    - Remote Git: Git URL toevoegen als remote repository, pushen deployt de app
 
 
 
