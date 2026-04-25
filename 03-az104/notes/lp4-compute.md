@@ -429,6 +429,125 @@
     - Remote Git: Git URL toevoegen als remote repository, pushen deployt de app
 
 
+**Create deployment slots**
+  - Deployment slots zijn live apps met hostnames. Je deployt naar een slot in plaats van direct naar productie
+  - Beschikbaar in Standard, Premium en isoloted v2 tiers.
+
+  - Voordelen
+    - Validatie: Test wijzigingen in een staging slot voor je naar productie swapt
+    - Geen downtime: Swap naar productie als alle instances klaar zijn, geen request woren gedropt
+    - Rollback: Bij problemen direct terug naar vorige versie door dezelfde swap opnieuw te doen
+    - Auto swap: Automatisch deployen naar productie na warmup in het staging slot. Geen cold starts, geen downtime
+   
+
+**Add deployment slots**
+  - Nieuwe deployment slots kunnen leeg of gekloond zijn vanuit een bestaand slot
+  - Slot settings vallen in 3 categorieen: slot-specific app settings/connection strings, continuous deployment settings, en App Service Authentications settings
+
+  - Swapped vs slot-specific settings:
+
+| Swapped (meegaan bij swap) | Slot-specific (blijven in source slot) |
+|---|---|
+| Language stack en versie | App settings* |
+| 32/64-bit | Connection strings* |
+| Public certificates | Mounted storage accounts* |
+| WebJobs content | Custom domain names |
+| Path mapping | Nonpublic certificates en TLS/SSL |
+| Scale settings | IP restrictions |
+| CORS | Virtual network integration |
+| Always On | Managed identities |
+| Diagnostic settings | WebJobs schedulers |
+
+  - Kan geconfigureerd worden als slot-specific
+
+
+**Secure your App Service app**
+  - App Service biedt ingebouwde authenticatie en autorisatie. Geen SDK of code wijzigingen vereist
+  - De security module draait in dezelfde omgeving als de app code maar apart daarvan
+  - Taken van security module: Gebruikers authenticeren, tokens valideren/opslaan/vernieuwen, sessie beheren, identity informatie injecteren in request headers
+
+  - Configuratieopties in de Azure portal:
+
+| Optie | Beschrijving |
+|---|---|
+| Allow Anonymous requests | Unauthenticated traffic doorgeven aan app code — app beslist zelf wat te doen. Ondersteunt meerdere sign-in providers |
+| Allow only authenticated requests | Alle anonieme requests omgeleid naar `/.auth/login/<provider>`. Native mobile apps krijgen HTTP 401. Geen authenticatiecode nodig in de app |
+| Logging and tracing | Authenticatie en autorisatie traces in log files — zoek naar `EasyAuthModule_32/64` in trace logs |
+
+
+**Create custom domain names**
+  - Standaard krijgt elke App Service app een Azure domain: `appnaam.azurewebsites.net`
+  - Een custom domain vervang dit door een eigen domeinnaam zoals `www.contoso.com`
+
+  - 3 stappen
+    - Domain reserveren: Koop direct via Azure portal of bij een externe registar
+    - DNS records aanmaken: Wijs het domein naar je Azure app:
+      - A record: mapt domeinnaam naar IP adres. Moet bijgewerkt worden als IP wijzigt
+      - CNAME record: mapt domeinnaam naar een adere domeinnaam (bijv. `contoso.com` -> webapp.azurewebsites.net) Blijft geldig als IP wijzigt
+      - Custom domain inschakelen: Valideer en voeg toe via Azure portal
+     
+    - App service biedt gratis managed TLS certificaten via Custom Domain -> Add binding -> App Service Managed Certificat - Automatisch vernieuwd 30 dagen voor vervaldatum
+      
+
+**Back up and restore your App Service app**
+  - Backup beshcikbaar in Basic, Standard, Premium en Isolated tiers. Basic ondersteunt alleen productie slot
+  - Vereist een Azure storage account en container in dezelfde subscription
+
+  - Wat wordt gebackupt:
+    - App configuratie settings
+    - File content
+    - Gekoppelde databases (SQL Database, MySQL, PostgreSQL, MySQL in-app)
+   
+  - Opslag formaat: ZIP bestand (data) + XML bestand (manifest)
+
+  - Belangrijke punten:
+    - Handmatig of op schema
+    - Full backups zijn standaard: Alle content wordt overschreven bij herstel
+    - Partial backups mogelijk: Specifieke bestanden/mappen uitsluiten
+    - Max 10 GB per backup (app + database)
+    - Storage account met firewall kan niet als backup bestemming gebruikt worden
+
+
+**Use Azure Application Insights**
+  - Application Insights is een feature van Azure Monitor voor het monitoren van live applicaties. Detecteert automatisch performance anomalieen
+  - Werkt op .NET, Node.js, JAVA EE. On-premises, hybrid en cloud
+  - Integreert met Azure Pipelines en development tools
+
+  - Wat je kunt monitoren:
+
+| Metric | Beschrijving |
+|---|---|
+| Request rates, response times, failure rates | Populaire pagina's, piekmomenten, performance problemen |
+| Dependency rates | Externe services die app performance beïnvloeden |
+| Exceptions | Server én browser exceptions met stack trace |
+| Page views en load performance | Browsergebaseerde paginaweergaven en laadtijden |
+| User en session counts | Aantal actieve gebruikers en sessies |
+| Performance counters | CPU, memory, network op Windows of Linux servers |
+| Host diagnostics | Docker of Azure diagnostics integratie |
+| Diagnostic trace logs | Trace events koppelen aan requests |
+| Custom events en metrics | Eigen tracking algoritmes voor business events |
+
+
+- [Exercise 16 Implement Web Apps](/03-az104/exercises/16=implement-web-apps.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
