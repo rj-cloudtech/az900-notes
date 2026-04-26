@@ -156,7 +156,16 @@
    
   - Opslag: Recovery Services vault. Backed by Azure Storage blobs. Hier definieer je welke machines worden gebackupt en wanneer snapshots worden gemaakt
 
+**Summary**
+  - Bij het aanmaken van een VM plan je van tevoren: netwerk (VNet, NSGs), naam (max 64/15 tekens, locatie, grootte op basis van workload, disks en OS. Compute wordt per minuut gefactureerd. Gedealloceerde VMs kosten geen compute. Storage wordt apart gefactureerd
 
+  - VM groottes: General purpose, Compute optimized, Memory optimized, Storage optimized, GPU, High performance compute
+  - Disk types: Ultra disk -> Premium SSD v2 -> Premium SSD -> Standaard SSD -> Standaard HDD (Ultra en Premium SSD v2 niet bruikbaar als OS disk
+  - Betaalopties: Pay-as-you-go of Reserverd VM Instances (1/3 jaar, tot 72% korting)
+  - Availability: Availability Zones, VM Scale Sets, Load Balancer, Site Recovery
+  - Backup: Azure Backup via Recorvery Services vault. LRS of GRS, geen data transfer kosten, geen tijdlimiet
+
+    
 ---
 
 
@@ -288,7 +297,13 @@
 | Query duration | Tijdvenster waarin Autoscale terugkijkt voor gemiddeld metricgebruik |
 | Schedule | Start- en einddatum, herhaling op specifieke dagen |
 
-
+**Summary**
+  - Azure plant voor 3 typen downtime: Unplanned hardware maintenance (Live Migration), Unexpected downtime (automatische migratie, reboot) en planned maintenance (Microsoft updates, minimale impact)
+      - Availability sets: Logische groepering van VMs over meerdere fysieke servers, racks en switches. Elke VM krijgt 1 update domain en 1 fault domain. Standaard 5 updates domains, 2 fault domains. Niet wijzigbaar na aanmaken
+      - Availability zones: Fysiek gescheiden locaties binnen een regoi (minimaal 3). Zonal (gepind) of Zone-redundant ( automatisch gerepliceerd)
+      - Scaling: Vertical (VM grootte aanpassen) vs Horizonal (aantal VMs aanpassen). Horizontal is flexibeler
+      - VM Scale Sets: Identieke VMs met autoscaling. Uniform (zelfde image) of Flexible (verschillende images). Max spreading aanbevolen
+      - Autoscale: Schalen op basis van CPU drempel, schema of metrics. Altijd scale-out en scale-in regel instellen
 
 
 ---
@@ -373,7 +388,14 @@
 | Beschikbaar | Alle tiers | Alleen PremiumV2 en PremiumV3 |
 | Gebruik | Custom logica, meerdere metrics, schema | Minder beheer, onvoorspelbare load |
     
-
+**Summary**
+  - Een App Service plan definieert de compute resources voor web applicaties. Vergelijkbaar met een server farm. Meerdere apps kunnen hetzelfde plan delen, maar overbelasting veroorzaakt downtime
+      - Pricing tiers: Shared (free/shared, dev/test, geen SLA) -> Dedicated (basic t/m premiumv3, productie) -> Isolated (VNet isolatie, max 200 instances. PremiumV3 en IsolatedV2 aanbevolen voor nieuwe deployements.
+      - Scale up: Hogere pricing tier, meer CPU/memory/features, geen redeployment nodig
+      - Scale out: Meer VM instances, handmatig of via autoscale, geldt voor alle apps in hetzelfde plan
+      - Autoscale: Metric-based (CPU, response time) of time-based (schema). Altijd scale-out en scale-in regel instellen, altijd notificaties configureren
+      - Automatisch scaling: Alleen PremiumV2/V3, platform-managed op basis van HTTP traffic, geen regels nodig
+        
 
 ---
 
@@ -531,6 +553,17 @@
 - [Exercise 16 Implement Web Apps](/03-az104/exercises/16-implement-web-apps.md)
 
 
+**Summary**
+  - Azure App Service host websites, mobile backends en web APIs op Windows of Linux, met CI/CD, global scale, ingebouwde security en Application Insights monitoring.
+    - App aanmakenL: Naam, runtime stack, OS, regio, pricing plan. Extra: Always On, Session affinity, HTTPS Only
+    - CI/CD: GitHub, Bitbucket, Local Git, Azure Repos of handmatig via Remote Git
+    - Deployment slots: Staging voor validatie, zero-downtime swaps. Standard, Premium en Isolated V2
+    - Security: Ingebouwde auth, geen SDK. Allow Anonymous, Allow authenticated, Logging
+    - Custom domain: A record of CNAME, gratis managed TLS certificaat
+    - Backup: Max 10 GB, handmatig of schema, geen firewall storage
+    - Application Insights: MOnitoring van requests, exceptions, dependencies, performance
+
+
 
 ---
 
@@ -623,18 +656,11 @@
 - [Exercise 17 Implement Container Instances](/03-az104/exercises/17-implementicontainer-instances.md)
  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+**Summary** 
+  - Containers zijn lichter dan VMs. Geen volledig OS, snellere starup, hogere workload density. VMs bieden sterkere isolatie en zijn beter voor stateful workloads
+    - ACI: Snelste manier om containers te draaien zonder VM beheer. Custom CPU/memory, Azure Files mounting, Linux en Windows, VNet deployment mogelijk
+    - Container groups: Collectie containers op dezelfde host, vergelijkbaar met Kubernetes pod. Deployment via ARM, Bicep of YAML. Delen één public IP en port namespace
+    - ACA: Serverless platform voor microservices en event-driven workloads. Gebouwd op Kubernetes/KEDA, scale to zero, geen directe Kubernetes API toegang
+    - AKS: Volledige Kubernetes controle voor complexe, langlopende applicaties
 
 
