@@ -528,7 +528,100 @@
 | Custom events en metrics | Eigen tracking algoritmes voor business events |
 
 
-- [Exercise 16 Implement Web Apps](/03-az104/exercises/16=implement-web-apps.md)
+- [Exercise 16 Implement Web Apps](/03-az104/exercises/16-implement-web-apps.md)
+
+
+
+---
+
+
+## Learning Path 4: Deploy and manage Azure compute resources
+### Module 5: Configure Azure Container Instances
+
+
+**Compare containers to virtual machines**
+
+  - Voordelen van containers:
+    - Snellere ontwikkeling en code sharing
+    - Eenvoudig testen
+    - Snellere deployment
+    - Hogere workload density en betere resource utilization
+   
+| | Containers | Virtual Machines |
+|---|---|---|
+| Isolatie | Lichtgewicht isolatie — geen sterke security boundary | Volledige isolatie van host OS en andere VMs |
+| Operating system | Alleen user mode van OS — alleen benodigde services | Volledig OS inclusief kernel — meer resources nodig |
+| Deployment | Docker CLI (enkeling) of Kubernetes/AKS (meerdere) | Hyper-V Manager (enkeling) of PowerShell/SCVMM (meerdere) |
+| Persistent storage | Azure Disks (single node) of Azure Files/SMB (meerdere nodes) | VHD (single machine) of SMB file share (meerdere servers) |
+| Fault tolerance | Orchestrator herstart containers snel op andere node | VM failover naar andere server, OS herstart |
+
+
+
+**Review Azure Container Instances**
+  - Azure Container Instances (ACI) is de snelste en eenvoudigste manier om container in Azure te draaien. Geen VM beheer nodig
+  - Een container image bevat: Code, runtime, system tools, system libraries en settings
+
+  - Kenmerken van een ACI (Azure Container Instance)
+    - Fast startup: Containers starten in seconden
+    - Public IP en DNS: Direct blootgesteld aan internet via IP en FQDN (Fully Qualified Domain Name)
+    - Custom sizes: 0.1-4 vCPU en 0.1-16 GB memory per container, vast voor de levensduur van de container group
+    - Persistent storage: Directe mounting van Azure Files file shares
+    - Linux en Windows: Beide OS types ondersteund
+    - Conscheduled groups: Multi-container groups die host resources delen
+    - VNet deployment: Linux container groups kunnen in een Azure VNet worden gedeployed voor private communicatie. Geen public IP
+
+
+**Implement container groups**
+  - Een container group is de top-level resource in ACI. Een collectie containers op dezelfde host machine die lifecycle, resources, netwerk en storage delen
+  - Vergelijkbaar met een pod in Kubernetes
+
+  - 3 deployment methoden:
+    
+| Methode | Beschrijving |
+|---|---|
+| ARM template | JSON-based IaC — ideaal bij deployment naast andere Azure resources |
+| Bicep | Microsoft aanbevolen IaC — compacter dan ARM, volledige IntelliSense support |
+| YAML files | Container-focused formaat — ideaal voor deployments met alleen container instances |
+
+  - Netwerk:
+    - Container groups delen 1 public IP adres, poorten en DNS label met FQDN (Fully Qualified Domain Name)
+    - Port mapping niet ondersteund. Containers in een group delen een port namespace
+    - Bij verwijderen van een group worden IP en FQDN vrijgegeven
+   
+  - Gebruik van multi-container groups:
+    - Web app updates: 1 container serveert de app, andere haalt nieuwe content op
+    - Log data collectie: App container produceert logs, logging container schrijft naar long-term storage
+    - App monitoring: monitoring container controleert periodiek of app correct reageert
+    - Front-end en back-end: aparte containers voor web front-end en data back-end
+
+
+  **Review Azure Container Apps**
+  - Azure Container Apps (ACA) is een serverless platform voor containerized applicaties. Geen server configuratie of container orchestratie nodig
+
+  - Gebruik:
+    - API endpoint deployen
+    - Background processing jobs
+    - Event-driven processing
+    - Microservices
+   
+  - Schalen op basis van: HTTP traffic, event-driven processing, CPU/memory load, KEDA scalers (inclusief scale to zer)
+
+  - Kenmerken:
+    - Gebouwd op Kubernetes, DAPR, KEDA en envoy
+    - Service discovery en traffic splitting
+    - Geen directe toegang tot Kubernetes APIs. Volledig managed experience
+
+| | ACI | ACA | AKS |
+|---|---|---|---|
+| Type | Isolated containers | Serverless microservices | Volledige Kubernetes controle |
+| Gebruik | Korte, geïsoleerde taken | Serverless microservices, event-driven | Complexe orchestratie |
+| Deployment | Snel, eenvoudig | PaaS, snel | Meer controle, Kubernetes expertise vereist |
+| Schalen | Handmatig | HTTP + event-driven autoscaling | Horizontal pod + cluster autoscaling |
+| Ideaal voor | Eenmalige taken | Microservices, snelle scaling | Complexe, langlopende applicaties |
+
+
+- [Exercise 17 Implement Container Instances](/03-az104/exercises/17-implementicontainer-instances.md)
+ 
 
 
 
@@ -545,12 +638,3 @@
 
 
 
-
-
-
-
-
-
-
-
-  
