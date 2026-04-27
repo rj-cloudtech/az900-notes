@@ -219,9 +219,9 @@
 
 
 
-**Exercise - Provide storage for the public website**
+**Lab - Provide storage for the public website**
 
-- [Exercise 13 Provide storage for the public website](/03-az104/exercises/13-provide-storage-for-the-public-website.md)
+- [Lab 13 Provide storage for the public website](/03-az104/labs/13-provide-storage-for-the-public-website.md)
 
 
   ---
@@ -324,7 +324,7 @@
   - Storage Insights = Reactief monitoren
   - Microsoft Defender for Storage = Actieve bedreigingsdetectie
 
-- [Exercise 14 Manage Azure Storage](/03-az104/exercises/14-manage-azure-storage.md)
+- [Lab 14 Manage Azure Storage](/03-az104/labs/14-manage-azure-storage.md)
 
 
   ---
