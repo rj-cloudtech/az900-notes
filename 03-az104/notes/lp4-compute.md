@@ -11,6 +11,11 @@
 ### Learning Path 4: Deploy and manage Azure compute resources
 
 - [Module 1: Introduction to Azure virtual machines](#module-1-introduction-to-azure-virtual-machines)
+- [Module 2: Configure virtual machine availability](#module-2-configure-virtual-machine-availability)
+- [Module 3: Configure Azure App Service plans](#module-3-configure-azure-app-service-plans)
+- [Module 4: Configure Azure App Service](#module-4-configure-azure-app-service)
+- [Module 5: Configure Azure Container Instances](#module-5-configure-azure-container-instances)
+
 
 ---
 
