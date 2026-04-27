@@ -129,12 +129,12 @@
        - Source: invited User. Account verwijderen trekt direct alle toegang in
 
 
-**Exercise - Restore or remove deleted users**
-- [Exercise 3 Assign licenses to users](/03-az104/exercises/03-assign-licenses-to-users.md)
+**Lab - Restore or remove deleted users**
+- [Lab 3 Assign licenses to users](/03-az104/labs/03-assign-licenses-to-users.md)
 
 
-**Exercise - Restore or remove deleted users**
-- [Exercise 4 Restore or remove deleted users](/03-az104/exercises/04-restore-or-remove-deleted-users.md)
+**Lab - Restore or remove deleted users**
+- [Lab 4 Restore or remove deleted users](/03-az104/labs/04-restore-or-remove-deleted-users.md)
 
 
 **Create, configure, and manage groups**
@@ -149,8 +149,8 @@
   - Dynamic membership vereist Entra ID P1 licentie (of Intune for Education voor device based rules)
 
 
-**Exercise - Add groups in Microsoft Entra ID**
-- [Exercise 5 Add groups in Microsoft Entra ID](/03-az104/exercises/05-add-groups-in-microsoft-entra-id.md)
+**Lab - Add groups in Microsoft Entra ID**
+- [Lab 5 Add groups in Microsoft Entra ID](/03-az104/labs/05-add-groups-in-microsoft-entra-id.md)
 
 
 
@@ -187,8 +187,8 @@
     - Usage location moet ingesteld zijn op het user profiel; users zonder locatie erven de directory locatie
 
 
-**Exercise - Change group license assignments**
-- [Exercise 6 change group license assignments](/03-az104/exercises/06-change-group-license-assignments.md)
+**Lab - Change group license assignments**
+- [Lab 6 change group license assignments](/03-az104/labs/06-change-group-license-assignments.md)
 
 | Foutcode | Oorzaak |
 |---|---|
@@ -199,8 +199,8 @@
 | LicenseAssignmentAttributeConcurrencyException | Gelijktijdige toewijzing van dezelfde licentie via meerdere groepen — Entra ID lost zelf op |
 
 
-**Exercise - Change user license assignments**
-- [Exercise 7 change user license assignments](/03-az104/exercises/07-change-user-license-assignments.md)
+**Lab - Change user license assignments**
+- [Lab 7 change user license assignments](/03-az104/labs/07-change-user-license-assignments.md)
 
 
 **Create custom security attributes**
@@ -470,16 +470,16 @@
   - Allow model: RBAC verleent toegang via `Actions`. Met `NotActions` kun je specifieke permissies uitsluiten. effectieve permissies = Action minus NotActions.
 
 
-**Exercise - List access using Azure RBAC and the Azure portal**
-- [Exercise 8 List access using Azure RBAC and the Azure portal](/03-az104/exercises/08-list-access-using-azure-rbac-and-the-azure-portal.md)
+**Lab - List access using Azure RBAC and the Azure portal**
+- [Lab 8 List access using Azure RBAC and the Azure portal](/03-az104/labs/08-list-access-using-azure-rbac-and-the-azure-portal.md)
 
 
-**Exercise - Grant access using Azure RBAC and the Azure portal**
-- [Exercise 9 Grant access using Azure RBAC and the Azure portal](/03-az104/exercises/09-grant-access-using-azure-rbac-and-the-azure-portal.md)
+**Lab - Grant access using Azure RBAC and the Azure portal**
+- [Lab 9 Grant access using Azure RBAC and the Azure portal](/03-az104/labs/09-grant-access-using-azure-rbac-and-the-azure-portal.md)
 
 
-**Exercise - View activity logs for Azure RBAC changes**
-- [Exercise 10 View activity logs for Azure RBAC changes](/03-az104/exercises/10-view-activity-logs-for-azure-rbac-changes.md)
+**Lab - View activity logs for Azure RBAC changes**
+- [Lab 10 View activity logs for Azure RBAC changes](/03-az104/labs/10-view-activity-logs-for-azure-rbac-changes.md)
 
 
 **Summary** Module 5 — Secure your Azure resources with Azure role-based access control (Azure RBAC)
@@ -536,9 +536,9 @@
     - Customization: Helpdesk emailadres of URL opgeven
 
 
-**Exercise - Set up self-service password reset**
-- [Exercise 11 Set up self-service password reset](/03-az104/exercises/11-set-up-self-service-password-reset.md)
+**Lab - Set up self-service password reset**
+- [Lab 11 Set up self-service password reset](/03-az104/labs/11-set-up-self-service-password-reset.md)
 
 
-**Exercise - Customize directory branding**
-- [Exercise 12 Customize directory branding](/03-az104/exercises/12-customize-directory-branding.md)
+**Lab - Customize directory branding**
+- [Lab 12 Customize directory branding](/03-az104/labs/12-customize-directory-branding.md)
